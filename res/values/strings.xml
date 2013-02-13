@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Guessaday</string>
+    <string name="menu_settings">Settings</string>
+    <string name="description">again!</string>
+    <string name="title_activity_check_answer">Check answer</string>
+
+</resources>
