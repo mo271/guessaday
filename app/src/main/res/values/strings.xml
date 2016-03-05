@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Guessaday</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Show Timer</string>
+    <string name="pref_description_social_recommendationsOn">on</string>
+    <string name="pref_description_social_recommendationsOff">off</string>
+    <string name="pick_date">pci date</string>
+
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+
+
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Select date range</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>1/1/1900–31/12/2050</item>
+        <item>1/1/1600–31/12/2100</item>
+        <item>1/1/1950–today</item>
+        <item>15/10/1582–today</item>
+        <item>1/1/1–31/12/9999</item>
+        <item>this year</item>
+        <item>next year</item>
+        <item>1/1/1900–31/12/1999</item>
+        <item>1/1/2000–31/12/2099</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+
+
+</resources>
