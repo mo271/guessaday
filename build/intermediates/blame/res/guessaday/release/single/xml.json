@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/release/xml/pref_general.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/src/main/res/xml/pref_general.xml"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/release/xml/pref_headers.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/src/main/res/xml/pref_headers.xml"
+    }
+]

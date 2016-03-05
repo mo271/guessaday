@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_timer.png",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/src/main/res/drawable-tvdpi/ic_timer.png"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_timer_off.png",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/src/main/res/drawable-tvdpi/ic_timer_off.png"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_event_note.png",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/src/main/res/drawable-tvdpi/ic_event_note.png"
+    }
+]
