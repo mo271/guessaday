@@ -150,8 +150,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             }
 
             //hier daten aus den Settings nehmen!
-            mcalendar.clear();
-            ecalendar.clear();
+            //mcalendar.clear();
+            //ecalendar.clear();
             //mcalendar.set(1900, 0, 1);
             //ecalendar.set(2050, 11, 31);
 
