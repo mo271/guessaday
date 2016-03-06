@@ -1,4 +1,5 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen android:icon="@null" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <SwitchPreference
         android:defaultValue="true"
@@ -6,7 +7,10 @@
         android:icon="@drawable/ic_timer"
         android:title="@string/pref_title_social_recommendations"
         android:summaryOn="@string/pref_description_social_recommendationsOn"
-        android:summaryOff="@string/pref_description_social_recommendationsOff"/>
+        android:summaryOff="@string/pref_description_social_recommendationsOff"
+        />
+
+
     <!--android:summary="@string/pref_description_social_recommendations"-->
 
     <!-- NOTE: EditTextPreference accepts EditText attributes. -->
@@ -20,7 +24,24 @@
         android:key="sync_frequency"
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
-        android:title="@string/pref_title_sync_frequency" />
+        android:title="@string/pref_title_sync_frequency"
+        app:dependentValue="0"/>
+    <com.goltzkiste.guessaday.DatePreference
+        android:key="startdate"
+        android:title="Start date"
+        android:dialogTitle="Pick start date"
+        android:dependency="sync_frequency"
+        android:dialogIcon="@drawable/ic_event"
+        android:icon="@android:color/transparent"
+        />
+    <com.goltzkiste.guessaday.DatePreference
+        android:key="enddate"
+        android:title="End date"
+        android:dialogTitle="Pick end date"
+        android:dependency="sync_frequency"
+        android:dialogIcon="@drawable/ic_event"
+        android:icon="@android:color/transparent"
+        />
 
   <!--  <EditTextPreference
         android:capitalize="words"

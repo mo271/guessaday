@@ -36,15 +36,17 @@
 
     <string name="pref_title_sync_frequency">Select date range</string>
     <string-array name="pref_sync_frequency_titles">
-        <item>1/1/1900–31/12/2050</item>
-        <item>1/1/1600–31/12/2100</item>
-        <item>1/1/1950–today</item>
-        <item>15/10/1582–today</item>
-        <item>1/1/1–31/12/9999</item>
+        <item>pick your own</item>
+        <item>this month</item>
         <item>this year</item>
         <item>next year</item>
-        <item>1/1/1900–31/12/1999</item>
-        <item>1/1/2000–31/12/2099</item>
+        <item>1582-10-15 – today</item>
+        <item>1950-01-01 – today</item>
+        <item>1900-01-01 – 1999-01-01</item>
+        <item>2000-01-01 – 2099-12-31</item>
+        <item>0001-01-01 – 9999-12-31</item>
+
+
     </string-array>
     <string-array name="pref_sync_frequency_values">
         <item>0</item>

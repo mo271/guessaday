@@ -203,7 +203,28 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(true);
-
+            final DatePreference dpstart= (DatePreference) findPreference("startdate");
+            dpstart.setText("1900-00-01");
+            //dpstart.setSummary("1900-00-01");
+            dpstart.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    //your code to change values.
+                    dpstart.setSummary((String) newValue);
+                    return true;
+                }
+            });
+            final DatePreference dpend= (DatePreference) findPreference("enddate");
+            dpend.setText("2050-11-31");
+            //dpend.setSummary("2050-11-31");
+            dpend.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    //your code to change values.
+                    dpend.setSummary((String) newValue);
+                    return true;
+                }
+            });
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design

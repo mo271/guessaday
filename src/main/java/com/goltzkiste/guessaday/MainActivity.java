@@ -93,6 +93,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
             SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
             String epochstring = SP.getString("sync_frequency", "0");
+            String startdate=SP.getString("startdate","0");
+            Toast.makeText(MainActivity.this, startdate,
+                    Toast.LENGTH_LONG).show();
+
             int epochname = Integer.parseInt(epochstring);
             mcalendar.clear();
             ecalendar.clear();
