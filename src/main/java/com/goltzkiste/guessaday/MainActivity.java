@@ -253,6 +253,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                                 Boolean timingon = SP.getBoolean("example_switch", true);
                                 if (timingon){//hier durch prefence entscheiden ob Zeit angezeigt wird oder nicht.
                                     SimpleDateFormat sdf = new SimpleDateFormat("mm:ss:SSS");
+                                    sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
                                     TextView timetext = (TextView) findViewById(R.id.textView);
                                     timetext.setText(sdf.format(System.currentTimeMillis()-starttime).substring(0,8));
                                 }
