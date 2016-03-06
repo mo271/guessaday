@@ -252,9 +252,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                                 SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
                                 Boolean timingon = SP.getBoolean("example_switch", true);
                                 if (timingon){//hier durch prefence entscheiden ob Zeit angezeigt wird oder nicht.
-                                    SimpleDateFormat sdf = new SimpleDateFormat("mm:ss:SS");
+                                    SimpleDateFormat sdf = new SimpleDateFormat("mm:ss:SSS");
                                     TextView timetext = (TextView) findViewById(R.id.textView);
-                                    timetext.setText(sdf.format(System.currentTimeMillis()-starttime));
+                                    timetext.setText(sdf.format(System.currentTimeMillis()-starttime).substring(0,8));
                                 }
 
                                 state=0;

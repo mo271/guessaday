@@ -1,47 +1,31 @@
 [
     {
-        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml",
-        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml"
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml"
     },
     {
         "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml",
         "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml"
     },
     {
-        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml",
-        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml"
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
     },
     {
-        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml",
-        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml"
-    },
-    {
-        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml",
-        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml"
-    },
-    {
-        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
-        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
-    },
-    {
-        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml",
-        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml"
-    },
-    {
-        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml",
-        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml"
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_clear_material.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_clear_material.xml"
     },
     {
         "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml",
         "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml"
     },
     {
-        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml",
-        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml"
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml"
     },
     {
-        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml",
-        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml"
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml"
     },
     {
         "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml",
@@ -52,7 +36,79 @@
         "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_clear_material.xml"
     },
     {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml"
+    },
+    {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml"
+    },
+    {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
+    },
+    {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml"
+    },
+    {
+        "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml",
+        "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml"
+    },
+    {
         "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml",
         "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/generated/res/pngs/guessaday/debug/drawable-anydpi-v21/abc_ic_menu_paste_material.xml"
     }
 ]

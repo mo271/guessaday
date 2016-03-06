@@ -2,5 +2,9 @@
     {
         "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
         "source": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
     }
 ]

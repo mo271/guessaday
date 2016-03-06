@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/mo/gitrepos/mo271/guessaday/build/intermediates/res/merged/guessaday/debug/menu/menu_main.xml",
+        "source": "/home/mo/gitrepos/mo271/guessaday/src/main/res/menu/menu_main.xml"
+    },
+    {
         "merged": "/home/mo/AndroidStudioProjects/Guessaday/app/build/intermediates/res/merged/guessaday/debug/menu/menu_main.xml",
         "source": "/home/mo/AndroidStudioProjects/Guessaday/app/src/main/res/menu/menu_main.xml"
     }
