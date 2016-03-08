@@ -204,8 +204,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(true);
             final DatePreference dpstart= (DatePreference) findPreference("startdate");
-            dpstart.setText("1900-00-01");
-            //dpstart.setSummary("1900-00-01");
+            //dpstart.setText("1900-01-01");
+            //dpstart.setSummary(null);
             dpstart.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -215,8 +215,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 }
             });
             final DatePreference dpend= (DatePreference) findPreference("enddate");
-            dpend.setText("2050-11-31");
-            //dpend.setSummary("2050-11-31");
+            //dpend.setText("2050-12-31");
+            //dpend.setSummary("2050-12-31");
             dpend.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object newValue) {

@@ -8,15 +8,15 @@
     </facet>
     <facet type="android" name="Android">
       <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="defaultConfig3Debug" />
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
         <option name="SELECTED_TEST_ARTIFACT" value="_android_test_" />
-        <option name="ASSEMBLE_TASK_NAME" value="assembleDefaultConfig3Debug" />
-        <option name="COMPILE_JAVA_TASK_NAME" value="compileDefaultConfig3DebugSources" />
-        <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleDefaultConfig3DebugAndroidTest" />
-        <option name="COMPILE_JAVA_TEST_TASK_NAME" value="compileDefaultConfig3DebugAndroidTestSources" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
+        <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleDebugAndroidTest" />
+        <option name="COMPILE_JAVA_TEST_TASK_NAME" value="compileDebugAndroidTestSources" />
         <afterSyncTasks>
-          <task>generateDefaultConfig3DebugAndroidTestSources</task>
-          <task>generateDefaultConfig3DebugSources</task>
+          <task>generateDebugAndroidTestSources</task>
+          <task>generateDebugSources</task>
         </afterSyncTasks>
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
@@ -27,43 +27,22 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
-    <output url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/intermediates/classes/defaultConfig3/debug" />
-    <output-test url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/intermediates/classes/androidTest/defaultConfig3/debug" />
+    <output url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/intermediates/classes/debug" />
+    <output-test url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/intermediates/classes/androidTest/debug" />
     <exclude-output />
     <content url="file://$USER_HOME$/gitrepos/mo271/guessaday">
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/r/defaultConfig3/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/aidl/defaultConfig3/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/buildConfig/defaultConfig3/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/rs/defaultConfig3/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/res/rs/defaultConfig3/debug" type="java-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/res/resValues/defaultConfig3/debug" type="java-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3Debug/res" type="java-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3Debug/resources" type="java-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3Debug/assets" type="java-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3Debug/aidl" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3Debug/java" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3Debug/jni" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3Debug/rs" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/r/androidTest/defaultConfig3/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/aidl/androidTest/defaultConfig3/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/buildConfig/androidTest/defaultConfig3/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/rs/androidTest/defaultConfig3/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/res/rs/androidTest/defaultConfig3/debug" type="java-test-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/res/resValues/androidTest/defaultConfig3/debug" type="java-test-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3/res" type="java-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3/resources" type="java-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3/assets" type="java-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3/aidl" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3/java" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3/jni" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/defaultConfig3/rs" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/androidTestDefaultConfig3/res" type="java-test-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/androidTestDefaultConfig3/resources" type="java-test-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/androidTestDefaultConfig3/assets" type="java-test-resource" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/androidTestDefaultConfig3/aidl" isTestSource="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/androidTestDefaultConfig3/java" isTestSource="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/androidTestDefaultConfig3/jni" isTestSource="true" />
-      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/androidTestDefaultConfig3/rs" isTestSource="true" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/r/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/aidl/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/rs/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/res/rs/debug" type="java-resource" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/res/resValues/debug" type="java-resource" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/r/androidTest/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/aidl/androidTest/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/source/rs/androidTest/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/res/rs/androidTest/debug" type="java-test-resource" />
+      <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/build/generated/res/resValues/androidTest/debug" type="java-test-resource" />
       <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$USER_HOME$/gitrepos/mo271/guessaday/src/debug/assets" type="java-resource" />

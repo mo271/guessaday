@@ -8,7 +8,10 @@
         android:title="@string/pref_title_social_recommendations"
         android:summaryOn="@string/pref_description_social_recommendationsOn"
         android:summaryOff="@string/pref_description_social_recommendationsOff"
-        />
+        android:switchTextOff=""
+        android:switchTextOn=""
+        android:showText="false"/>
+        <!--/>-->
 
 
     <!--android:summary="@string/pref_description_social_recommendations"-->
@@ -31,16 +34,18 @@
         android:title="Start date"
         android:dialogTitle="Pick start date"
         android:dependency="sync_frequency"
-        android:dialogIcon="@drawable/ic_event"
         android:icon="@android:color/transparent"
+        android:defaultValue="@string/dstartdate"
+        android:summary="%s"
         />
     <com.goltzkiste.guessaday.DatePreference
         android:key="enddate"
         android:title="End date"
         android:dialogTitle="Pick end date"
         android:dependency="sync_frequency"
-        android:dialogIcon="@drawable/ic_event"
         android:icon="@android:color/transparent"
+        android:defaultValue="@string/denddate"
+        android:summary="%s"
         />
 
   <!--  <EditTextPreference

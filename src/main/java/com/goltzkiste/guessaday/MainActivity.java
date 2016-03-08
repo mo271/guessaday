@@ -86,70 +86,68 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
             weekdaylistview.setAdapter(listAdapter);
 
-            TimeZone MyTimezone = TimeZone.getDefault();
+            TimeZone MyTimezone = TimeZone.getTimeZone("UTC");
+            TimeZone MeineTimezone = TimeZone.getDefault();
+            Calendar rightnow = new GregorianCalendar(MeineTimezone);
 
             Calendar mcalendar = new GregorianCalendar(MyTimezone);
             Calendar ecalendar = new GregorianCalendar(MyTimezone);
 
             SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
             String epochstring = SP.getString("sync_frequency", "0");
-            String startdate=SP.getString("startdate","0");
-            Toast.makeText(MainActivity.this, startdate,
-                    Toast.LENGTH_LONG).show();
+
+
+            //Toast.makeText(MainActivity.this, startdate,
+            //       Toast.LENGTH_LONG).show();
 
             int epochname = Integer.parseInt(epochstring);
             mcalendar.clear();
             ecalendar.clear();
             switch (epochname) {
                 case 0:
-                    mcalendar.set(1900, 0, 1);
-                    ecalendar.set(2050, 11, 31);
+                    String startdate=SP.getString("startdate","1900-01-01");
+                    String enddate=SP.getString("enddate", "2050-12-31");
+                    String[] spieces = startdate.split("-");
+                    mcalendar.set(Integer.parseInt(spieces[0]), Integer.parseInt(spieces[1])-1,Integer.parseInt(spieces[2]));
+                    String[] epieces = enddate.split("-");
+                    ecalendar.set(Integer.parseInt(epieces[0]), Integer.parseInt(epieces[1])-1,Integer.parseInt(epieces[2]));
+                    //ecalendar.set(sdf.parse(enddate));
                     break;
                 case 1:
-                    mcalendar.set(1600, 0, 1);
-                    ecalendar.set(2100, 11, 31);
+                    mcalendar.set(rightnow.get(Calendar.YEAR), rightnow.get(Calendar.MONTH), 1);
+                    ecalendar.set(rightnow.get(Calendar.YEAR), rightnow.get(Calendar.MONTH), rightnow.getActualMaximum(Calendar.DAY_OF_MONTH));
                     break;
-                case 2:
-                    mcalendar.set(1950, 0, 1);
+                case 4:
+                    mcalendar.set(rightnow.get(Calendar.YEAR)-100,rightnow.get(Calendar.MONTH), rightnow.get(Calendar.DAY_OF_MONTH));
                     ecalendar = new GregorianCalendar(MyTimezone);
                     break;
-                case 3:
-                    mcalendar.clear();
-                    ecalendar.clear();
+                case 7:
                     mcalendar.set(1582, 9, 15);
                     ecalendar = new GregorianCalendar(MyTimezone);
                     break;
-                case 4:
-                    mcalendar.clear();
-                    ecalendar.clear();
+                case 9:
                     mcalendar.set(1, 0, 1);
                     ecalendar.set(9999,11,1);
                     break;
-                case 5:
-                    mcalendar.clear();
-                    ecalendar.clear();
-                    Calendar rightnow = new GregorianCalendar(MyTimezone);
+                case 2:
                     mcalendar.set(rightnow.get(Calendar.YEAR), 0, 1);
                     ecalendar.set(rightnow.get(Calendar.YEAR),11,31);
                     break;
-                case 6:
-                    mcalendar.clear();
-                    ecalendar.clear();
-                    Calendar rightnow3 = new GregorianCalendar(MyTimezone);
-                    mcalendar.set(rightnow3.get(Calendar.YEAR)+1, 0, 1);
-                    ecalendar.set(rightnow3.get(Calendar.YEAR)+1,11,31);
+                case 3:
+                    mcalendar.set(rightnow.get(Calendar.YEAR)+1, 0, 1);
+                    ecalendar.set(rightnow.get(Calendar.YEAR)+1,11,31);
                     break;
-                case 7:
-                    mcalendar.clear();
-                    ecalendar.clear();
-                    mcalendar.set(1900, 0, 1);
-                    ecalendar.set(1999, 11, 31);
+                case 5:
+                    mcalendar.set(1901, 0, 1);
+                    ecalendar.set(2000, 11, 31);
+                    break;
+                case 6:
+                    mcalendar.set(2001, 0, 1);
+                    ecalendar.set(2100, 11, 31);
                     break;
                 case 8:
-                    mcalendar.clear();
-                    ecalendar.clear();
-                    mcalendar.set(2000, 0, 1);
-                    ecalendar.set(2099, 11, 31);
+                    mcalendar.set(1600, 0, 1);
+                    ecalendar.set(2099,11,1);
                     break;
             }
 
@@ -162,12 +160,24 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             long delta = ecalendar.getTimeInMillis() - mcalendar.getTimeInMillis();
             delta = delta / 86400000; //convert from Millis to Days 86400000=1000*60*60*24:
             mcalendar.add(Calendar.DATE, ((int) (Math.random() * delta)));
-            date_name = DateFormat.getLongDateFormat(this).format(mcalendar.getTime());
+            java.text.DateFormat df = java.text.DateFormat.getDateInstance(java.text.DateFormat.LONG);;
+            df.setTimeZone(TimeZone.getTimeZone("UTC"));
+            date_name = df.format(mcalendar.getTime());
             TextView text = (TextView) findViewById(R.id.textView2);
             text.setText(date_name);
+            //SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            //sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+            //String shortdate=sdf.format(mcalendar.getTimeInMillis());
+            //Toast.makeText(MainActivity.this, shortdate,
+            //      Toast.LENGTH_LONG).show();
+
+            //TextView timetext = (TextView) findViewById(R.id.textView);
+            //timetext.setText("UTC");
+
             correctday = mcalendar.get(Calendar.DAY_OF_WEEK);
-            TextView timetext = (TextView) findViewById(R.id.textView);
-            timetext.setText("");
+            //String startdate=SP.getString("startdate","0");
+            //Toast.makeText(MainActivity.this, correctday,
+
             Calendar calendar = new GregorianCalendar(MyTimezone);
             for (int i = 0; i < 7; i++) {
                 calendar.set(1985, 10, 3 + i);

@@ -5,9 +5,14 @@ package com.goltzkiste.guessaday;
  */
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
+
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.preference.DialogPreference;
+import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.DatePicker;
@@ -15,7 +20,7 @@ import android.os.Build;
 
 
 public class DatePreference extends DialogPreference {
-    private int lastDate = 0;
+    private int lastDate = 1;
     private int lastMonth = 0;
     private int lastYear = 0;
     private String dateval;
@@ -58,8 +63,33 @@ public class DatePreference extends DialogPreference {
     @Override
     protected void onBindDialogView(View v) {
         super.onBindDialogView(v);
+        SharedPreferences SP=this.getSharedPreferences();
+        //SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(this.getDialog().getBaseContext());
 
-        picker.updateDate(lastYear, lastMonth, lastDate);
+        picker.updateDate(lastYear, lastMonth-1, lastDate);
+        TimeZone MyTimezone = TimeZone.getTimeZone("UTC");
+        Calendar cal = new GregorianCalendar(MyTimezone);
+
+        if (this.getKey().equals("startdate")){
+            cal.set(lastYear - 1000, 0, 1);
+            picker.setMinDate(cal.getTimeInMillis());
+            String enddate=SP.getString("enddate", "2050-12-31");
+            String[] spieces = enddate.split("-");
+            cal.set(Integer.parseInt(spieces[0]), Integer.parseInt(spieces[1])-1, Integer.parseInt(spieces[2]));
+            picker.setMaxDate(cal.getTimeInMillis());
+
+
+        }
+        if (this.getKey().equals("enddate")) {
+            String startdate=SP.getString("startdate", "1900-01-01");
+            String[] spieces = startdate.split("-");
+            cal.set(Integer.parseInt(spieces[0]), Integer.parseInt(spieces[1])-1, Integer.parseInt(spieces[2]));
+            picker.setMinDate(cal.getTimeInMillis());
+            cal.set(lastYear + 1000, 11, 31);
+            picker.setMaxDate(cal.getTimeInMillis());
+        }
+
+
     }
 
     @Override
@@ -68,7 +98,7 @@ public class DatePreference extends DialogPreference {
 
         if (positiveResult) {
             lastYear = picker.getYear();
-            lastMonth = picker.getMonth()+1;
+            lastMonth = (picker.getMonth()+1);
             lastDate = picker.getDayOfMonth();
 
             String dateval = String.valueOf(lastYear) + "-"
@@ -105,6 +135,7 @@ public class DatePreference extends DialogPreference {
         lastYear = getYear(dateval);
         lastMonth = getMonth(dateval);
         lastDate = getDate(dateval);
+        setSummary(dateval);
     }
 
     public void setText(String text) {
