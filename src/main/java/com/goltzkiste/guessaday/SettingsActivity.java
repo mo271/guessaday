@@ -7,6 +7,7 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -27,9 +28,14 @@ import android.util.AttributeSet;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Locale;
+import java.util.TimeZone;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -59,18 +65,20 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
+
         @Override
         public boolean onPreferenceChange(Preference preference, Object value) {
             String stringValue = value.toString();
 
 
 
-            if (preference instanceof ListPreference) {
-                // For list preferences, look up the correct display value in
-                // the preference's 'entries' list.
-                ListPreference listPreference = (ListPreference) preference;
-                int index = listPreference.findIndexOfValue(stringValue);
+//            if (preference instanceof ListPreference) {
+//                // For list preferences, look up the correct display value in
+//                // the preference's 'entries' list.
+//                ListPreference listPreference = (ListPreference) preference;
+//                int index = listPreference.findIndexOfValue(stringValue);
 
                 // Set the summary to reflect the new value.
 //                preference.setSummary(
@@ -100,11 +108,11 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 //                    }
 //                }
 
-            } else {
-                // For all other preferences, set the summary to the value's
-                // simple string representation.
-                preference.setSummary(stringValue);
-            }
+//            } else {
+//                // For all other preferences, set the summary to the value's
+//                // simple string representation.
+//                preference.setSummary(stringValue);
+//            }
 
             return true;
         }
@@ -145,6 +153,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         getFragmentManager().beginTransaction().replace(android.R.id.content, new GeneralPreferenceFragment()).commit();
                 setupActionBar();
@@ -203,6 +213,24 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(true);
+            List<String> lentries = new ArrayList<String>();
+            //CharSequence[] entries = {}
+            TimeZone MyTimezone = TimeZone.getTimeZone("UTC");
+            Calendar calendar = new GregorianCalendar(MyTimezone);
+            for (int i = 0; i < 7; i++) {
+                calendar.set(1985, 10, 3 + i);
+                String day_name = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
+                lentries.add(day_name);
+                //Zeile newZeile = new Zeile(day_name,state,(i+k)%7);
+                //listAdapter.add(newZeile);
+            }
+             //"Sunday","Monday", "Tuesday", "Wednesday","Thursday","Friday","Saturday" };
+            final CharSequence[] entries = lentries.toArray(new CharSequence[lentries.size()]);
+
+            ListPreference lp = (ListPreference)findPreference("firstweekday");
+            lp.setEntries(entries);
+
+
             final DatePreference dpstart= (DatePreference) findPreference("startdate");
             //dpstart.setText("1900-01-01");
             //dpstart.setSummary(null);
@@ -305,5 +333,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 //            return super.onOptionsItemSelected(item);
 //        }
 //    }
+
 
 }

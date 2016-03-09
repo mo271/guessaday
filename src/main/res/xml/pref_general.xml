@@ -47,7 +47,39 @@
         android:defaultValue="@string/denddate"
         android:summary="%s"
         />
-
+    <com.goltzkiste.guessaday.ListPreferenceCompat
+        android:key="firstweekday"
+        android:icon="@drawable/ic_format_list_numbered"
+        android:defaultValue="0"
+        android:summary="%s"
+        android:entries="@array/pref_firstweekday_titles"
+        android:entryValues="@array/pref_sync_frequency_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_firstweekday"
+        />
+    <SwitchPreference
+        android:icon="@drawable/ic_visibility_off"
+        android:defaultValue="false"
+        android:key="pref_visi_switch"
+        android:title="@string/pref_title_visi_switch"
+        android:summaryOn="@string/pref_visiOn"
+        android:summaryOff="@string/pref_visiOff"
+        android:switchTextOff=""
+        android:switchTextOn=""
+        android:showText="false"/>
+    <com.goltzkiste.guessaday.ListPreferenceCompat
+        android:key="visi_pref"
+        android:defaultValue="1"
+        android:summary="After %s"
+        android:entries="@array/pref_visi_titles"
+        android:entryValues="@array/pref_visi_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_visi"
+        android:dependency="pref_visi_switch"
+        android:icon="@android:color/transparent"
+        />
   <!--  <EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_default_display_name"

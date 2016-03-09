@@ -22,7 +22,10 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Large Text"
             android:id="@+id/textView2"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:repeatCount="infinite"
+            android:clickable="true"
+            />
 
     <RelativeLayout
         android:layout_width="match_parent"

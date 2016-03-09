@@ -66,12 +66,12 @@ public class DatePreference extends DialogPreference {
         SharedPreferences SP=this.getSharedPreferences();
         //SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(this.getDialog().getBaseContext());
 
-        picker.updateDate(lastYear, lastMonth-1, lastDate);
+
         TimeZone MyTimezone = TimeZone.getTimeZone("UTC");
         Calendar cal = new GregorianCalendar(MyTimezone);
 
         if (this.getKey().equals("startdate")){
-            cal.set(lastYear - 1000, 0, 1);
+            cal.set(1, 0, 1);
             picker.setMinDate(cal.getTimeInMillis());
             String enddate=SP.getString("enddate", "2050-12-31");
             String[] spieces = enddate.split("-");
@@ -88,6 +88,7 @@ public class DatePreference extends DialogPreference {
             cal.set(lastYear + 1000, 11, 31);
             picker.setMaxDate(cal.getTimeInMillis());
         }
+        picker.updateDate(lastYear, lastMonth-1, lastDate);
 
 
     }

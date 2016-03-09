@@ -10,9 +10,11 @@
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>
 
-    <string name="pref_title_social_recommendations">Show Timer</string>
-    <string name="pref_description_social_recommendationsOn">on</string>
-    <string name="pref_description_social_recommendationsOff">off</string>
+    <string name="pref_title_social_recommendations">Timer</string>
+    <string name="pref_description_social_recommendationsOn">Enabled</string>
+    <string name="pref_description_social_recommendationsOff">Disabled</string>
+    <string name="pref_visiOn">Enabled</string>
+    <string name="pref_visiOff">Disabled</string>
     <string name="pick_date">Pic date</string>
 
 
@@ -34,9 +36,9 @@
     <!--</string-array>-->
 
     <!-- Example settings for Data & Sync -->
-    <string name="pref_header_data_sync">Data &amp; sync</string>
+  <!--  <string name="pref_header_data_sync">Data &amp; sync</string>-->
 
-    <string name="pref_title_sync_frequency">Select date range</string>
+    <string name="pref_title_sync_frequency">Date range</string>
     <string-array name="pref_sync_frequency_titles">
         <item>Pick your own</item>
         <item>This month</item>
@@ -65,5 +67,62 @@
     </string-array>
 
 
+    <string name="pref_firstweekday">First day in list</string>
+    <string-array name="pref_firstweekday_titles">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="pref_firstweekday_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string name="pref_title_visi_switch">Short Date display</string>
+
+    <string name="pref_title_visi">Hide the date</string>
+    <string-array name="pref_visi_titles">
+        <item>0.1s</item>
+        <item>0.25s</item>
+        <item>0.5s</item>
+        <item>0.75s</item>
+        <item>1s</item>
+        <item>1.25s</item>
+        <item>1.5s</item>
+        <item>1.75s</item>
+        <item>2s</item>
+        <item>2.5s</item>
+        <item>5s</item>
+        <item>10s</item>
+        <item>25s</item>
+        <item>60s</item>
+
+
+
+    </string-array>
+    <string-array name="pref_visi_values">
+        <item>0.1</item>
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>0.75</item>
+        <item>1</item>
+        <item>1.25</item>
+        <item>1.5</item>
+        <item>1.75</item>
+        <item>2</item>
+        <item>2.5</item>
+        <item>5</item>
+        <item>10</item>
+        <item>25</item>
+        <item>60</item>
+    </string-array>
 
 </resources>
