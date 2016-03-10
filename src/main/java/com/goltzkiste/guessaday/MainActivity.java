@@ -8,12 +8,14 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateFormat;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -46,18 +48,83 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
     private DayAdapter listAdapter ;
     private ArrayAdapter<String> listAdapter2 ;
-
+    //public static TextView timetext;
     private static String date_name;
     private static int state;
     private static int correctday;
     private static int guessedday;
     private static long starttime;
     private static AlphaAnimation alphaAnim = new AlphaAnimation(1.0f,0.0f);
+    private static SharedPreferences prefs;
+    private static SharedPreferences.OnSharedPreferenceChangeListener listener;
+    public static String timeneeded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         state=1;
+        timeneeded="";
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+            public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+                switch (key) {
+                    case "example_switch":
+                        TextView timetext = (TextView) findViewById(R.id.textView);
+                        //MainActivity.timetext.setText("");
+                        Boolean timingon = prefs.getBoolean("example_switch", true);
+                        if(state==0){
+                            if ((timingon)) {
+                                timetext.setText(timeneeded);
+                            }
+                            else {
+                                timetext.setText("");
+                            }
+                        }
+                        break;
+                    case "firstweekday":
+                        repopulatelist();
+                        break;
+                    case "pref_visi_switch":
+                        if (state==1){
+                            TextView text = (TextView) findViewById(R.id.textView2);
+
+                            if (prefs.getBoolean("pref_visi_switch",false)) {
+                                ladealphaanim();
+                                text.setAnimation(alphaAnim);
+                                alphaAnim.start();
+
+                                Toast toast=Toast.makeText(MainActivity.this, "Tap on hidden date to make it reappear!",
+                                        Toast.LENGTH_LONG);
+                                toast.setGravity(Gravity.CENTER,0,0);
+                                toast.show();
+                            }
+                            else {
+                                alphaAnim.cancel();
+                                text.setVisibility(View.VISIBLE);
+                                text.setTextColor(Color.BLACK);
+                            }
+                        }
+                        break;
+                    case "visi_pref":
+                        if (state==1) {
+                            TextView text = (TextView) findViewById(R.id.textView2);
+
+                            if (prefs.getBoolean("pref_visi_switch", false)) {
+                                ladealphaanim();
+                                text.setAnimation(alphaAnim);
+                                alphaAnim.start();
+                            }
+                        }
+                        break;
+                    case "sync_frequency":
+                        state=1;
+                        loadActivity();
+                        break;
+                }
+            }
+
+        };
+        prefs.registerOnSharedPreferenceChangeListener(listener);
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -69,11 +136,35 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         LinearLayout layout = (LinearLayout) findViewById(R.id.linearLayout1);
         layout.setOnTouchListener(this);
 
-
     }
 
+    private void ladealphaanim(){
+        final TextView text = (TextView) findViewById(R.id.textView2);
 
-        private void loadActivity() {
+        alphaAnim.cancel();
+        float f=Float.parseFloat(prefs.getString("visi_pref", "1"));
+        float g=(Float.parseFloat(".02")+(f-Float.parseFloat(".1"))/Float.parseFloat("10"));
+        alphaAnim.setStartOffset(Math.round(f*1000));                        // in Miilisec
+        alphaAnim.setDuration(Math.round(g*1000));                    //add some fading
+        //alphaAnim.setRepeatMode(Animation.RESTART);
+        //alphaAnim.setRepeatCount(Animation.INFINITE);
+        alphaAnim.setAnimationListener(new Animation.AnimationListener() {
+            public void onAnimationEnd(Animation animation) {
+                // make invisible when animation completes, you could also remove the view from the layout
+                text.setVisibility(View.INVISIBLE);
+                //text.setTextColor(Color.TRANSPARENT);
+            }
+
+            public void onAnimationStart(Animation a) {
+                text.setVisibility(View.VISIBLE);
+                //text.setTextColor(Color.BLACK);
+            }
+
+            public void onAnimationRepeat(Animation a) {
+            }
+        });
+    }
+    private void loadActivity() {
             // Do all of your work here
             android.widget.ListView weekdaylistview = (android.widget.ListView) findViewById(R.id.listView);
             weekdaylistview.setClickable(true);
@@ -183,59 +274,41 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             //text.setVisibility(View.VISIBLE);
             //text.setClickable(true);
             //text.setEnabled(true);
-
-            alphaAnim.cancel();
-            float f=Float.parseFloat(SP.getString("visi_pref","1"));
-            float g=(Float.parseFloat(".02")+(f-Float.parseFloat(".1"))/Float.parseFloat("10"));
-            alphaAnim.setStartOffset(Math.round(f*1000));                        // in Miilisec
-            alphaAnim.setDuration(Math.round(g*1000));                    //add some fading
-            //alphaAnim.setRepeatMode(Animation.RESTART);
-            //alphaAnim.setRepeatCount(Animation.INFINITE);
-            alphaAnim.setAnimationListener(new Animation.AnimationListener() {
-                public void onAnimationEnd(Animation animation) {
-                    // make invisible when animation completes, you could also remove the view from the layout
-                    text.setVisibility(View.INVISIBLE);
-                    //text.setTextColor(Color.TRANSPARENT);
-                }
-
-                public void onAnimationStart(Animation a) {
-                    text.setVisibility(View.VISIBLE);
-                    text.setTextColor(Color.BLACK);
-                }
-
-                public void onAnimationRepeat(Animation a) {
-                }
-            });
+            ladealphaanim();
+//            alphaAnim.cancel();
+//            float f=Float.parseFloat(SP.getString("visi_pref","1"));
+//            float g=(Float.parseFloat(".02")+(f-Float.parseFloat(".1"))/Float.parseFloat("10"));
+//            alphaAnim.setStartOffset(Math.round(f*1000));                        // in Miilisec
+//            alphaAnim.setDuration(Math.round(g*1000));                    //add some fading
+//            //alphaAnim.setRepeatMode(Animation.RESTART);
+//            //alphaAnim.setRepeatCount(Animation.INFINITE);
+//            alphaAnim.setAnimationListener(new Animation.AnimationListener() {
+//                public void onAnimationEnd(Animation animation) {
+//                    // make invisible when animation completes, you could also remove the view from the layout
+//                    text.setVisibility(View.INVISIBLE);
+//                    //text.setTextColor(Color.TRANSPARENT);
+//                }
+//
+//                public void onAnimationStart(Animation a) {
+//                    text.setVisibility(View.VISIBLE);
+//                    //text.setTextColor(Color.BLACK);
+//                }
+//
+//                public void onAnimationRepeat(Animation a) {
+//                }
+//            });
             if (SP.getBoolean("pref_visi_switch",false)){
                 text.setAnimation(alphaAnim);
                 alphaAnim.start();
             }
-
-
             TextView timetext = (TextView) findViewById(R.id.textView);
             timetext.setText("");
-            //SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            //sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-            //String shortdate=sdf.format(mcalendar.getTimeInMillis());
-            //Toast.makeText(MainActivity.this, shortdate,
-            //      Toast.LENGTH_LONG).show();
 
-            //TextView timetext = (TextView) findViewById(R.id.textView);
-            //timetext.setText("UTC");
             int k=Integer.parseInt(SP.getString("firstweekday", "0"));
             correctday = (mcalendar.get(Calendar.DAY_OF_WEEK));
-            //String startdate=SP.getString("startdate","0");
-            //Toast.makeText(MainActivity.this, correctday,
 
-            Calendar calendar = new GregorianCalendar(MyTimezone);
-            for (int i = 0; i < 7; i++) {
-                calendar.set(1985, 10, 3 + i+k);
-                String day_name = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
-                Zeile newZeile = new Zeile(day_name,state,(i+k)%7);
-                listAdapter.add(newZeile);
-            }
+            repopulatelist();
             starttime = System.currentTimeMillis();
-            //weekdaylistview.setAdapter(listAdapter);
         }
     public class Zeile {
         public String tag;
@@ -290,18 +363,20 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
         }
     }
+    private void repopulatelist(){
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        int k = Integer.parseInt(SP.getString("firstweekday", "0"));
+        listAdapter.clear();
+        TimeZone MyTimezone = TimeZone.getDefault();
+        Calendar calendar = new GregorianCalendar(MyTimezone);
+        for (int i = 0; i < 7; i++) {
+            calendar.set(1985, 10, 3 + i + k);
+            String day_name = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
+            Zeile newZeile = new Zeile(day_name, state, (i + k) % 7);
+            listAdapter.add(newZeile);
+        }
+    }
         private void listenActivity() {
-//            final TextView text = (TextView) findViewById(R.id.textView2);
-//            text.setOnTouchListener(new View.OnTouchListener() {
-//                @Override
-//                public boolean onTouch(View v, MotionEvent event) {
-//                    TextView text=(TextView) findViewById(R.id.textView2);
-//                    //text.setTextColor(Color.BLACK);
-//                    //text.setVisibility(View.VISIBLE);
-//                    alphaAnim.start();
-//                    return false;
-//                }
-//            });
             if(state==1) {
 
                 final android.widget.ListView weekdaylistview = (android.widget.ListView) findViewById(R.id.listView);
@@ -313,25 +388,27 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                                 SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
                                 int k = Integer.parseInt(SP.getString("firstweekday", "0"));
                                 guessedday = (position + k) % 7;
-
-                                listAdapter.clear();
-                                TimeZone MyTimezone = TimeZone.getDefault();
-                                Calendar calendar = new GregorianCalendar(MyTimezone);
-
-                                for (int i = 0; i < 7; i++) {
-                                    calendar.set(1985, 10, 3 + i + k);
-                                    String day_name = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
-                                    Zeile newZeile = new Zeile(day_name, 0, (i + k) % 7);
-                                    listAdapter.add(newZeile);
-                                }
+                                state = 0;
+                                repopulatelist();
+//                                listAdapter.clear();
+//                                TimeZone MyTimezone = TimeZone.getDefault();
+//                                Calendar calendar = new GregorianCalendar(MyTimezone);
+//                                for (int i = 0; i < 7; i++) {
+//                                    calendar.set(1985, 10, 3 + i + k);
+//                                    String day_name = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
+//                                    Zeile newZeile = new Zeile(day_name, 0, (i + k) % 7);
+//                                    listAdapter.add(newZeile);
+//                                }
                                 weekdaylistview.setClickable(false);
                                 weekdaylistview.setEnabled(false);
                                 Boolean timingon = SP.getBoolean("example_switch", true);
+                                SimpleDateFormat sdf = new SimpleDateFormat("mm:ss:SSS");
+                                sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+                                //TextView timetext = (TextView) findViewById(R.id.textView);
+                                TextView timetext = (TextView) findViewById(R.id.textView);
+                                timeneeded=sdf.format(System.currentTimeMillis() - starttime).substring(0, 8);
                                 if (timingon) {//hier durch prefence entscheiden ob Zeit angezeigt wird oder nicht.
-                                    SimpleDateFormat sdf = new SimpleDateFormat("mm:ss:SSS");
-                                    sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-                                    TextView timetext = (TextView) findViewById(R.id.textView);
-                                    timetext.setText(sdf.format(System.currentTimeMillis() - starttime).substring(0, 8));
+                                    timetext.setText(timeneeded);
                                 }
                                 final TextView text = (TextView) findViewById(R.id.textView2);
                                 alphaAnim.cancel();
@@ -339,7 +416,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                                 //ext.setTextColor(Color.BLACK);
                                 //text.setClickable(false);
                                 //text.setEnabled(false);
-                                state = 0;
 
                             }
                         }
@@ -399,7 +475,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
             return super.onOptionsItemSelected(item);
         }
-
 
 }
 

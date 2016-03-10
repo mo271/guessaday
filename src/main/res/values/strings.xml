@@ -16,6 +16,7 @@
     <string name="pref_visiOn">Enabled</string>
     <string name="pref_visiOff">Disabled</string>
     <string name="pick_date">Pic date</string>
+    <!--<string name="visi_toast">Tap on hidden date to make it reappear!</string>-->
 
 
     <!--<string name="pref_title_display_name">Display name</string>-->
@@ -86,7 +87,7 @@
         <item>5</item>
         <item>6</item>
     </string-array>
-    <string name="pref_title_visi_switch">Short Date display</string>
+    <string name="pref_title_visi_switch">Short date display</string>
 
     <string name="pref_title_visi">Hide the date</string>
     <string-array name="pref_visi_titles">
