@@ -85,6 +85,12 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                         repopulatelist();
                         break;
                     case "pref_visi_switch":
+                        if (prefs.getBoolean("pref_visi_switch",false)) {
+                            Toast toast=Toast.makeText(MainActivity.this, "Tap on hidden date to make it reappear!",
+                                    Toast.LENGTH_LONG);
+                            toast.setGravity(Gravity.CENTER,0,0);
+                            toast.show();
+                        }
                         if (state==1){
                             TextView text = (TextView) findViewById(R.id.textView2);
 
@@ -92,11 +98,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                                 ladealphaanim();
                                 text.setAnimation(alphaAnim);
                                 alphaAnim.start();
-
-                                Toast toast=Toast.makeText(MainActivity.this, "Tap on hidden date to make it reappear!",
-                                        Toast.LENGTH_LONG);
-                                toast.setGravity(Gravity.CENTER,0,0);
-                                toast.show();
                             }
                             else {
                                 alphaAnim.cancel();
@@ -117,6 +118,14 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                         }
                         break;
                     case "sync_frequency":
+                        state=1;
+                        loadActivity();
+                        break;
+                    case "startdate":
+                        state=1;
+                        loadActivity();
+                        break;
+                    case "enddate":
                         state=1;
                         loadActivity();
                         break;
