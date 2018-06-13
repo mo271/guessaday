@@ -1,4 +1,5 @@
 package com.goltzkiste.guessaday;
+import com.goltzkiste.guessaday.BuildConfig;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -14,6 +15,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.text.format.DateFormat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -43,12 +45,12 @@ import java.util.Locale;
 import java.util.TimeZone;
 import java.util.Timer;
 import java.util.TimerTask;
+import android.text.method.LinkMovementMethod;
 
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
 
     private DayAdapter listAdapter ;
     private ArrayAdapter<String> listAdapter2 ;
-    //public static TextView timetext;
     private static String date_name;
     private static int state;
     private static int correctday;
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                         break;
                     case "pref_visi_switch":
                         if (prefs.getBoolean("pref_visi_switch",false)) {
-                            Toast toast=Toast.makeText(MainActivity.this, "Tap on hidden date to make it reappear!",
+                            Toast toast=Toast.makeText(MainActivity.this, R.string.reappear_msg,
                                     Toast.LENGTH_LONG);
                             toast.setGravity(Gravity.CENTER,0,0);
                             toast.show();
@@ -153,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         alphaAnim.cancel();
         float f=Float.parseFloat(prefs.getString("visi_pref", "1"));
         float g=(Float.parseFloat(".02")+(f-Float.parseFloat(".1"))/Float.parseFloat("10"));
-        alphaAnim.setStartOffset(Math.round(f*1000));                        // in Miilisec
+        alphaAnim.setStartOffset(Math.round(f*1000));                        // in Millisec
         alphaAnim.setDuration(Math.round(g*1000));                    //add some fading
         //alphaAnim.setRepeatMode(Animation.RESTART);
         //alphaAnim.setRepeatCount(Animation.INFINITE);
@@ -209,9 +211,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             String epochstring = SP.getString("sync_frequency", "0");
 
 
-
-            //Toast.makeText(MainActivity.this, startdate,
-            //       Toast.LENGTH_LONG).show();
 
             int epochname = Integer.parseInt(epochstring);
             mcalendar.clear();
@@ -284,28 +283,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             //text.setClickable(true);
             //text.setEnabled(true);
             ladealphaanim();
-//            alphaAnim.cancel();
-//            float f=Float.parseFloat(SP.getString("visi_pref","1"));
-//            float g=(Float.parseFloat(".02")+(f-Float.parseFloat(".1"))/Float.parseFloat("10"));
-//            alphaAnim.setStartOffset(Math.round(f*1000));                        // in Miilisec
-//            alphaAnim.setDuration(Math.round(g*1000));                    //add some fading
-//            //alphaAnim.setRepeatMode(Animation.RESTART);
-//            //alphaAnim.setRepeatCount(Animation.INFINITE);
-//            alphaAnim.setAnimationListener(new Animation.AnimationListener() {
-//                public void onAnimationEnd(Animation animation) {
-//                    // make invisible when animation completes, you could also remove the view from the layout
-//                    text.setVisibility(View.INVISIBLE);
-//                    //text.setTextColor(Color.TRANSPARENT);
-//                }
-//
-//                public void onAnimationStart(Animation a) {
-//                    text.setVisibility(View.VISIBLE);
-//                    //text.setTextColor(Color.BLACK);
-//                }
-//
-//                public void onAnimationRepeat(Animation a) {
-//                }
-//            });
+
             if (SP.getBoolean("pref_visi_switch",false)){
                 text.setAnimation(alphaAnim);
                 alphaAnim.start();
@@ -366,8 +344,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 tagName.setText("");
             }
 
-            //tvHome.setText(user.hometown);
-            // Return the completed view to render on screen
+
             return convertView;
 
         }
@@ -422,9 +399,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                                 final TextView text = (TextView) findViewById(R.id.textView2);
                                 alphaAnim.cancel();
                                 text.setVisibility(View.VISIBLE);
-                                //ext.setTextColor(Color.BLACK);
-                                //text.setClickable(false);
-                                //text.setEnabled(false);
+
 
                             }
                         }
@@ -481,9 +456,42 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 //finish();
                 //return true;
             }
+            if (id == R.id.activity_about) {
+                DialogAbout();
+                //finish();
+                //return true;
+            }
 
             return super.onOptionsItemSelected(item);
         }
+    private void DialogAbout()
+    {
+        final String strTitle = getString(R.string.app_name);
+        final String strDescription = getString(R.string.str_app_description);
+        final String strAuthor = getString(R.string.str_author);
+        final String strHowto = getString(R.string.str_howto);
+        final String strMoreInfo = getString(R.string.str_moreinfo);
+        final String strUrl = getString(R.string.str_url);
+        final String versionName = BuildConfig.VERSION_NAME;
+        final String str_Version = getString(R.string.str_version);
+
+        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+        alertDialog.setTitle(strTitle);
+        alertDialog.setIcon(R.drawable.ic_launcher);
+        alertDialog.setMessage(Html.fromHtml(
+                "<p>"+strDescription+"</p>"  + "<p>"+strHowto+" <a href=\""+strUrl+"\">"+strMoreInfo+"</a>"+"</p>" +"<p><i>"+strAuthor+"</i>: " +"<a href=\"mailto:firsching@math.fu-berlin.de?subject=Feedback for Guessaday\">Moritz Firsching</a><br><i>"+str_Version+"</i>: "+versionName+"</p>"));
+        alertDialog.setCancelable(true);
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.str_ok),
+                new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog, int which)
+                    {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+        ((TextView)alertDialog.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
+    }
 
 }
 

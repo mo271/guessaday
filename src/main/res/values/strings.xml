@@ -1,9 +1,18 @@
 <resources>
-    <string name="app_name">Guessaday</string>
+    <string name="app_name" translatable="false">Guessaday</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_settings">Settings</string>
-    <string name="dstartdate">1900-01-01</string>
-    <string name="denddate">2050-12-31</string>
+    <string name="dstartdate" translatable="false">1900-01-01</string>
+    <string name="denddate" translatable="false">2050-12-31</string>
+    <string name="about">About</string>
+    <string name="title_activity_about">About Guessaday</string>
+    <string name="str_app_description">This app displays a random date. You are then supposed to calculate what day of the week this day is and select the correct one.</string>
+    <string name="str_author">"Author"</string>
+    <string name="str_howto">If you don\'t yet know how to calculate the day of the week, you can certainly learn it:</string>
+    <string name="str_moreinfo">More Information</string>
+    <string name="str_url" translatable="false">https://page.mi.fu-berlin.de/moritz/guessaday</string>
+    <string name="str_ok">OK</string>
+    <string name="str_version">Version</string>
 
     <!-- Strings related to Settings -->
 
@@ -15,7 +24,8 @@
     <string name="pref_description_social_recommendationsOff">Disabled</string>
     <string name="pref_visiOn">Enabled</string>
     <string name="pref_visiOff">Disabled</string>
-    <string name="pick_date">Pic date</string>
+    <string name="reappear_msg">Tap on hidden date to make it reappear!</string>
+    <string name="after">After %s</string>
     <!--<string name="visi_toast">Tap on hidden date to make it reappear!</string>-->
 
 
@@ -24,20 +34,20 @@
 
     <!--<string name="pref_title_add_friends_to_messages">Add friends to messages</string>-->
     <!--<string-array name="pref_example_list_titles">-->
-        <!--<item>Always</item>-->
-        <!--<item>When possible</item>-->
-        <!--<item>Never</item>-->
+    <!--<item>Always</item>-->
+    <!--<item>When possible</item>-->
+    <!--<item>Never</item>-->
     <!--</string-array>-->
 
 
     <!--<string-array name="pref_example_list_values">-->
-        <!--<item>1</item>-->
-        <!--<item>0</item>-->
-        <!--<item>-1</item>-->
+    <!--<item>1</item>-->
+    <!--<item>0</item>-->
+    <!--<item>-1</item>-->
     <!--</string-array>-->
 
     <!-- Example settings for Data & Sync -->
-  <!--  <string name="pref_header_data_sync">Data &amp; sync</string>-->
+    <!--  <string name="pref_header_data_sync">Data &amp; sync</string>-->
 
     <string name="pref_title_sync_frequency">Date range</string>
     <string-array name="pref_sync_frequency_titles">
@@ -107,7 +117,6 @@
         <item>60s</item>
 
 
-
     </string-array>
     <string-array name="pref_visi_values">
         <item>0.1</item>
@@ -125,5 +134,6 @@
         <item>25</item>
         <item>60</item>
     </string-array>
+
 
 </resources>

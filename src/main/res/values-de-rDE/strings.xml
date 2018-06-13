@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Einstellungen</string>
+    <string name="title_activity_settings">Einstellungen</string>
+    <string name="pref_header_general">Allgemein</string>
+    <string name="pref_title_social_recommendations">Stoppuhr</string>
+    <string name="after">Nach %s</string>
+    <string name="pref_description_social_recommendationsOn">aktiviert</string>
+    <string name="pref_description_social_recommendationsOff">deaktiviert</string>
+    <string name="pref_visiOn">aktiviert</string>
+    <string name="pref_visiOff">deaktiviert</string>
+    <string name="reappear_msg">Tippe auf das versteckte Datum um es nochmal zu sehen!</string>
+    <string name="pref_title_sync_frequency">Zeitraum</string>
+    <string name="pref_firstweekday">Erster Tag in der Liste</string>
+    <string name="pref_title_visi_switch">Datum nur kurz  anzeigen</string>
+    <string name="pref_title_visi">Verstecke das Datum</string>
+
+    <string-array name="pref_sync_frequency_titles">
+        <item>Wähle eigenen</item>
+        <item>Aktueller Monat</item>
+        <item>Dieses Jahr</item>
+        <item>Nächstes Jahr</item>
+        <item>Die vergangenen 100 Jahre</item>
+        <item>Das 20. Jahrhundert</item>
+        <item>Das 21. Jahrhundert</item>
+        <item>1582-10-15 – heute</item>
+        <item>1600-01-01 – 2099-12-31</item>
+        <item>0001-01-01 – 9999-12-31</item>
+    </string-array>
+    <string name="about">Info</string>
+    <string name="title_activity_about">Über Guessaday</string>
+    <string name="str_author">Autor</string>
+    <string name="str_moreinfo">Mehr Informationen</string>
+    <string name="str_ok">Ok</string>
+    <string name="str_version">Version</string>
+    <string name="str_app_description">Diese App zeigt ein zufälliges Datum an. Der passende Wochentag soll dann errechnet und ausgewählt werden.</string>
+    <string name="str_howto">"Man kann leicht lernen, wie man den Wochentag für ein beliebiges Datum ausrechnet: "</string>
+</resources>

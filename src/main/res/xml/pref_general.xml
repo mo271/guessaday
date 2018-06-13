@@ -71,7 +71,7 @@
     <com.goltzkiste.guessaday.ListPreferenceCompat
         android:key="visi_pref"
         android:defaultValue="1"
-        android:summary="After %s"
+        android:summary="@string/after"
         android:entries="@array/pref_visi_titles"
         android:entryValues="@array/pref_visi_values"
         android:negativeButtonText="@null"
