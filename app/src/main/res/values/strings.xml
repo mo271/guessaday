@@ -4,8 +4,11 @@
     <string name="title_activity_settings">Settings</string>
     <string name="dstartdate" translatable="false">1900-01-01</string>
     <string name="denddate" translatable="false">2050-12-31</string>
+    <string name="startdate">Start date</string>
+    <string name="enddate">End date</string>
+    <string name="pickstartdate">Pick start date</string>
+    <string name="pickenddate">Pick end date</string>
     <string name="about">About</string>
-    <string name="title_activity_about">About Guessaday</string>
     <string name="str_app_description">This app displays a random date. You are then supposed to calculate what day of the week this day is and select the correct one.</string>
     <string name="str_author">"Author"</string>
     <string name="str_howto">If you don\'t yet know how to calculate the day of the week, you can certainly learn it:</string>
@@ -13,6 +16,8 @@
     <string name="str_url" translatable="false">https://page.mi.fu-berlin.de/moritz/guessaday</string>
     <string name="str_ok">OK</string>
     <string name="str_version">Version</string>
+    <string name="str_set">Set</string>
+    <string name="str_cancel">Cancel</string>
 
     <!-- Strings related to Settings -->
 
@@ -48,21 +53,29 @@
 
     <!-- Example settings for Data & Sync -->
     <!--  <string name="pref_header_data_sync">Data &amp; sync</string>-->
+    <string name="pitem0">Pick your own</string>
+    <string name="pitem1">This month</string>
+    <string name="pitem2">This year</string>
+    <string name="pitem3">Next year</string>
+    <string name="pitem4">The last 100 years</string>
+    <string name="pitem5">The 20th century</string>
+    <string name="pitem6">The 21th century</string>
+    <string name="pitem7">1582-10-15 – today</string>
+    <string name="pitem8">1600-01-01 – 2099-12-31</string>
+    <string name="pitem9">0001-01-01 – 9999-12-31</string>
 
     <string name="pref_title_sync_frequency">Date range</string>
     <string-array name="pref_sync_frequency_titles">
-        <item>Pick your own</item>
-        <item>This month</item>
-        <item>This year</item>
-        <item>Next year</item>
-        <item>The last 100 years</item>
-        <item>The 20th century</item>
-        <item>The 21th century</item>
-        <item>1582-10-15 – today</item>
-        <item>1600-01-01 – 2099-12-31</item>
-        <item>0001-01-01 – 9999-12-31</item>
-
-
+        <item>@string/pitem0</item>
+        <item>@string/pitem1</item>
+        <item>@string/pitem2</item>
+        <item>@string/pitem3</item>
+        <item>@string/pitem4</item>
+        <item>@string/pitem5</item>
+        <item>@string/pitem6</item>
+        <item>@string/pitem7</item>
+        <item>@string/pitem8</item>
+        <item>@string/pitem9</item>
     </string-array>
     <string-array name="pref_sync_frequency_values" translatable="false">
         <item>0</item>

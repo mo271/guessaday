@@ -44,8 +44,8 @@ public class DatePreference extends DialogPreference {
     public DatePreference(Context ctxt, AttributeSet attrs) {
         super(ctxt, attrs);
 
-        setPositiveButtonText("Set");
-        setNegativeButtonText("Cancel");
+        setPositiveButtonText(R.string.str_set);
+        setNegativeButtonText(R.string.str_cancel);
     }
 
     @Override

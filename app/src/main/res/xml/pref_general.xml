@@ -31,8 +31,8 @@
         app:dependentValue="0"/>
     <com.goltzkiste.guessaday.DatePreference
         android:key="startdate"
-        android:title="Start date"
-        android:dialogTitle="Pick start date"
+        android:title="@string/startdate"
+        android:dialogTitle="@string/pickstartdate"
         android:dependency="sync_frequency"
         android:icon="@android:color/transparent"
         android:defaultValue="@string/dstartdate"
@@ -40,8 +40,8 @@
         />
     <com.goltzkiste.guessaday.DatePreference
         android:key="enddate"
-        android:title="End date"
-        android:dialogTitle="Pick end date"
+        android:title="@string/enddate"
+        android:dialogTitle="@string/pickenddate"
         android:dependency="sync_frequency"
         android:icon="@android:color/transparent"
         android:defaultValue="@string/denddate"

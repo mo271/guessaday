@@ -1,0 +1,36 @@
+ENGLISH		GERMAN
+
+Settings		Einstellungen
+Start date		Erstes Datum
+End date		Letztes Datum
+Pick start date		Wähle Anfang
+Pick end date		Wähle Ende
+About		Info
+This app displays a random date. You are then supposed to calculate what day of the week this day is and select the correct one.		Diese App zeigt ein zufälliges Datum an. Der passende Wochentag soll dann errechnet und ausgewählt werden.
+Author		Autor
+If you don't yet know how to calculate the day of the week, you can certainly learn it:		Man kann leicht lernen, wie man den Wochentag für ein beliebiges Datum ausrechnet: 
+More Information		Mehr Informationen
+OK		Ok
+Version		Version
+Set		Ok
+Cancel		zurück
+General		Allgemein
+Timer		Stoppuhr
+Enabled		aktiviert
+Disabled		deaktiviert
+Tap on hidden date to make it reappear!		Tippe auf das versteckte Datum um es nochmal zu sehen!
+After %s		Nach %s
+Date range		Zeitraum
+First day in list		Erster Tag in der Liste
+Short date display		Datum nur kurz  anzeigen
+Hide the date		Verstecke das Datum
+Pick your own		Wähle eigenen Zeitraum
+This month		Aktueller Monat
+This year		Dieses Jahr
+Next year		Nächstes Jahr
+The last 100 years		Die vergangenen 100 Jahre
+The 20th century		Das 20. Jahrhundert
+The 21th century		Das 21. Jahrhundert
+1582-10-15 – today		1582-10-15 – heute
+1600-01-01 – 2099-12-31		1600-01-01 – 2099-12-31
+0001-01-01 – 9999-12-31		0001-01-01 – 9999-12-31
