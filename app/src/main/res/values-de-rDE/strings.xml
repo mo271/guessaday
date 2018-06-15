@@ -15,24 +15,42 @@
     <string name="pref_title_visi_switch">Datum nur kurz  anzeigen</string>
     <string name="pref_title_visi">Verstecke das Datum</string>
 
+
+    <string name="pitem0">Wähle eigenen Zeitraum</string>
+    <string name="pitem1">Aktueller Monat</string>
+    <string name="pitem2">Dieses Jahr</string>
+    <string name="pitem3">Nächstes Jahr</string>
+    <string name="pitem4">Die vergangenen 100 Jahre</string>
+    <string name="pitem5">Das 20. Jahrhundert</string>
+    <string name="pitem6">Das 21. Jahrhundert</string>
+    <string name="pitem7">1582-10-15 – heute</string>
+    <string name="pitem8">1600-01-01 – 2099-12-31</string>
+    <string name="pitem9">0001-01-01 – 9999-12-31</string>
+
+
     <string-array name="pref_sync_frequency_titles">
-        <item>Wähle eigenen</item>
-        <item>Aktueller Monat</item>
-        <item>Dieses Jahr</item>
-        <item>Nächstes Jahr</item>
-        <item>Die vergangenen 100 Jahre</item>
-        <item>Das 20. Jahrhundert</item>
-        <item>Das 21. Jahrhundert</item>
-        <item>1582-10-15 – heute</item>
-        <item>1600-01-01 – 2099-12-31</item>
-        <item>0001-01-01 – 9999-12-31</item>
+        <item>@string/pitem0</item>
+        <item>@string/pitem1</item>
+        <item>@string/pitem2</item>
+        <item>@string/pitem3</item>
+        <item>@string/pitem4</item>
+        <item>@string/pitem5</item>
+        <item>@string/pitem6</item>
+        <item>@string/pitem7</item>
+        <item>@string/pitem8</item>
+        <item>@string/pitem9</item>
     </string-array>
     <string name="about">Info</string>
-    <string name="title_activity_about">Über Guessaday</string>
     <string name="str_author">Autor</string>
     <string name="str_moreinfo">Mehr Informationen</string>
     <string name="str_ok">Ok</string>
     <string name="str_version">Version</string>
     <string name="str_app_description">Diese App zeigt ein zufälliges Datum an. Der passende Wochentag soll dann errechnet und ausgewählt werden.</string>
     <string name="str_howto">"Man kann leicht lernen, wie man den Wochentag für ein beliebiges Datum ausrechnet: "</string>
+    <string name="str_cancel">zurück</string>
+    <string name="str_set">Ok</string>
+    <string name="startdate">Erstes Datum</string>
+    <string name="enddate">Letztes Datum</string>
+    <string name="pickstartdate">Wähle Anfang</string>
+    <string name="pickenddate">Wähle Ende</string>
 </resources>
