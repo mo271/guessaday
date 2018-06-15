@@ -64,7 +64,7 @@
 
 
     </string-array>
-    <string-array name="pref_sync_frequency_values">
+    <string-array name="pref_sync_frequency_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -79,7 +79,7 @@
 
 
     <string name="pref_firstweekday">First day in list</string>
-    <string-array name="pref_firstweekday_titles">
+    <string-array name="pref_firstweekday_titles" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -88,7 +88,7 @@
         <item>5</item>
         <item>6</item>
     </string-array>
-    <string-array name="pref_firstweekday_values">
+    <string-array name="pref_firstweekday_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -100,7 +100,7 @@
     <string name="pref_title_visi_switch">Short date display</string>
 
     <string name="pref_title_visi">Hide the date</string>
-    <string-array name="pref_visi_titles">
+    <string-array name="pref_visi_titles" translatable="false">
         <item>0.1s</item>
         <item>0.25s</item>
         <item>0.5s</item>
@@ -118,7 +118,7 @@
 
 
     </string-array>
-    <string-array name="pref_visi_values">
+    <string-array name="pref_visi_values" translatable="false">
         <item>0.1</item>
         <item>0.25</item>
         <item>0.5</item>
