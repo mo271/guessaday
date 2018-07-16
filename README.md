@@ -3,7 +3,7 @@ Guessaday
 
 An android app for training mental calender caculations.
 
-For more informations, please visit https://page.mi.fu-berlin.de/moritz/guessaday/
+For more informations, please visit https://page.mi.fu-berlin.de/moritz/guessaday
 
 [<img src="https://f-droid.org/badge/get-it-on.svg"
       alt="Get it on F-Droid"
