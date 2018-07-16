@@ -1,5 +1,5 @@
-Guessaday
-=========
+<img alt="guessaday icon" src=./app/src/main/res/mipmap-hdpi/ic_launcher.png width=50px>  Guessaday 
+======
 
 An android app for training mental calender caculations.
 
