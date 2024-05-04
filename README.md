@@ -1,15 +1,12 @@
 <h1><img align="left"  alt="guessaday icon" src=./app/src/main/res/mipmap-hdpi/ic_launcher.png width=45px>Guessaday</h1>
 
-An android app for training mental calender caculations.
+An android app for training mental calender calculations.
 
-For more informations, please visit https://page.mi.fu-berlin.de/moritz/guessaday
+For more information, please visit https://firsching.ch/guessaday
 
 [<img src="https://f-droid.org/badge/get-it-on.png"
       alt="Get it on F-Droid"
       height="90">](https://f-droid.org/packages/com.goltzkiste.guessaday/)
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
-      alt="Get it on Google Play"
-      height="90">](https://play.google.com/store/apps/details?id=com.goltzkiste.guessaday)
 
 Contribute
 -----
