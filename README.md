@@ -56,6 +56,17 @@ Release signing reads `android/key.properties` (see the comment in
 signed with the debug key, which is what F-Droid's build server needs.
 Store listing texts live in `fastlane/metadata/android/`.
 
+Releasing a new version:
+
+1. Bump `version` in `pubspec.yaml` (`x.y.z+N`, with `N` strictly increasing)
+   and add `fastlane/metadata/android/*/changelogs/N.txt`.
+2. Commit, tag `vx.y.z` and push the tag.
+3. Google Play: build the bundle with `-Pstore=play` and upload it.
+4. F-Droid: nothing to do. Its update bot sees the tag and reuses the build
+   recipe in [fdroiddata](https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.goltzkiste.guessaday.yml).
+   That recipe pins the Flutter version, as does `.github/workflows/build.yml`;
+   when upgrading Flutter, change both.
+
 Launcher icons are generated from `assets/icon/icon.png`:
 
 ```sh
