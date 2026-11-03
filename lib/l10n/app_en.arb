@@ -1,0 +1,41 @@
+{
+  "@@locale": "en",
+  "appName": "Guessaday",
+  "settings": "Settings",
+  "about": "About",
+  "startDate": "Start date",
+  "endDate": "End date",
+  "pickStartDate": "Pick start date",
+  "pickEndDate": "Pick end date",
+  "appDescription": "This app displays a random date. You are then supposed to calculate what day of the week this day is and select the correct one.",
+  "author": "Author",
+  "howTo": "If you don't yet know how to calculate the day of the week, you can certainly learn it:",
+  "moreInfo": "More information",
+  "ok": "OK",
+  "version": "Version",
+  "timer": "Timer",
+  "enabled": "Enabled",
+  "disabled": "Disabled",
+  "reappearMsg": "Tap on hidden date to make it reappear!",
+  "after": "After {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {"type": "String"}
+    }
+  },
+  "dateRange": "Date range",
+  "firstDayInList": "First day in list",
+  "localeDefault": "Automatic",
+  "shortDateDisplay": "Short date display",
+  "hideTheDate": "Hide the date",
+  "rangeCustom": "Pick your own",
+  "rangeThisMonth": "This month",
+  "rangeThisYear": "This year",
+  "rangeNextYear": "Next year",
+  "rangeLast100Years": "The last 100 years",
+  "rangeCentury20": "The 20th century",
+  "rangeCentury21": "The 21st century",
+  "rangeGregorianToToday": "1582-10-15 – today",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31"
+}

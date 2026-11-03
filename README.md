@@ -1,6 +1,7 @@
-<h1><img align="left"  alt="guessaday icon" src=./app/src/main/res/mipmap-hdpi/ic_launcher.png width=45px>Guessaday</h1>
+<h1><img align="left" alt="guessaday icon" src="./assets/icon/icon.png" width="45px">Guessaday</h1>
 
-An android app for training mental calender calculations.
+An app for training mental calendar calculations: it shows a random date,
+you work out which day of the week it falls on and tap the right one.
 
 For more information, please visit https://firsching.ch/guessaday
 
@@ -8,11 +9,63 @@ For more information, please visit https://firsching.ch/guessaday
       alt="Get it on F-Droid"
       height="90">](https://f-droid.org/packages/com.goltzkiste.guessaday/)
 
-Contribute
------
+Version 2 is a Flutter rewrite of the original Java Android app (see the
+git history before the `flutter-rewrite` branch for that code). It targets
+Android, iOS, Linux desktop and the web from one Dart codebase.
 
-Feel free to improve this app! You can open an issue [here](../../issues) or make a pull request.
+## Features
 
-The app already supports all the languages in android for displaying the dates;
-you can help by translating the strings for the settings menu, by letting me know
-what all the phrases/words in the file [strings.txt](./strings.txt) should be in your language!
+- Random dates from configurable ranges (this month, this year, the 20th
+  century, the Gregorian era, year 1 to 9999, or your own start and end).
+- Stopwatch for each guess.
+- "Short date display": the date fades out after a configurable delay; tap
+  anywhere to bring it back.
+- Dates and weekday names follow the device language. The settings strings
+  are translated into English and German.
+
+## Development
+
+Requires the [Flutter SDK](https://docs.flutter.dev/get-started/install).
+
+```sh
+flutter pub get
+flutter gen-l10n          # regenerate lib/l10n/app_localizations*.dart
+flutter test
+flutter run               # on a connected device or emulator
+flutter build apk         # Android release APK
+flutter build linux       # Linux desktop
+flutter build ios         # macOS only
+```
+
+Launcher icons are generated from `assets/icon/icon.png`:
+
+```sh
+dart run flutter_launcher_icons
+```
+
+## Layout
+
+- `lib/game/game_logic.dart` – date ranges, random dates, weekday order, timing. Pure Dart, unit tested.
+- `lib/settings/` – persisted preferences and the `InheritedNotifier` that exposes them.
+- `lib/ui/` – game screen, settings screen, about dialog.
+- `lib/l10n/` – ARB translation sources and the generated localizations.
+
+## Contribute
+
+Feel free to improve this app! You can open an issue or make a pull request.
+
+## Translating
+
+Add an `app_<lang>.arb` file next to `lib/l10n/app_en.arb`, translate the
+values, and run `flutter gen-l10n`. Pull requests are welcome.
+
+## Calendar note
+
+All dates use the proleptic Gregorian calendar, which is what Dart's
+`DateTime` implements. This also applies to dates before 15 October 1582,
+where the original Java app used the Julian calendar instead. The usual
+mental-calculation methods assume Gregorian anyway.
+
+## License
+
+See [LICENSE](LICENSE).
