@@ -1,0 +1,4 @@
+Complete rewrite in Flutter.
+• Same training game, new look, dark mode.
+• First day in the weekday list now follows your language by default.
+• Settings from older versions are not carried over.

@@ -1,0 +1,4 @@
+Komplett neu geschrieben in Flutter.
+• Gleiches Spiel, neues Aussehen, dunkler Modus.
+• Der erste Wochentag in der Liste folgt jetzt standardmäßig der Sprache.
+• Einstellungen aus älteren Versionen werden nicht übernommen.

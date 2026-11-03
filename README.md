@@ -32,10 +32,29 @@ flutter pub get
 flutter gen-l10n          # regenerate lib/l10n/app_localizations*.dart
 flutter test
 flutter run               # on a connected device or emulator
-flutter build apk         # Android release APK
+flutter build apk         # Android release APK (F-Droid id)
 flutter build linux       # Linux desktop
 flutter build ios         # macOS only
 ```
+
+## Store builds
+
+The app has two Android application ids:
+
+- `com.goltzkiste.guessaday` is the default and what F-Droid builds. It is
+  the id the app has had since the first release.
+- `ch.firsching.guessaday` is used on Google Play, where the old name was
+  not available to the current developer account. Select it with a Gradle
+  property:
+
+```sh
+flutter build appbundle --release -Pstore=play
+```
+
+Release signing reads `android/key.properties` (see the comment in
+`android/app/build.gradle.kts`). Without that file the release build is
+signed with the debug key, which is what F-Droid's build server needs.
+Store listing texts live in `fastlane/metadata/android/`.
 
 Launcher icons are generated from `assets/icon/icon.png`:
 
