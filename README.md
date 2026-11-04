@@ -98,6 +98,11 @@ All dates use the proleptic Gregorian calendar, which is what Dart's
 where the original Java app used the Julian calendar instead. The usual
 mental-calculation methods assume Gregorian anyway.
 
+## Fonts
+
+The app text is set in [Libertinus Serif](https://github.com/alerque/libertinus),
+bundled under `fonts/` with its SIL Open Font License (`fonts/OFL-Libertinus.txt`).
+
 ## License
 
 See [LICENSE](LICENSE).

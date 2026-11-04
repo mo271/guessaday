@@ -21,19 +21,40 @@ class GuessadayApp extends StatelessWidget {
 
   static const _seed = Color(0xFF3F51B5);
 
+  /// Libertinus Serif (bundled, OFL) for all text. Glyphs it lacks, e.g. in
+  /// CJK or Arabic dates, fall back to the platform fonts automatically.
+  static ThemeData _theme(Brightness brightness) {
+    final base = ThemeData(
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: _seed,
+        brightness: brightness,
+      ),
+      fontFamily: 'Libertinus Serif',
+    );
+    // Libertinus has a small x-height, so Material's default sizes read a
+    // step smaller than intended. Lists, dialogs and the app bar get a bump.
+    final text = base.textTheme;
+    return base.copyWith(
+      textTheme: text.copyWith(
+        bodyLarge: text.bodyLarge?.copyWith(fontSize: 20),
+        bodyMedium: text.bodyMedium?.copyWith(fontSize: 16),
+        titleLarge: text.titleLarge?.copyWith(fontSize: 26),
+      ),
+      listTileTheme: ListTileThemeData(
+        titleTextStyle: text.bodyLarge?.copyWith(fontSize: 20),
+        subtitleTextStyle: text.bodyMedium?.copyWith(fontSize: 16),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SettingsScope(
       settings: settings,
       child: MaterialApp(
         onGenerateTitle: (context) => AppLocalizations.of(context).appName,
-        theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: _seed)),
-        darkTheme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: _seed,
-            brightness: Brightness.dark,
-          ),
-        ),
+        theme: _theme(Brightness.light),
+        darkTheme: _theme(Brightness.dark),
         localizationsDelegates: const [
           FallbackAppLocalizationsDelegate(),
           GlobalMaterialLocalizations.delegate,

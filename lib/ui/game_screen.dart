@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../game/game_logic.dart';
+import 'fit_text.dart';
 import '../l10n/app_localizations.dart';
 import '../settings/settings.dart';
 import '../settings/settings_scope.dart';
@@ -141,42 +142,66 @@ class _GameScreenState extends State<GameScreen> {
         behavior: HitTestBehavior.opaque,
         onTap: _onBackgroundTap,
         child: SafeArea(
-          child: Column(
-            children: [
-              Expanded(
-                flex: 2,
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24),
-                    child: AnimatedOpacity(
-                      opacity: _dateVisible ? 1 : 0,
-                      duration: Duration(
-                        milliseconds: (fadeSeconds * 1000).round(),
-                      ),
-                      child: Text(
-                        DateFormat.yMMMMd(locale).format(round.date),
-                        textAlign: TextAlign.center,
-                        style: textTheme.headlineMedium,
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              // The seven weekday rows take three quarters of the height; the
+              // date and the timer share the rest. The row font is as large
+              // as the longest weekday name allows.
+              final rowHeight = constraints.maxHeight * 0.75 / 7;
+              final names = [
+                for (final weekday in weekdayOrder(first))
+                  weekdayName(locale, weekday),
+              ];
+              final rowFontSize = fitFontSize(
+                texts: names,
+                style: textTheme.titleLarge!,
+                maxWidth: constraints.maxWidth,
+                rowHeight: rowHeight,
+              );
+              return Column(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Center(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 24),
+                        child: AnimatedOpacity(
+                          opacity: _dateVisible ? 1 : 0,
+                          duration: Duration(
+                            milliseconds: (fadeSeconds * 1000).round(),
+                          ),
+                          child: Text(
+                            DateFormat.yMMMMd(locale).format(round.date),
+                            textAlign: TextAlign.center,
+                            style: textTheme.displaySmall?.copyWith(
+                              fontSize: 44,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ),
-              for (final weekday in weekdayOrder(first))
-                _WeekdayRow(
-                  name: weekdayName(locale, weekday),
-                  state: _rowState(weekday, round),
-                  onTap: _answered ? null : () => _onGuess(weekday),
-                ),
-              Expanded(
-                child: Center(
-                  child: Text(
-                    showTimer ? formatElapsed(_elapsed!) : '',
-                    style: textTheme.titleMedium,
+                  for (final weekday in weekdayOrder(first))
+                    _WeekdayRow(
+                      name: weekdayName(locale, weekday),
+                      state: _rowState(weekday, round),
+                      height: rowHeight,
+                      fontSize: rowFontSize,
+                      onTap: _answered ? null : () => _onGuess(weekday),
+                    ),
+                  Expanded(
+                    child: Center(
+                      child: Text(
+                        showTimer ? formatElapsed(_elapsed!) : '',
+                        style: textTheme.headlineMedium?.copyWith(
+                          fontFeatures: const [FontFeature.tabularFigures()],
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
+                ],
+              );
+            },
           ),
         ),
       ),
@@ -197,17 +222,22 @@ class _WeekdayRow extends StatelessWidget {
   const _WeekdayRow({
     required this.name,
     required this.state,
+    required this.height,
+    required this.fontSize,
     required this.onTap,
   });
 
   final String name;
   final _RowState state;
+  final double height;
+  final double fontSize;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    final base = Theme.of(context).textTheme.titleLarge!;
+    final base = Theme.of(context).textTheme.titleLarge!
+        .copyWith(fontSize: fontSize);
     final style = switch (state) {
       _RowState.open => base,
       _RowState.correct => base.copyWith(
@@ -225,9 +255,13 @@ class _WeekdayRow extends StatelessWidget {
     };
     return InkWell(
       onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        child: Center(child: Text(name, style: style)),
+      child: SizedBox(
+        height: height,
+        child: Center(
+          // The size already follows the screen, so the system text scale
+          // must not be applied on top of it.
+          child: Text(name, style: style, textScaler: TextScaler.noScaling),
+        ),
       ),
     );
   }
