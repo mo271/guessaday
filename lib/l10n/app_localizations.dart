@@ -295,6 +295,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'0001-01-01 – 9999-12-31'**
   String get range1To9999;
+
+  /// No description provided for @statistics.
+  ///
+  /// In en, this message translates to:
+  /// **'Statistics'**
+  String get statistics;
+
+  /// No description provided for @rounds.
+  ///
+  /// In en, this message translates to:
+  /// **'Rounds'**
+  String get rounds;
+
+  /// No description provided for @accuracy.
+  ///
+  /// In en, this message translates to:
+  /// **'Accuracy'**
+  String get accuracy;
+
+  /// No description provided for @averageTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Average time'**
+  String get averageTime;
+
+  /// No description provided for @bestTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Best time'**
+  String get bestTime;
+
+  /// No description provided for @currentStreak.
+  ///
+  /// In en, this message translates to:
+  /// **'Current streak'**
+  String get currentStreak;
+
+  /// No description provided for @bestStreak.
+  ///
+  /// In en, this message translates to:
+  /// **'Best streak'**
+  String get bestStreak;
+
+  /// No description provided for @allTime.
+  ///
+  /// In en, this message translates to:
+  /// **'All time'**
+  String get allTime;
+
+  /// No description provided for @lastNRounds.
+  ///
+  /// In en, this message translates to:
+  /// **'Last {n} rounds'**
+  String lastNRounds(int n);
+
+  /// No description provided for @nRounds.
+  ///
+  /// In en, this message translates to:
+  /// **'{n} rounds'**
+  String nRounds(int n);
+
+  /// No description provided for @allRanges.
+  ///
+  /// In en, this message translates to:
+  /// **'All date ranges'**
+  String get allRanges;
+
+  /// No description provided for @noRoundsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No rounds played yet. Statistics appear here after your first answer.'**
+  String get noRoundsYet;
+
+  /// No description provided for @recentWindow.
+  ///
+  /// In en, this message translates to:
+  /// **'Rounds in recent statistics'**
+  String get recentWindow;
+
+  /// No description provided for @resetStatistics.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset statistics'**
+  String get resetStatistics;
+
+  /// No description provided for @resetStatisticsConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete all recorded rounds? This cannot be undone.'**
+  String get resetStatisticsConfirm;
+
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @withAverage.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} · ⌀ {time}'**
+  String withAverage(int count, String time);
 }
 
 class _AppLocalizationsDelegate

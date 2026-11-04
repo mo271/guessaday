@@ -122,6 +122,23 @@ class SettingsScreen extends StatelessWidget {
               if (picked != null) settings.setHideAfterSeconds(picked);
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.insights_outlined),
+            title: Text(l10n.recentWindow),
+            subtitle: Text(l10n.nRounds(settings.recentWindow)),
+            onTap: () async {
+              final picked = await pickOption<int>(
+                context,
+                title: l10n.recentWindow,
+                current: settings.recentWindow,
+                options: [
+                  for (final n in Settings.recentWindowOptions)
+                    (n, l10n.nRounds(n)),
+                ],
+              );
+              if (picked != null) settings.setRecentWindow(picked);
+            },
+          ),
         ],
       ),
     );

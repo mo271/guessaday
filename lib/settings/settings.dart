@@ -16,7 +16,8 @@ class Settings extends ChangeNotifier {
       customEnd = _readDate(_prefs, _kEnd) ?? utcDay(2050, 12, 31),
       firstWeekday = _prefs.getInt(_kFirstWeekday) ?? 0,
       hideDate = _prefs.getBool(_kHide) ?? false,
-      hideAfterSeconds = _prefs.getDouble(_kHideAfter) ?? 1.0;
+      hideAfterSeconds = _prefs.getDouble(_kHideAfter) ?? 1.0,
+      recentWindow = _prefs.getInt(_kRecentWindow) ?? 20;
 
   static const _kTimer = 'timerEnabled';
   static const _kPreset = 'rangePreset';
@@ -25,11 +26,15 @@ class Settings extends ChangeNotifier {
   static const _kFirstWeekday = 'firstWeekday';
   static const _kHide = 'hideDate';
   static const _kHideAfter = 'hideAfterSeconds';
+  static const _kRecentWindow = 'recentWindow';
 
   /// Choices for how long the date stays visible, in seconds.
   static const hideAfterOptions = <double>[
     0.1, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 5, 10, 25, 60, //
   ];
+
+  /// Choices for how many recent rounds the "recent" statistics cover.
+  static const recentWindowOptions = <int>[5, 10, 20, 50, 100];
 
   final SharedPreferences _prefs;
 
@@ -43,6 +48,9 @@ class Settings extends ChangeNotifier {
   int firstWeekday;
   bool hideDate;
   double hideAfterSeconds;
+
+  /// How many of the latest rounds the "recent" statistics cover.
+  int recentWindow;
 
   /// Everything that determines which dates can be asked.
   (RangePreset, DateTime, DateTime) get rangeKey =>
@@ -95,6 +103,12 @@ class Settings extends ChangeNotifier {
   void setHideAfterSeconds(double value) {
     hideAfterSeconds = value;
     _prefs.setDouble(_kHideAfter, value);
+    notifyListeners();
+  }
+
+  void setRecentWindow(int value) {
+    recentWindow = value;
+    _prefs.setInt(_kRecentWindow, value);
     notifyListeners();
   }
 

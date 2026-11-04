@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:guessaday/main.dart';
 import 'package:guessaday/settings/settings.dart';
+import 'package:guessaday/stats/stats.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  Future<Settings> freshSettings([
-    Map<String, Object> values = const {},
-  ]) async {
+  Future<GuessadayApp> freshApp([Map<String, Object> values = const {}]) async {
     SharedPreferences.setMockInitialValues(values);
-    return Settings(await SharedPreferences.getInstance());
+    final prefs = await SharedPreferences.getInstance();
+    return GuessadayApp(settings: Settings(prefs), stats: Stats(prefs));
   }
 
   testWidgets('shows a date, seven weekdays, and reacts to a guess', (
     tester,
   ) async {
-    await tester.pumpWidget(GuessadayApp(settings: await freshSettings()));
+    await tester.pumpWidget(await freshApp());
     await tester.pumpAndSettle();
 
     for (final day in [
@@ -39,7 +39,7 @@ void main() {
   });
 
   testWidgets('settings screen opens and shows the date range', (tester) async {
-    await tester.pumpWidget(GuessadayApp(settings: await freshSettings()));
+    await tester.pumpWidget(await freshApp());
     await tester.pumpAndSettle();
 
     await tester.tap(find.byIcon(Icons.settings_outlined));
@@ -54,12 +54,7 @@ void main() {
     tester,
   ) async {
     await tester.pumpWidget(
-      GuessadayApp(
-        settings: await freshSettings({
-          'hideDate': true,
-          'hideAfterSeconds': 0.5,
-        }),
-      ),
+      await freshApp({'hideDate': true, 'hideAfterSeconds': 0.5}),
     );
     await tester.pumpAndSettle();
 

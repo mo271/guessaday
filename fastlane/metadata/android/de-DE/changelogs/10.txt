@@ -1,0 +1,3 @@
+• Neues Aussehen: Die App verwendet die Schrift Libertinus Serif, mit großem Datum und an den Bildschirm angepassten Wochentagen.
+• Statistik: Runden, Trefferquote, Durchschnitts- und Bestzeit je Zeitraum, insgesamt und für die letzten Runden, dazu aktuelle und längste Serie.
+• Einstellung, wie viele der letzten Runden die Statistik umfasst.

@@ -111,4 +111,66 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get range1To9999 => '0001-01-01 – 9999-12-31';
+
+  @override
+  String get statistics => 'Statistics';
+
+  @override
+  String get rounds => 'Rounds';
+
+  @override
+  String get accuracy => 'Accuracy';
+
+  @override
+  String get averageTime => 'Average time';
+
+  @override
+  String get bestTime => 'Best time';
+
+  @override
+  String get currentStreak => 'Current streak';
+
+  @override
+  String get bestStreak => 'Best streak';
+
+  @override
+  String get allTime => 'All time';
+
+  @override
+  String lastNRounds(int n) {
+    return 'Last $n rounds';
+  }
+
+  @override
+  String nRounds(int n) {
+    return '$n rounds';
+  }
+
+  @override
+  String get allRanges => 'All date ranges';
+
+  @override
+  String get noRoundsYet =>
+      'No rounds played yet. Statistics appear here after your first answer.';
+
+  @override
+  String get recentWindow => 'Rounds in recent statistics';
+
+  @override
+  String get resetStatistics => 'Reset statistics';
+
+  @override
+  String get resetStatisticsConfirm =>
+      'Delete all recorded rounds? This cannot be undone.';
+
+  @override
+  String get delete => 'Delete';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String withAverage(int count, String time) {
+    return '$count · ⌀ $time';
+  }
 }

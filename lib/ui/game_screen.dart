@@ -9,8 +9,11 @@ import 'fit_text.dart';
 import '../l10n/app_localizations.dart';
 import '../settings/settings.dart';
 import '../settings/settings_scope.dart';
+import '../stats/stats.dart';
+import '../stats/stats_scope.dart';
 import 'about_dialog.dart';
 import 'settings_screen.dart';
+import 'stats_screen.dart';
 import 'weekday_names.dart';
 
 class GameScreen extends StatefulWidget {
@@ -85,11 +88,23 @@ class _GameScreenState extends State<GameScreen> {
   void _onGuess(int weekday) {
     if (_answered) return;
     final settings = SettingsScope.read(context);
+    final elapsed = DateTime.now().difference(_round!.startedAt);
     setState(() {
       _guess = weekday;
-      _elapsed = DateTime.now().difference(_round!.startedAt);
+      _elapsed = elapsed;
       _scheduleHide(settings);
     });
+    StatsScope.read(context).record(
+      RoundResult(
+        rangeId: rangeIdFor(
+          settings.preset,
+          settings.customStart,
+          settings.customEnd,
+        ),
+        correct: weekday == _round!.correctWeekday,
+        millis: settings.timerEnabled ? elapsed.inMilliseconds : null,
+      ),
+    );
   }
 
   /// Tapping anywhere else: next round once answered, otherwise bring a
@@ -124,6 +139,13 @@ class _GameScreenState extends State<GameScreen> {
       appBar: AppBar(
         title: Text(l10n.appName),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.insights_outlined),
+            tooltip: l10n.statistics,
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const StatsScreen()),
+            ),
+          ),
           IconButton(
             icon: const Icon(Icons.settings_outlined),
             tooltip: l10n.settings,

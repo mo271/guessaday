@@ -112,4 +112,66 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get range1To9999 => '0001-01-01 – 9999-12-31';
+
+  @override
+  String get statistics => 'Statistik';
+
+  @override
+  String get rounds => 'Runden';
+
+  @override
+  String get accuracy => 'Trefferquote';
+
+  @override
+  String get averageTime => 'Durchschnittszeit';
+
+  @override
+  String get bestTime => 'Bestzeit';
+
+  @override
+  String get currentStreak => 'Aktuelle Serie';
+
+  @override
+  String get bestStreak => 'Längste Serie';
+
+  @override
+  String get allTime => 'Insgesamt';
+
+  @override
+  String lastNRounds(int n) {
+    return 'Letzte $n Runden';
+  }
+
+  @override
+  String nRounds(int n) {
+    return '$n Runden';
+  }
+
+  @override
+  String get allRanges => 'Alle Zeiträume';
+
+  @override
+  String get noRoundsYet =>
+      'Noch keine Runden gespielt. Nach der ersten Antwort erscheint hier die Statistik.';
+
+  @override
+  String get recentWindow => 'Runden in der aktuellen Statistik';
+
+  @override
+  String get resetStatistics => 'Statistik zurücksetzen';
+
+  @override
+  String get resetStatisticsConfirm =>
+      'Alle gespeicherten Runden löschen? Das lässt sich nicht rückgängig machen.';
+
+  @override
+  String get delete => 'Löschen';
+
+  @override
+  String get cancel => 'Abbrechen';
+
+  @override
+  String withAverage(int count, String time) {
+    return '$count · ⌀ $time';
+  }
 }

@@ -1,0 +1,3 @@
+• New look: the app is set in Libertinus Serif, with a large date and weekday rows sized to your screen.
+• Statistics: rounds, accuracy, average and best time per date range, all-time and for the latest rounds, plus your current and best streak.
+• Setting for how many recent rounds the statistics cover.

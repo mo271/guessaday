@@ -20,7 +20,9 @@
   "after": "After {duration}",
   "@after": {
     "placeholders": {
-      "duration": {"type": "String"}
+      "duration": {
+        "type": "String"
+      }
     }
   },
   "dateRange": "Date range",
@@ -37,5 +39,47 @@
   "rangeCentury21": "The 21st century",
   "rangeGregorianToToday": "1582-10-15 – today",
   "range1600To2099": "1600-01-01 – 2099-12-31",
-  "range1To9999": "0001-01-01 – 9999-12-31"
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Statistics",
+  "rounds": "Rounds",
+  "accuracy": "Accuracy",
+  "averageTime": "Average time",
+  "bestTime": "Best time",
+  "currentStreak": "Current streak",
+  "bestStreak": "Best streak",
+  "allTime": "All time",
+  "lastNRounds": "Last {n} rounds",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} rounds",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "All date ranges",
+  "noRoundsYet": "No rounds played yet. Statistics appear here after your first answer.",
+  "recentWindow": "Rounds in recent statistics",
+  "resetStatistics": "Reset statistics",
+  "resetStatisticsConfirm": "Delete all recorded rounds? This cannot be undone.",
+  "delete": "Delete",
+  "cancel": "Cancel",
+  "withAverage": "{count} · ⌀ {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  }
 }

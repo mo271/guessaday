@@ -6,18 +6,21 @@ import 'l10n/app_localizations.dart';
 import 'l10n/l10n.dart';
 import 'settings/settings.dart';
 import 'settings/settings_scope.dart';
+import 'stats/stats.dart';
+import 'stats/stats_scope.dart';
 import 'ui/game_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
-  runApp(GuessadayApp(settings: Settings(prefs)));
+  runApp(GuessadayApp(settings: Settings(prefs), stats: Stats(prefs)));
 }
 
 class GuessadayApp extends StatelessWidget {
-  const GuessadayApp({super.key, required this.settings});
+  const GuessadayApp({super.key, required this.settings, required this.stats});
 
   final Settings settings;
+  final Stats stats;
 
   static const _seed = Color(0xFF3F51B5);
 
@@ -51,18 +54,21 @@ class GuessadayApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return SettingsScope(
       settings: settings,
-      child: MaterialApp(
-        onGenerateTitle: (context) => AppLocalizations.of(context).appName,
-        theme: _theme(Brightness.light),
-        darkTheme: _theme(Brightness.dark),
-        localizationsDelegates: const [
-          FallbackAppLocalizationsDelegate(),
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: supportedLocales,
-        home: const GameScreen(),
+      child: StatsScope(
+        stats: stats,
+        child: MaterialApp(
+          onGenerateTitle: (context) => AppLocalizations.of(context).appName,
+          theme: _theme(Brightness.light),
+          darkTheme: _theme(Brightness.dark),
+          localizationsDelegates: const [
+            FallbackAppLocalizationsDelegate(),
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: supportedLocales,
+          home: const GameScreen(),
+        ),
       ),
     );
   }
