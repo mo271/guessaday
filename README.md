@@ -64,8 +64,10 @@ Releasing a new version:
 3. Google Play: build the bundle with `-Pstore=play` and upload it.
 4. F-Droid: nothing to do. Its update bot sees the tag and reuses the build
    recipe in [fdroiddata](https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.goltzkiste.guessaday.yml).
-   That recipe pins the Flutter version, as does `.github/workflows/build.yml`;
-   when upgrading Flutter, change both.
+   Both that recipe and CI read the exact Flutter version from
+   `environment.flutter` in `pubspec.yaml`; when upgrading Flutter, change it
+   there. F-Droid ships one APK per ABI with version code `N * 10 + abi`
+   (see `android/app/build.gradle.kts`); Play gets the bundle with plain `N`.
 
 Launcher icons are generated from `assets/icon/icon.png`:
 
