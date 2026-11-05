@@ -7,6 +7,9 @@ import 'package:intl/intl.dart';
 import '../game/game_logic.dart';
 import 'fit_text.dart';
 import '../l10n/app_localizations.dart';
+import '../reminders/reminder_schedule.dart';
+import '../reminders/reminders.dart';
+import '../reminders/reminders_scope.dart';
 import '../settings/settings.dart';
 import '../settings/settings_scope.dart';
 import '../stats/stats.dart';
@@ -31,6 +34,7 @@ class _GameScreenState extends State<GameScreen> {
   bool _dateVisible = true;
   Timer? _hideTimer;
   (RangePreset, DateTime, DateTime)? _rangeKey;
+  Reminders? _reminders;
 
   bool get _answered => _guess != null;
 
@@ -46,15 +50,34 @@ class _GameScreenState extends State<GameScreen> {
     } else if (!_answered) {
       _scheduleHide(settings);
     }
+    if (_reminders == null) {
+      _reminders = RemindersScope.of(context);
+      _reminders!.practice.addListener(_onPracticeRequest);
+      // A reminder that launched the app may already be waiting; handle it
+      // once this frame is built rather than from inside the build phase.
+      WidgetsBinding.instance.addPostFrameCallback((_) => _onPracticeRequest());
+    }
   }
 
   @override
   void dispose() {
     _hideTimer?.cancel();
+    _reminders?.practice.removeListener(_onPracticeRequest);
     super.dispose();
   }
 
-  void _startRound(Settings settings) {
+  /// The user opened a reminder: show its date as the next round.
+  void _onPracticeRequest() {
+    final ReminderPayload? payload = _reminders?.practice.value;
+    if (payload == null || !mounted) return;
+    _reminders!.practice.value = null;
+    Navigator.of(context).popUntil((route) => route.isFirst);
+    setState(
+      () => _startRound(SettingsScope.read(context), date: payload.date),
+    );
+  }
+
+  void _startRound(Settings settings, {DateTime? date}) {
     final range = rangeForPreset(
       settings.preset,
       today: DateTime.now(),
@@ -62,7 +85,7 @@ class _GameScreenState extends State<GameScreen> {
       customEnd: settings.customEnd,
     );
     _round = Round(
-      date: randomDateIn(range, _random),
+      date: date ?? randomDateIn(range, _random),
       startedAt: DateTime.now(),
     );
     _guess = null;

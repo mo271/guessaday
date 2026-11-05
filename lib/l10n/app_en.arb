@@ -81,5 +81,22 @@
         "type": "String"
       }
     }
-  }
+  },
+  "practiceReminders": "Practice reminders",
+  "practiceRemindersHint": "Random dates as notifications during the day",
+  "remindersPerDay": "Reminders per day",
+  "nPerDay": "{n, plural, =1{Once a day} =2{Twice a day} other{{n} times a day}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Earliest reminder",
+  "latestReminder": "Latest reminder",
+  "notificationsBlocked": "Notifications are turned off for Guessaday. Allow them in the system settings to get reminders.",
+  "reminderTitle": "Which day of the week?",
+  "reveal": "Reveal",
+  "practice": "Practice"
 }

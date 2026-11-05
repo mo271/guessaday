@@ -20,6 +20,10 @@ Android, iOS, Linux desktop and the web from one Dart codebase.
 - Stopwatch for each guess.
 - "Short date display": the date fades out after a configurable delay; tap
   anywhere to bring it back.
+- Statistics per date range: accuracy, times and streaks.
+- Optional practice reminders: a few random dates a day arrive as
+  notifications, with "Reveal" and "Practice" buttons. Off by default; the
+  notification permission is only requested when you turn them on.
 - Dates and weekday names follow the device language. The settings strings
   are translated into English and German.
 
@@ -79,7 +83,15 @@ dart run flutter_launcher_icons
 
 - `lib/game/game_logic.dart` – date ranges, random dates, weekday order, timing. Pure Dart, unit tested.
 - `lib/settings/` – persisted preferences and the `InheritedNotifier` that exposes them.
-- `lib/ui/` – game screen, settings screen, about dialog.
+- `lib/stats/` – recorded rounds and their summaries.
+- `lib/reminders/` – practice reminders: `reminder_schedule.dart` draws the
+  random moments (pure Dart, unit tested), `reminder_sync.dart` keeps the
+  scheduled notifications in line with the settings, and
+  `local_notifications_backend.dart` talks to `flutter_local_notifications`.
+  Reminders are scheduled a week ahead and refreshed whenever the app is
+  opened. "Reveal" runs in a background isolate and replaces the question
+  with the answer; "Practice" opens the app on that date.
+- `lib/ui/` – game screen, settings screen, statistics screen, about dialog.
 - `lib/l10n/` – ARB translation sources and the generated localizations.
 
 ## Contribute

@@ -3,6 +3,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../game/game_logic.dart';
 
+/// Reminder settings that matter for scheduling, see [Settings.reminderKey].
+typedef ReminderKey = (bool, int, int, int, RangePreset, DateTime, DateTime);
+
 /// User preferences, persisted with shared_preferences.
 class Settings extends ChangeNotifier {
   Settings(this._prefs)
@@ -17,7 +20,11 @@ class Settings extends ChangeNotifier {
       firstWeekday = _prefs.getInt(_kFirstWeekday) ?? 0,
       hideDate = _prefs.getBool(_kHide) ?? false,
       hideAfterSeconds = _prefs.getDouble(_kHideAfter) ?? 1.0,
-      recentWindow = _prefs.getInt(_kRecentWindow) ?? 20;
+      recentWindow = _prefs.getInt(_kRecentWindow) ?? 20,
+      remindersEnabled = _prefs.getBool(_kReminders) ?? false,
+      remindersPerDay = _prefs.getInt(_kRemindersPerDay) ?? 2,
+      reminderStartMinute = _prefs.getInt(_kReminderStart) ?? 9 * 60,
+      reminderEndMinute = _prefs.getInt(_kReminderEnd) ?? 21 * 60;
 
   static const _kTimer = 'timerEnabled';
   static const _kPreset = 'rangePreset';
@@ -27,6 +34,10 @@ class Settings extends ChangeNotifier {
   static const _kHide = 'hideDate';
   static const _kHideAfter = 'hideAfterSeconds';
   static const _kRecentWindow = 'recentWindow';
+  static const _kReminders = 'remindersEnabled';
+  static const _kRemindersPerDay = 'remindersPerDay';
+  static const _kReminderStart = 'reminderStartMinute';
+  static const _kReminderEnd = 'reminderEndMinute';
 
   /// Choices for how long the date stays visible, in seconds.
   static const hideAfterOptions = <double>[
@@ -35,6 +46,11 @@ class Settings extends ChangeNotifier {
 
   /// Choices for how many recent rounds the "recent" statistics cover.
   static const recentWindowOptions = <int>[5, 10, 20, 50, 100];
+
+  /// Choices for how many practice reminders a day brings. Reminders are
+  /// scheduled a week ahead, and iOS allows 64 pending notifications, so
+  /// the largest choice stays below 64 / 7.
+  static const remindersPerDayOptions = <int>[1, 2, 3, 5, 8];
 
   final SharedPreferences _prefs;
 
@@ -51,6 +67,27 @@ class Settings extends ChangeNotifier {
 
   /// How many of the latest rounds the "recent" statistics cover.
   int recentWindow;
+
+  /// Random practice reminders as notifications. Off until the user turns
+  /// them on, which is also when notification permission is requested.
+  bool remindersEnabled;
+  int remindersPerDay;
+
+  /// Reminders only arrive between these two times of day, given as
+  /// minutes since midnight. The window may wrap past midnight.
+  int reminderStartMinute;
+  int reminderEndMinute;
+
+  /// Everything that determines when and what to remind.
+  ReminderKey get reminderKey => (
+    remindersEnabled,
+    remindersPerDay,
+    reminderStartMinute,
+    reminderEndMinute,
+    preset,
+    customStart,
+    customEnd,
+  );
 
   /// Everything that determines which dates can be asked.
   (RangePreset, DateTime, DateTime) get rangeKey =>
@@ -109,6 +146,30 @@ class Settings extends ChangeNotifier {
   void setRecentWindow(int value) {
     recentWindow = value;
     _prefs.setInt(_kRecentWindow, value);
+    notifyListeners();
+  }
+
+  void setRemindersEnabled(bool value) {
+    remindersEnabled = value;
+    _prefs.setBool(_kReminders, value);
+    notifyListeners();
+  }
+
+  void setRemindersPerDay(int value) {
+    remindersPerDay = value;
+    _prefs.setInt(_kRemindersPerDay, value);
+    notifyListeners();
+  }
+
+  void setReminderStartMinute(int value) {
+    reminderStartMinute = value;
+    _prefs.setInt(_kReminderStart, value);
+    notifyListeners();
+  }
+
+  void setReminderEndMinute(int value) {
+    reminderEndMinute = value;
+    _prefs.setInt(_kReminderEnd, value);
     notifyListeners();
   }
 

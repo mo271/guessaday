@@ -174,4 +174,45 @@ class AppLocalizationsDe extends AppLocalizations {
   String withAverage(int count, String time) {
     return '$count · ⌀ $time';
   }
+
+  @override
+  String get practiceReminders => 'Übungserinnerungen';
+
+  @override
+  String get practiceRemindersHint =>
+      'Zufällige Daten als Benachrichtigung über den Tag verteilt';
+
+  @override
+  String get remindersPerDay => 'Erinnerungen pro Tag';
+
+  @override
+  String nPerDay(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n-mal täglich',
+      two: 'Zweimal täglich',
+      one: 'Einmal täglich',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get earliestReminder => 'Früheste Erinnerung';
+
+  @override
+  String get latestReminder => 'Späteste Erinnerung';
+
+  @override
+  String get notificationsBlocked =>
+      'Benachrichtigungen sind für Guessaday ausgeschaltet. Erlaube sie in den Systemeinstellungen, um Erinnerungen zu erhalten.';
+
+  @override
+  String get reminderTitle => 'Welcher Wochentag?';
+
+  @override
+  String get reveal => 'Auflösen';
+
+  @override
+  String get practice => 'Üben';
 }

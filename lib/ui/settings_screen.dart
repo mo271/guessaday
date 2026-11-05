@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import '../game/game_logic.dart';
 import '../l10n/app_localizations.dart';
 import '../l10n/l10n.dart';
+import '../reminders/reminders_scope.dart';
 import '../settings/settings.dart';
 import '../settings/settings_scope.dart';
 import 'weekday_names.dart';
@@ -14,10 +15,14 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final settings = SettingsScope.of(context);
+    final reminders = RemindersScope.of(context);
     final l10n = AppLocalizations.of(context);
     final locale = Localizations.localeOf(context).toString();
     final dateFormat = DateFormat.yMMMd(locale);
     final isCustom = settings.preset == RangePreset.custom;
+    final timeFormat = DateFormat.jm(locale);
+    String minuteLabel(int minute) =>
+        timeFormat.format(DateTime(2024, 1, 1, 0, minute));
 
     String seconds(double s) =>
         '${NumberFormat.decimalPattern(locale).format(s)}s';
@@ -139,9 +144,90 @@ class SettingsScreen extends StatelessWidget {
               if (picked != null) settings.setRecentWindow(picked);
             },
           ),
+          if (reminders.supported) ...[
+            const Divider(),
+            SwitchListTile(
+              secondary: const Icon(Icons.notifications_outlined),
+              title: Text(l10n.practiceReminders),
+              subtitle: Text(l10n.practiceRemindersHint),
+              value: settings.remindersEnabled,
+              onChanged: (value) async {
+                if (!value) {
+                  settings.setRemindersEnabled(false);
+                  return;
+                }
+                // The system permission prompt appears only here, when the
+                // user asks for reminders.
+                final granted = await reminders.requestPermission();
+                if (granted) {
+                  settings.setRemindersEnabled(true);
+                } else if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text(l10n.notificationsBlocked)),
+                  );
+                }
+              },
+            ),
+            ListTile(
+              leading: const SizedBox(width: 24),
+              enabled: settings.remindersEnabled,
+              title: Text(l10n.remindersPerDay),
+              subtitle: Text(l10n.nPerDay(settings.remindersPerDay)),
+              onTap: () async {
+                final picked = await pickOption<int>(
+                  context,
+                  title: l10n.remindersPerDay,
+                  current: settings.remindersPerDay,
+                  options: [
+                    for (final n in Settings.remindersPerDayOptions)
+                      (n, l10n.nPerDay(n)),
+                  ],
+                );
+                if (picked != null) settings.setRemindersPerDay(picked);
+              },
+            ),
+            ListTile(
+              leading: const SizedBox(width: 24),
+              enabled: settings.remindersEnabled,
+              title: Text(l10n.earliestReminder),
+              subtitle: Text(minuteLabel(settings.reminderStartMinute)),
+              onTap: () => _pickMinute(
+                context,
+                l10n.earliestReminder,
+                settings.reminderStartMinute,
+                settings.setReminderStartMinute,
+              ),
+            ),
+            ListTile(
+              leading: const SizedBox(width: 24),
+              enabled: settings.remindersEnabled,
+              title: Text(l10n.latestReminder),
+              subtitle: Text(minuteLabel(settings.reminderEndMinute)),
+              onTap: () => _pickMinute(
+                context,
+                l10n.latestReminder,
+                settings.reminderEndMinute,
+                settings.setReminderEndMinute,
+              ),
+            ),
+          ],
         ],
       ),
     );
+  }
+
+  Future<void> _pickMinute(
+    BuildContext context,
+    String title,
+    int current,
+    void Function(int) onPicked,
+  ) async {
+    final picked = await showTimePicker(
+      context: context,
+      helpText: title,
+      initialTime: TimeOfDay(hour: current ~/ 60, minute: current % 60),
+    );
+    if (picked != null) onPicked(picked.hour * 60 + picked.minute);
   }
 
   Future<void> _pickDate(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:guessaday/main.dart';
+import 'package:guessaday/reminders/reminders.dart';
 import 'package:guessaday/settings/settings.dart';
 import 'package:guessaday/stats/stats.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -9,7 +10,11 @@ void main() {
   Future<GuessadayApp> freshApp([Map<String, Object> values = const {}]) async {
     SharedPreferences.setMockInitialValues(values);
     final prefs = await SharedPreferences.getInstance();
-    return GuessadayApp(settings: Settings(prefs), stats: Stats(prefs));
+    return GuessadayApp(
+      settings: Settings(prefs),
+      stats: Stats(prefs),
+      reminders: Reminders(const NoReminders()),
+    );
   }
 
   testWidgets('shows a date, seven weekdays, and reacts to a guess', (

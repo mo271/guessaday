@@ -50,5 +50,22 @@
   "resetStatisticsConfirm": "Alle gespeicherten Runden löschen? Das lässt sich nicht rückgängig machen.",
   "delete": "Löschen",
   "cancel": "Abbrechen",
-  "withAverage": "{count} · ⌀ {time}"
+  "withAverage": "{count} · ⌀ {time}",
+  "practiceReminders": "Übungserinnerungen",
+  "practiceRemindersHint": "Zufällige Daten als Benachrichtigung über den Tag verteilt",
+  "remindersPerDay": "Erinnerungen pro Tag",
+  "nPerDay": "{n, plural, =1{Einmal täglich} =2{Zweimal täglich} other{{n}-mal täglich}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Früheste Erinnerung",
+  "latestReminder": "Späteste Erinnerung",
+  "notificationsBlocked": "Benachrichtigungen sind für Guessaday ausgeschaltet. Erlaube sie in den Systemeinstellungen, um Erinnerungen zu erhalten.",
+  "reminderTitle": "Welcher Wochentag?",
+  "reveal": "Auflösen",
+  "practice": "Üben"
 }

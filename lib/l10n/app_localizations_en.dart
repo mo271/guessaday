@@ -173,4 +173,45 @@ class AppLocalizationsEn extends AppLocalizations {
   String withAverage(int count, String time) {
     return '$count · ⌀ $time';
   }
+
+  @override
+  String get practiceReminders => 'Practice reminders';
+
+  @override
+  String get practiceRemindersHint =>
+      'Random dates as notifications during the day';
+
+  @override
+  String get remindersPerDay => 'Reminders per day';
+
+  @override
+  String nPerDay(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times a day',
+      two: 'Twice a day',
+      one: 'Once a day',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get earliestReminder => 'Earliest reminder';
+
+  @override
+  String get latestReminder => 'Latest reminder';
+
+  @override
+  String get notificationsBlocked =>
+      'Notifications are turned off for Guessaday. Allow them in the system settings to get reminders.';
+
+  @override
+  String get reminderTitle => 'Which day of the week?';
+
+  @override
+  String get reveal => 'Reveal';
+
+  @override
+  String get practice => 'Practice';
 }

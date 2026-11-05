@@ -403,6 +403,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{count} · ⌀ {time}'**
   String withAverage(int count, String time);
+
+  /// No description provided for @practiceReminders.
+  ///
+  /// In en, this message translates to:
+  /// **'Practice reminders'**
+  String get practiceReminders;
+
+  /// No description provided for @practiceRemindersHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Random dates as notifications during the day'**
+  String get practiceRemindersHint;
+
+  /// No description provided for @remindersPerDay.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminders per day'**
+  String get remindersPerDay;
+
+  /// No description provided for @nPerDay.
+  ///
+  /// In en, this message translates to:
+  /// **'{n, plural, =1{Once a day} =2{Twice a day} other{{n} times a day}}'**
+  String nPerDay(int n);
+
+  /// No description provided for @earliestReminder.
+  ///
+  /// In en, this message translates to:
+  /// **'Earliest reminder'**
+  String get earliestReminder;
+
+  /// No description provided for @latestReminder.
+  ///
+  /// In en, this message translates to:
+  /// **'Latest reminder'**
+  String get latestReminder;
+
+  /// No description provided for @notificationsBlocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications are turned off for Guessaday. Allow them in the system settings to get reminders.'**
+  String get notificationsBlocked;
+
+  /// No description provided for @reminderTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Which day of the week?'**
+  String get reminderTitle;
+
+  /// No description provided for @reveal.
+  ///
+  /// In en, this message translates to:
+  /// **'Reveal'**
+  String get reveal;
+
+  /// No description provided for @practice.
+  ///
+  /// In en, this message translates to:
+  /// **'Practice'**
+  String get practice;
 }
 
 class _AppLocalizationsDelegate

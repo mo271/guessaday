@@ -1,0 +1,2 @@
+• Optional practice reminders: a few random dates a day as notifications, with "Reveal" and "Practice" buttons. Off by default.
+• Choose how many reminders you get and between which times of day.

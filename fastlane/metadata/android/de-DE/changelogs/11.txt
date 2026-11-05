@@ -1,0 +1,2 @@
+• Optionale Übungserinnerungen: ein paar zufällige Daten pro Tag als Benachrichtigung, mit „Auflösen“ und „Üben“. Standardmäßig aus.
+• Wähle, wie viele Erinnerungen du bekommst und zwischen welchen Uhrzeiten.
