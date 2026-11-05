@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 import '../game/game_logic.dart';
@@ -175,13 +174,14 @@ class SettingsScreen extends StatelessWidget {
               title: Text(l10n.remindersPerDay),
               subtitle: Text(l10n.nPerDay(settings.remindersPerDay)),
               onTap: () async {
-                final picked = await pickNumber(
+                final picked = await pickOption<int>(
                   context,
                   title: l10n.remindersPerDay,
-                  hint: l10n.betweenNumbers(1, Settings.maxRemindersPerDay),
                   current: settings.remindersPerDay,
-                  min: 1,
-                  max: Settings.maxRemindersPerDay,
+                  options: [
+                    for (final n in Settings.remindersPerDayOptions)
+                      (n, l10n.nPerDay(n)),
+                  ],
                 );
                 if (picked != null) settings.setRemindersPerDay(picked);
               },
@@ -273,86 +273,4 @@ Future<T?> pickOption<T>(
       ],
     ),
   );
-}
-
-/// A dialog with a single whole-number field. Returns the number, or null
-/// if dismissed or out of range.
-Future<int?> pickNumber(
-  BuildContext context, {
-  required String title,
-  required String hint,
-  required int current,
-  required int min,
-  required int max,
-}) {
-  return showDialog<int>(
-    context: context,
-    builder: (context) => _NumberDialog(
-      title: title,
-      hint: hint,
-      initial: current,
-      min: min,
-      max: max,
-    ),
-  );
-}
-
-class _NumberDialog extends StatefulWidget {
-  const _NumberDialog({
-    required this.title,
-    required this.hint,
-    required this.initial,
-    required this.min,
-    required this.max,
-  });
-
-  final String title;
-  final String hint;
-  final int initial;
-  final int min;
-  final int max;
-
-  @override
-  State<_NumberDialog> createState() => _NumberDialogState();
-}
-
-class _NumberDialogState extends State<_NumberDialog> {
-  late final TextEditingController _controller = TextEditingController(
-    text: '${widget.initial}',
-  );
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  void _submit() {
-    final value = int.tryParse(_controller.text.trim());
-    final valid = value != null && value >= widget.min && value <= widget.max;
-    Navigator.of(context).pop(valid ? value : null);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
-    return AlertDialog(
-      title: Text(widget.title),
-      content: TextField(
-        controller: _controller,
-        autofocus: true,
-        keyboardType: TextInputType.number,
-        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-        decoration: InputDecoration(helperText: widget.hint),
-        onSubmitted: (_) => _submit(),
-      ),
-      actions: [
-        TextButton(
-          onPressed: () => Navigator.of(context).pop(),
-          child: Text(l10n.cancel),
-        ),
-        TextButton(onPressed: _submit, child: Text(l10n.ok)),
-      ],
-    );
-  }
 }

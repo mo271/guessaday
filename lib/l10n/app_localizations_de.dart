@@ -215,9 +215,4 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get practice => 'Üben';
-
-  @override
-  String betweenNumbers(int min, int max) {
-    return 'Zwischen $min und $max';
-  }
 }

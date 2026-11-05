@@ -22,10 +22,7 @@ class Settings extends ChangeNotifier {
       hideAfterSeconds = _prefs.getDouble(_kHideAfter) ?? 1.0,
       recentWindow = _prefs.getInt(_kRecentWindow) ?? 20,
       remindersEnabled = _prefs.getBool(_kReminders) ?? false,
-      remindersPerDay = (_prefs.getInt(_kRemindersPerDay) ?? 5).clamp(
-        1,
-        maxRemindersPerDay,
-      ),
+      remindersPerDay = _nearestOption(_prefs.getInt(_kRemindersPerDay) ?? 5),
       reminderStartMinute = _prefs.getInt(_kReminderStart) ?? 7 * 60,
       reminderEndMinute = _prefs.getInt(_kReminderEnd) ?? 22 * 60;
 
@@ -50,10 +47,15 @@ class Settings extends ChangeNotifier {
   /// Choices for how many recent rounds the "recent" statistics cover.
   static const recentWindowOptions = <int>[5, 10, 20, 50, 100];
 
-  /// Upper bound for practice reminders per day. Only as many upcoming
+  /// Choices for practice reminders per day. Only as many upcoming
   /// reminders as the platform allows are pending at once (see
   /// ReminderBackend.maxPending); opening the app tops them up.
-  static const maxRemindersPerDay = 200;
+  static const remindersPerDayOptions = <int>[1, 2, 3, 5, 8, 13, 21, 34];
+
+  /// The choice closest to [value], for values stored by other versions.
+  static int _nearestOption(int value) => remindersPerDayOptions.reduce(
+    (a, b) => (b - value).abs() < (a - value).abs() ? b : a,
+  );
 
   final SharedPreferences _prefs;
 
@@ -159,7 +161,7 @@ class Settings extends ChangeNotifier {
   }
 
   void setRemindersPerDay(int value) {
-    remindersPerDay = value.clamp(1, maxRemindersPerDay);
+    remindersPerDay = _nearestOption(value);
     _prefs.setInt(_kRemindersPerDay, remindersPerDay);
     notifyListeners();
   }

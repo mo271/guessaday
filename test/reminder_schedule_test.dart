@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:guessaday/reminders/reminder_schedule.dart';
 import 'package:guessaday/reminders/reminder_sync.dart';
+import 'package:guessaday/settings/settings.dart';
 
 void main() {
   group('windowLength', () {
@@ -114,7 +115,7 @@ void main() {
       expect(ReminderSync.daysFor(99, 60), 1);
       expect(ReminderSync.daysFor(99, 300), 3);
       for (final limit in [60, 300]) {
-        for (var n = 1; n <= 200; n++) {
+        for (final n in Settings.remindersPerDayOptions) {
           final days = ReminderSync.daysFor(n, limit);
           expect(days, inInclusiveRange(1, 7));
           // One day may exceed the limit; the caller truncates the list.
