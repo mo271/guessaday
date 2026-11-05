@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Release builds shrink resources. The notification icon is only referenced
+  by name from Dart, which the shrinker cannot see, so without this rule it
+  is removed and scheduled notifications silently never appear.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_notification" />
