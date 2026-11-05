@@ -50,8 +50,10 @@ class Settings extends ChangeNotifier {
   /// Choices for how many recent rounds the "recent" statistics cover.
   static const recentWindowOptions = <int>[5, 10, 20, 50, 100];
 
-  /// Upper bound for practice reminders per day.
-  static const maxRemindersPerDay = 24;
+  /// Upper bound for practice reminders per day. Only as many upcoming
+  /// reminders as the platform allows are pending at once (see
+  /// ReminderBackend.maxPending); opening the app tops them up.
+  static const maxRemindersPerDay = 200;
 
   final SharedPreferences _prefs;
 

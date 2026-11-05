@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 
@@ -17,6 +19,11 @@ class LocalNotificationsBackend implements ReminderBackend {
 
   @override
   bool get supported => true;
+
+  /// iOS keeps at most 64 pending notifications per app; Android allows
+  /// 500 alarms. Stay well below both.
+  @override
+  int get maxPending => Platform.isAndroid ? 300 : 60;
 
   @override
   Future<void> initialize(

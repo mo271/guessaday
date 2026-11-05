@@ -107,15 +107,19 @@ void main() {
   });
 
   group('ReminderSync.daysFor', () {
-    test('keeps the pending count within the iOS limit', () {
-      expect(ReminderSync.daysFor(1), 7);
-      expect(ReminderSync.daysFor(5), 7);
-      expect(ReminderSync.daysFor(8), 7);
-      expect(ReminderSync.daysFor(9), 6);
-      expect(ReminderSync.daysFor(24), 2);
-      for (var n = 1; n <= 24; n++) {
-        expect(n * ReminderSync.daysFor(n), lessThanOrEqualTo(64));
-        expect(ReminderSync.daysFor(n), greaterThanOrEqualTo(1));
+    test('keeps the pending count within the platform limit', () {
+      expect(ReminderSync.daysFor(1, 60), 7);
+      expect(ReminderSync.daysFor(8, 60), 7);
+      expect(ReminderSync.daysFor(9, 60), 6);
+      expect(ReminderSync.daysFor(99, 60), 1);
+      expect(ReminderSync.daysFor(99, 300), 3);
+      for (final limit in [60, 300]) {
+        for (var n = 1; n <= 200; n++) {
+          final days = ReminderSync.daysFor(n, limit);
+          expect(days, inInclusiveRange(1, 7));
+          // One day may exceed the limit; the caller truncates the list.
+          if (days > 1) expect(n * days, lessThanOrEqualTo(limit));
+        }
       }
     });
   });

@@ -23,6 +23,9 @@ abstract class ReminderBackend {
   /// Whether reminders can be offered at all on this platform.
   bool get supported;
 
+  /// How many reminders may be pending at once.
+  int get maxPending;
+
   /// Sets up the plugin. [onOpen] receives the payload whenever the user
   /// opens the app from a reminder while it is running.
   Future<void> initialize(
@@ -50,6 +53,9 @@ class NoReminders implements ReminderBackend {
 
   @override
   bool get supported => false;
+
+  @override
+  int get maxPending => 0;
 
   @override
   Future<void> initialize(
