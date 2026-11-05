@@ -463,6 +463,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Practice'**
   String get practice;
+
+  /// No description provided for @betweenNumbers.
+  ///
+  /// In en, this message translates to:
+  /// **'Between {min} and {max}'**
+  String betweenNumbers(int min, int max);
 }
 
 class _AppLocalizationsDelegate

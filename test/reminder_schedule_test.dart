@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:guessaday/reminders/reminder_schedule.dart';
+import 'package:guessaday/reminders/reminder_sync.dart';
 
 void main() {
   group('windowLength', () {
@@ -102,6 +103,20 @@ void main() {
       expect(ReminderPayload.decode('nope'), isNull);
       expect(ReminderPayload.decode('{"d":"x"}'), isNull);
       expect(ReminderPayload.decode('[1]'), isNull);
+    });
+  });
+
+  group('ReminderSync.daysFor', () {
+    test('keeps the pending count within the iOS limit', () {
+      expect(ReminderSync.daysFor(1), 7);
+      expect(ReminderSync.daysFor(5), 7);
+      expect(ReminderSync.daysFor(8), 7);
+      expect(ReminderSync.daysFor(9), 6);
+      expect(ReminderSync.daysFor(24), 2);
+      for (var n = 1; n <= 24; n++) {
+        expect(n * ReminderSync.daysFor(n), lessThanOrEqualTo(64));
+        expect(ReminderSync.daysFor(n), greaterThanOrEqualTo(1));
+      }
     });
   });
 }

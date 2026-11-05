@@ -23,8 +23,13 @@ class ReminderSync extends StatefulWidget {
 
   final Widget child;
 
-  /// How far ahead reminders are scheduled.
-  static const days = 7;
+  /// How far ahead reminders are scheduled, at most. iOS keeps at most 64
+  /// pending notifications, so many reminders a day mean fewer days ahead;
+  /// every start of the app tops the schedule up again.
+  static const maxDays = 7;
+  static const maxPending = 60;
+
+  static int daysFor(int perDay) => (maxPending ~/ perDay).clamp(1, maxDays);
 
   @override
   State<ReminderSync> createState() => _ReminderSyncState();
@@ -108,7 +113,7 @@ class _ReminderSyncState extends State<ReminderSync>
       perDay: settings.remindersPerDay,
       startMinute: settings.reminderStartMinute,
       endMinute: settings.reminderEndMinute,
-      days: ReminderSync.days,
+      days: ReminderSync.daysFor(settings.remindersPerDay),
       random: _random,
     );
     final requests = [

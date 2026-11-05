@@ -22,9 +22,12 @@ class Settings extends ChangeNotifier {
       hideAfterSeconds = _prefs.getDouble(_kHideAfter) ?? 1.0,
       recentWindow = _prefs.getInt(_kRecentWindow) ?? 20,
       remindersEnabled = _prefs.getBool(_kReminders) ?? false,
-      remindersPerDay = _prefs.getInt(_kRemindersPerDay) ?? 2,
-      reminderStartMinute = _prefs.getInt(_kReminderStart) ?? 9 * 60,
-      reminderEndMinute = _prefs.getInt(_kReminderEnd) ?? 21 * 60;
+      remindersPerDay = (_prefs.getInt(_kRemindersPerDay) ?? 5).clamp(
+        1,
+        maxRemindersPerDay,
+      ),
+      reminderStartMinute = _prefs.getInt(_kReminderStart) ?? 7 * 60,
+      reminderEndMinute = _prefs.getInt(_kReminderEnd) ?? 22 * 60;
 
   static const _kTimer = 'timerEnabled';
   static const _kPreset = 'rangePreset';
@@ -47,10 +50,8 @@ class Settings extends ChangeNotifier {
   /// Choices for how many recent rounds the "recent" statistics cover.
   static const recentWindowOptions = <int>[5, 10, 20, 50, 100];
 
-  /// Choices for how many practice reminders a day brings. Reminders are
-  /// scheduled a week ahead, and iOS allows 64 pending notifications, so
-  /// the largest choice stays below 64 / 7.
-  static const remindersPerDayOptions = <int>[1, 2, 3, 5, 8];
+  /// Upper bound for practice reminders per day.
+  static const maxRemindersPerDay = 24;
 
   final SharedPreferences _prefs;
 
@@ -156,8 +157,8 @@ class Settings extends ChangeNotifier {
   }
 
   void setRemindersPerDay(int value) {
-    remindersPerDay = value;
-    _prefs.setInt(_kRemindersPerDay, value);
+    remindersPerDay = value.clamp(1, maxRemindersPerDay);
+    _prefs.setInt(_kRemindersPerDay, remindersPerDay);
     notifyListeners();
   }
 

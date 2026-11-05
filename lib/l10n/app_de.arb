@@ -67,5 +67,16 @@
   "notificationsBlocked": "Benachrichtigungen sind für Guessaday ausgeschaltet. Erlaube sie in den Systemeinstellungen, um Erinnerungen zu erhalten.",
   "reminderTitle": "Welcher Wochentag?",
   "reveal": "Auflösen",
-  "practice": "Üben"
+  "practice": "Üben",
+  "betweenNumbers": "Zwischen {min} und {max}",
+  "@betweenNumbers": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 import '../game/game_logic.dart';
@@ -174,14 +175,13 @@ class SettingsScreen extends StatelessWidget {
               title: Text(l10n.remindersPerDay),
               subtitle: Text(l10n.nPerDay(settings.remindersPerDay)),
               onTap: () async {
-                final picked = await pickOption<int>(
+                final picked = await pickNumber(
                   context,
                   title: l10n.remindersPerDay,
+                  hint: l10n.betweenNumbers(1, Settings.maxRemindersPerDay),
                   current: settings.remindersPerDay,
-                  options: [
-                    for (final n in Settings.remindersPerDayOptions)
-                      (n, l10n.nPerDay(n)),
-                  ],
+                  min: 1,
+                  max: Settings.maxRemindersPerDay,
                 );
                 if (picked != null) settings.setRemindersPerDay(picked);
               },
@@ -273,4 +273,47 @@ Future<T?> pickOption<T>(
       ],
     ),
   );
+}
+
+/// A dialog with a single whole-number field. Returns the number, or null
+/// if dismissed or out of range.
+Future<int?> pickNumber(
+  BuildContext context, {
+  required String title,
+  required String hint,
+  required int current,
+  required int min,
+  required int max,
+}) {
+  final l10n = AppLocalizations.of(context);
+  final controller = TextEditingController(text: '$current');
+  return showDialog<int>(
+    context: context,
+    builder: (context) {
+      void submit() {
+        final value = int.tryParse(controller.text.trim());
+        Navigator.of(context)
+            .pop(value != null && value >= min && value <= max ? value : null);
+      }
+
+      return AlertDialog(
+        title: Text(title),
+        content: TextField(
+          controller: controller,
+          autofocus: true,
+          keyboardType: TextInputType.number,
+          inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+          decoration: InputDecoration(helperText: hint),
+          onSubmitted: (_) => submit(),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(l10n.cancel),
+          ),
+          TextButton(onPressed: submit, child: Text(l10n.ok)),
+        ],
+      );
+    },
+  ).whenComplete(controller.dispose);
 }

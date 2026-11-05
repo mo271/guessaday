@@ -98,5 +98,16 @@
   "notificationsBlocked": "Notifications are turned off for Guessaday. Allow them in the system settings to get reminders.",
   "reminderTitle": "Which day of the week?",
   "reveal": "Reveal",
-  "practice": "Practice"
+  "practice": "Practice",
+  "betweenNumbers": "Between {min} and {max}",
+  "@betweenNumbers": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  }
 }
