@@ -285,35 +285,74 @@ Future<int?> pickNumber(
   required int min,
   required int max,
 }) {
-  final l10n = AppLocalizations.of(context);
-  final controller = TextEditingController(text: '$current');
   return showDialog<int>(
     context: context,
-    builder: (context) {
-      void submit() {
-        final value = int.tryParse(controller.text.trim());
-        Navigator.of(context)
-            .pop(value != null && value >= min && value <= max ? value : null);
-      }
+    builder: (context) => _NumberDialog(
+      title: title,
+      hint: hint,
+      initial: current,
+      min: min,
+      max: max,
+    ),
+  );
+}
 
-      return AlertDialog(
-        title: Text(title),
-        content: TextField(
-          controller: controller,
-          autofocus: true,
-          keyboardType: TextInputType.number,
-          inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-          decoration: InputDecoration(helperText: hint),
-          onSubmitted: (_) => submit(),
+class _NumberDialog extends StatefulWidget {
+  const _NumberDialog({
+    required this.title,
+    required this.hint,
+    required this.initial,
+    required this.min,
+    required this.max,
+  });
+
+  final String title;
+  final String hint;
+  final int initial;
+  final int min;
+  final int max;
+
+  @override
+  State<_NumberDialog> createState() => _NumberDialogState();
+}
+
+class _NumberDialogState extends State<_NumberDialog> {
+  late final TextEditingController _controller = TextEditingController(
+    text: '${widget.initial}',
+  );
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  void _submit() {
+    final value = int.tryParse(_controller.text.trim());
+    final valid = value != null && value >= widget.min && value <= widget.max;
+    Navigator.of(context).pop(valid ? value : null);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    return AlertDialog(
+      title: Text(widget.title),
+      content: TextField(
+        controller: _controller,
+        autofocus: true,
+        keyboardType: TextInputType.number,
+        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+        decoration: InputDecoration(helperText: widget.hint),
+        onSubmitted: (_) => _submit(),
+      ),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.of(context).pop(),
+          child: Text(l10n.cancel),
         ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(l10n.cancel),
-          ),
-          TextButton(onPressed: submit, child: Text(l10n.ok)),
-        ],
-      );
-    },
-  ).whenComplete(controller.dispose);
+        TextButton(onPressed: _submit, child: Text(l10n.ok)),
+      ],
+    );
+  }
 }
