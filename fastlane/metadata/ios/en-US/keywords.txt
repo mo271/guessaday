@@ -1,0 +1,1 @@
+calendar,weekday,day of the week,doomsday,mental math,brain training,date,trainer,memory

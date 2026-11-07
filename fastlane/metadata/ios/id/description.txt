@@ -1,0 +1,15 @@
+Trainer untuk menghitung hari dalam seminggu dari tanggal apa pun.
+
+Guessaday menampilkan tanggal acak dan menanyakan tanggal tersebut jatuh pada hari apa. Ketuk jawaban Anda, dan aplikasi akan memberi tahu apakah jawaban Anda benar, dan jika diinginkan, berapa lama waktu yang Anda butuhkan.
+
+Fitur:
+• Pilih rentang tanggal: bulan ini, tahun ini, 100 tahun terakhir, abad ke-20 atau ke-21, seluruh era Gregorian, atau tanggal mulai dan akhir pilihan Anda sendiri.
+• Stopwatch untuk setiap tebakan.
+• "Tampilkan tanggal sebentar saja": tanggal menghilang setelah jeda yang dapat diatur, jadi Anda harus mengingatnya terlebih dahulu.
+• Statistik per rentang tanggal: akurasi, waktu, dan rentetan.
+• Pengingat latihan opsional: beberapa tanggal acak per hari sebagai notifikasi, dengan tombol "Tampilkan" dan "Latihan". Nonaktif secara default.
+• Tanggal dan nama hari mengikuti bahasa perangkat Anda.
+
+Jika Anda ingin belajar cara menghitung hari dalam seminggu di luar kepala, kunjungi situs web pengembang: https://firsching.ch/guessaday
+
+Guessaday adalah perangkat lunak bebas (GPL-3.0) dan tidak mengandung iklan maupun pelacakan.

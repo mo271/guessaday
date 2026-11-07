@@ -1,0 +1,15 @@
+Un entraîneur pour calculer le jour de la semaine de n'importe quelle date.
+
+Guessaday affiche une date aléatoire et vous demande quel jour de la semaine elle tombe. Touchez votre réponse : l'application vous dit si elle est correcte et, si vous le souhaitez, combien de temps il vous a fallu.
+
+Fonctionnalités :
+• Choisissez la plage de dates : ce mois-ci, cette année, les 100 dernières années, le XXe ou le XXIe siècle, toute l'ère grégorienne, ou vos propres dates de début et de fin.
+• Chronomètre pour chaque réponse.
+• « Affichage bref de la date » : la date disparaît après un délai configurable, vous devez donc d'abord la mémoriser.
+• Statistiques par plage de dates : taux de réussite, temps et séries.
+• Rappels d'entraînement facultatifs : quelques dates aléatoires par jour sous forme de notifications, avec les boutons « Révéler » et « S'entraîner ». Désactivés par défaut.
+• Les dates et les noms des jours suivent la langue de votre appareil.
+
+Si vous voulez apprendre à calculer le jour de la semaine de tête, visitez le site web du développeur : https://firsching.ch/guessaday
+
+Guessaday est un logiciel libre (GPL-3.0) et ne contient ni publicité ni pistage.

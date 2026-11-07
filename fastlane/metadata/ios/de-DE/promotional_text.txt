@@ -1,0 +1,1 @@
+Übe, den Wochentag eines beliebigen Datums zu berechnen

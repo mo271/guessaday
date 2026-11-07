@@ -1,0 +1,15 @@
+Ứng dụng luyện tính thứ trong tuần của bất kỳ ngày nào.
+
+Guessaday hiển thị một ngày ngẫu nhiên và hỏi bạn ngày đó là thứ mấy. Nhấn vào câu trả lời của bạn, ứng dụng sẽ cho biết bạn trả lời đúng hay sai và, nếu muốn, bạn đã mất bao lâu.
+
+Tính năng:
+• Chọn khoảng ngày: tháng này, năm nay, 100 năm gần đây, thế kỷ 20 hoặc 21, toàn bộ kỷ nguyên lịch Gregory, hoặc ngày bắt đầu và kết thúc do bạn tự chọn.
+• Bấm giờ cho mỗi lần đoán.
+• "Chỉ hiển thị ngày trong chốc lát": ngày sẽ biến mất sau một khoảng thời gian có thể điều chỉnh, nên bạn phải ghi nhớ trước.
+• Thống kê theo từng khoảng ngày: độ chính xác, thời gian và chuỗi trả lời đúng.
+• Nhắc luyện tập tùy chọn: vài ngày ngẫu nhiên mỗi ngày dưới dạng thông báo, với nút "Xem đáp án" và "Luyện tập". Mặc định tắt.
+• Ngày và tên thứ hiển thị theo ngôn ngữ của thiết bị.
+
+Nếu bạn muốn học cách tính nhẩm thứ trong tuần, hãy truy cập trang web của nhà phát triển: https://firsching.ch/guessaday
+
+Guessaday là phần mềm tự do (GPL-3.0), không chứa quảng cáo hay theo dõi.

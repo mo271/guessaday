@@ -1,0 +1,1 @@
+Entrena el cálculo del día de la semana de cualquier fecha

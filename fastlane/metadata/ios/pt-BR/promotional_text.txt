@@ -1,0 +1,1 @@
+Treine o cálculo do dia da semana de qualquer data

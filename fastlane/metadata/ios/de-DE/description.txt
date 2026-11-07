@@ -1,0 +1,15 @@
+Ein Trainer für das Kopfrechnen von Wochentagen.
+
+Guessaday zeigt ein zufälliges Datum an und fragt, auf welchen Wochentag es fällt. Tippe deine Antwort an, und die App sagt dir, ob sie richtig war, und auf Wunsch, wie lange du gebraucht hast.
+
+Funktionen:
+• Zeitraum wählen: aktueller Monat, dieses Jahr, die letzten 100 Jahre, das 20. oder 21. Jahrhundert, die gesamte gregorianische Zeitrechnung oder ein eigener Zeitraum.
+• Stoppuhr für jede Antwort.
+• „Datum nur kurz anzeigen“: Das Datum verschwindet nach einer einstellbaren Zeit, du musst es dir also zuerst merken.
+• Statistik pro Zeitraum: Trefferquote, Zeiten und Serien.
+• Optionale Übungserinnerungen: ein paar zufällige Daten pro Tag als Benachrichtigung, mit „Auflösen“ und „Üben“. Standardmäßig aus.
+• Datum und Wochentage folgen der Sprache deines Geräts.
+
+Wie man den Wochentag im Kopf berechnet, erfährst du auf der Website des Entwicklers: https://firsching.ch/guessaday
+
+Guessaday ist freie Software (GPL-3.0) und enthält weder Werbung noch Tracking.

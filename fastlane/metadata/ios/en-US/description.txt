@@ -1,0 +1,15 @@
+A trainer for calculating the day of the week of any given date.
+
+Guessaday shows a random date and asks you which day of the week it falls on. Tap your answer and the app tells you whether you were right, and optionally how long you needed.
+
+Features:
+• Choose the range of dates: this month, this year, the last 100 years, the 20th or 21st century, the whole Gregorian era, or your own start and end date.
+• Stopwatch for each guess.
+• "Short date display": the date disappears after a configurable delay, so you have to memorise it first.
+• Statistics per date range: accuracy, times and streaks.
+• Optional practice reminders: a few random dates a day as notifications, with "Reveal" and "Practice" buttons. Off by default.
+• Dates and weekday names follow your device language.
+
+If you want to learn how to calculate the weekday in your head, visit the developer's website: https://firsching.ch/guessaday
+
+Guessaday is free software (GPL-3.0) and contains no ads or tracking.
