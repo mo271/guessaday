@@ -1,6 +1,7 @@
 # App Store listing texts
 
-One folder per App Store locale, in the file layout that fastlane's
+One folder per App Store locale (Bengali, Persian, Tamil and Filipino have no
+App Store locale; the app itself is still translated), in the file layout that fastlane's
 `deliver` expects (`deliver --metadata_path fastlane/metadata/ios`). The
 texts can just as well be pasted into App Store Connect by hand. They are
 derived from the Google Play / F-Droid texts in `../android/`; keep the two

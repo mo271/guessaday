@@ -1,1 +1,1 @@
-• Az alkalmazás mostantól 23 nyelvre van lefordítva. A javításokat szívesen fogadjuk a GitHubon.
+• Tíz további nyelv: bengáli, thai, perzsa, tamil, filippínó, görög, héber, dán, norvég és finn. A javításokat szívesen fogadjuk a GitHubon.

@@ -1,1 +1,1 @@
-• La aplicación ahora está traducida a 23 idiomas. Las correcciones son bienvenidas en GitHub.
+• Diez idiomas más: bengalí, tailandés, persa, tamil, filipino, griego, hebreo, danés, noruego y finés. Las correcciones son bienvenidas en GitHub.

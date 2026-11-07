@@ -1,1 +1,1 @@
-• Uygulama artık 23 dile çevrildi. Düzeltmeler GitHub üzerinden memnuniyetle karşılanır.
+• On yeni dil daha: Bengalce, Tayca, Farsça, Tamilce, Filipince, Yunanca, İbranice, Danca, Norveççe ve Fince. Düzeltmeler GitHub üzerinden memnuniyetle karşılanır.

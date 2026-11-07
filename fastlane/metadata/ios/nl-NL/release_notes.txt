@@ -1,1 +1,1 @@
-• De app is nu vertaald in 23 talen. Verbeteringen zijn welkom op GitHub.
+• Tien extra talen: Bengaals, Thai, Perzisch, Tamil, Filipijns, Grieks, Hebreeuws, Deens, Noors en Fins. Verbeteringen zijn welkom op GitHub.

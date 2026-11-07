@@ -1,0 +1,15 @@
+Isang trainer para sa pagkuwenta ng araw ng linggo ng anumang petsa.
+
+Nagpapakita ang Guessaday ng random na petsa at tinatanong ka kung anong araw ng linggo ito. I-tap ang iyong sagot at sasabihin ng app kung tama ka, at opsyonal kung gaano katagal ka sumagot.
+
+Mga feature:
+• Piliin ang saklaw ng mga petsa: ngayong buwan, ngayong taon, ang nakaraang 100 taon, ang ika-20 o ika-21 siglo, ang buong panahong Gregorian, o ang sarili mong petsa ng simula at katapusan.
+• Stopwatch para sa bawat sagot.
+• "Saglit lang ipakita ang petsa": nawawala ang petsa pagkalipas ng itinakdang oras, kaya kailangan mo muna itong tandaan.
+• Istatistika bawat saklaw ng petsa: katumpakan, oras at mga streak.
+• Opsyonal na mga paalala sa pagsasanay: ilang random na petsa bawat araw bilang notification, may mga button na "Ipakita" at "Magsanay". Naka-off bilang default.
+• Sumusunod sa wika ng iyong device ang mga petsa at pangalan ng araw.
+
+Kung gusto mong matutunan kung paano kuwentahin ang araw ng linggo sa isip, bisitahin ang website ng developer: https://firsching.ch/guessaday
+
+Libreng software ang Guessaday (GPL-3.0) at walang ads o tracking.

@@ -25,7 +25,7 @@ Android, iOS, Linux desktop and the web from one Dart codebase.
   notifications, with "Reveal" and "Practice" buttons. Off by default; the
   notification permission is only requested when you turn them on.
 - Dates and weekday names follow the device language. The interface is
-  translated into more than twenty languages.
+  translated into more than thirty languages.
 
 ## Development
 

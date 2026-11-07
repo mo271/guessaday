@@ -1,1 +1,1 @@
-• Aplikasi kini diterjemahkan ke 23 bahasa. Koreksi dipersilakan di GitHub.
+• Sepuluh bahasa tambahan: Bengali, Thai, Persia, Tamil, Filipino, Yunani, Ibrani, Denmark, Norwegia, dan Finlandia. Koreksi dipersilakan di GitHub.
