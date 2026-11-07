@@ -41,3 +41,40 @@ jobs:
       - run: flutter pub get
       - run: flutter gen-l10n
       - run: flutter build ios --release --no-codesign
+
+  ios-simulator:
+    # Runs the app on the iOS Simulator and uploads a screenshot of every
+    # screen (integration_test/screenshots_test.dart). Without a Mac this is
+    # the only way to see the iOS build.
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: pubspec.yaml
+          cache: true
+      - run: flutter pub get
+      - run: flutter gen-l10n
+      - name: Boot a simulator
+        id: sim
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json, sys
+          devices = json.load(sys.stdin)['devices']
+          phones = [d for runtime, ds in devices.items() if 'iOS' in runtime
+                    for d in ds if d['name'].startswith('iPhone')]
+          phones.sort(key=lambda d: d['name'])
+          print(phones[-1]['udid'])")
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+      - run: >
+          flutter drive
+          --driver=test_driver/integration_test.dart
+          --target=integration_test/screenshots_test.dart
+          -d ${{ steps.sim.outputs.udid }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ios-screenshots
+          path: screenshots/
