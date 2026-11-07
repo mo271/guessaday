@@ -25,8 +25,12 @@ https://firsching.ch/guessaday/de/datenschutz/).
 
 Screenshots are not stored here. The `ios-simulator` job in
 `.github/workflows/build.yml` produces iPhone and iPad screenshots of every
-screen on each push; download the `ios-screenshots-iphone` and `ios-screenshots-ipad`
-artifacts from the run.
+screen on each push. Open the newest green run at
+https://github.com/mo271/guessaday/actions/workflows/build.yml?query=branch%3Amaster
+and download the `ios-screenshots-iphone` (iPhone 17 Pro Max, 1320×2868,
+Apple's 6.9" size) and `ios-screenshots-ipad` (iPad Pro 13", 2064×2752)
+zip files under "Artifacts" at the bottom of the run page. Artifacts are
+kept for 90 days.
 
 App Privacy questionnaire: the app collects no data at all ("Data Not
 Collected"). It has no network access, no accounts, no analytics and no ads.
