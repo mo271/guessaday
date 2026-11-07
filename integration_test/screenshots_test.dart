@@ -17,8 +17,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 ///     flutter drive --driver=test_driver/integration_test.dart \
 ///         --target=integration_test/screenshots_test.dart -d <device>
 ///
-/// The pictures land in screenshots/. CI runs this on the iOS Simulator,
-/// which is the only way to see the iOS build without a Mac.
+/// The pictures land in screenshots/. On Android emulators with host GPU
+/// rendering the screenshot capture fails under Impeller, so add
+/// `--no-enable-impeller` there. CI runs this on the iOS Simulator, which
+/// is the only way to see the iOS build without a Mac.
 void main() {
   final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
