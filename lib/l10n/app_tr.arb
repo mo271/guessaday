@@ -1,0 +1,102 @@
+{
+  "@@locale": "tr",
+  "appName": "Guessaday",
+  "settings": "Ayarlar",
+  "about": "Hakkında",
+  "startDate": "Başlangıç tarihi",
+  "endDate": "Bitiş tarihi",
+  "pickStartDate": "Başlangıç tarihini seçin",
+  "pickEndDate": "Bitiş tarihini seçin",
+  "appDescription": "Bu uygulama rastgele bir tarih gösterir. Sizden bu tarihin haftanın hangi gününe denk geldiğini hesaplamanız ve doğru günü seçmeniz beklenir.",
+  "author": "Geliştirici",
+  "howTo": "Haftanın gününü nasıl hesaplayacağınızı henüz bilmiyorsanız, bunu kolayca öğrenebilirsiniz:",
+  "moreInfo": "Daha fazla bilgi",
+  "ok": "Tamam",
+  "version": "Sürüm",
+  "timer": "Kronometre",
+  "enabled": "Açık",
+  "disabled": "Kapalı",
+  "reappearMsg": "Gizlenen tarihi yeniden görmek için üzerine dokunun!",
+  "after": "{duration} sonra",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Tarih aralığı",
+  "firstDayInList": "Listedeki ilk gün",
+  "localeDefault": "Otomatik",
+  "shortDateDisplay": "Tarihi kısa süre göster",
+  "hideTheDate": "Tarihi gizle",
+  "rangeCustom": "Kendiniz seçin",
+  "rangeThisMonth": "Bu ay",
+  "rangeThisYear": "Bu yıl",
+  "rangeNextYear": "Gelecek yıl",
+  "rangeLast100Years": "Son 100 yıl",
+  "rangeCentury20": "20. yüzyıl",
+  "rangeCentury21": "21. yüzyıl",
+  "rangeGregorianToToday": "1582-10-15 – bugün",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "İstatistikler",
+  "rounds": "Tur",
+  "accuracy": "Doğruluk",
+  "averageTime": "Ortalama süre",
+  "bestTime": "En iyi süre",
+  "currentStreak": "Mevcut seri",
+  "bestStreak": "En iyi seri",
+  "allTime": "Tüm zamanlar",
+  "lastNRounds": "Son {n} tur",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} tur",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Tüm tarih aralıkları",
+  "noRoundsYet": "Henüz tur oynanmadı. İlk yanıtınızdan sonra istatistikler burada görünür.",
+  "recentWindow": "Son istatistiklerdeki tur sayısı",
+  "resetStatistics": "İstatistikleri sıfırla",
+  "resetStatisticsConfirm": "Kaydedilen tüm turlar silinsin mi? Bu işlem geri alınamaz.",
+  "delete": "Sil",
+  "cancel": "İptal",
+  "withAverage": "{count} · ort. {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Alıştırma hatırlatıcıları",
+  "practiceRemindersHint": "Gün içinde bildirim olarak rastgele tarihler",
+  "remindersPerDay": "Günlük hatırlatıcı sayısı",
+  "nPerDay": "{n, plural, =1{Günde bir kez} =2{Günde iki kez} other{Günde {n} kez}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "En erken hatırlatıcı",
+  "latestReminder": "En geç hatırlatıcı",
+  "notificationsBlocked": "Guessaday için bildirimler kapalı. Hatırlatıcı almak için sistem ayarlarından bildirimlere izin verin.",
+  "reminderTitle": "Haftanın hangi günü?",
+  "reveal": "Göster",
+  "practice": "Alıştırma"
+}

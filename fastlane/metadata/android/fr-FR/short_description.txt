@@ -1,0 +1,1 @@
+Entraînez-vous à calculer le jour de la semaine de n'importe quelle date

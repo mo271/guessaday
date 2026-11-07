@@ -1,0 +1,102 @@
+{
+  "@@locale": "ro",
+  "appName": "Guessaday",
+  "settings": "Setări",
+  "about": "Despre",
+  "startDate": "Data de început",
+  "endDate": "Data de sfârșit",
+  "pickStartDate": "Alegeți data de început",
+  "pickEndDate": "Alegeți data de sfârșit",
+  "appDescription": "Această aplicație afișează o dată aleatorie. Trebuie să calculați în ce zi a săptămânii cade și să o selectați pe cea corectă.",
+  "author": "Autor",
+  "howTo": "Dacă nu știți încă cum se calculează ziua săptămânii, puteți învăța cu siguranță:",
+  "moreInfo": "Mai multe informații",
+  "ok": "OK",
+  "version": "Versiune",
+  "timer": "Cronometru",
+  "enabled": "Activat",
+  "disabled": "Dezactivat",
+  "reappearMsg": "Atingeți data ascunsă pentru a o afișa din nou!",
+  "after": "După {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Interval de date",
+  "firstDayInList": "Prima zi din listă",
+  "localeDefault": "Automat",
+  "shortDateDisplay": "Afișare scurtă a datei",
+  "hideTheDate": "Ascundeți data",
+  "rangeCustom": "Interval personalizat",
+  "rangeThisMonth": "Luna aceasta",
+  "rangeThisYear": "Anul acesta",
+  "rangeNextYear": "Anul viitor",
+  "rangeLast100Years": "Ultimii 100 de ani",
+  "rangeCentury20": "Secolul al XX-lea",
+  "rangeCentury21": "Secolul al XXI-lea",
+  "rangeGregorianToToday": "1582-10-15 – azi",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Statistici",
+  "rounds": "Runde",
+  "accuracy": "Precizie",
+  "averageTime": "Timp mediu",
+  "bestTime": "Cel mai bun timp",
+  "currentStreak": "Seria curentă",
+  "bestStreak": "Cea mai lungă serie",
+  "allTime": "Total",
+  "lastNRounds": "{n, plural, one{Ultima rundă} few{Ultimele {n} runde} other{Ultimele {n} de runde}}",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n, plural, one{{n} rundă} few{{n} runde} other{{n} de runde}}",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Toate intervalele de date",
+  "noRoundsYet": "Nicio rundă jucată încă. Statisticile apar aici după primul răspuns.",
+  "recentWindow": "Runde în statisticile recente",
+  "resetStatistics": "Resetați statisticile",
+  "resetStatisticsConfirm": "Ștergeți toate rundele înregistrate? Această acțiune nu poate fi anulată.",
+  "delete": "Ștergeți",
+  "cancel": "Anulați",
+  "withAverage": "{count} · medie {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Mementouri de exersare",
+  "practiceRemindersHint": "Date aleatorii ca notificări pe parcursul zilei",
+  "remindersPerDay": "Mementouri pe zi",
+  "nPerDay": "{n, plural, one{O dată pe zi} =2{De două ori pe zi} few{De {n} ori pe zi} other{De {n} de ori pe zi}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Cel mai devreme memento",
+  "latestReminder": "Cel mai târziu memento",
+  "notificationsBlocked": "Notificările pentru Guessaday sunt dezactivate. Permiteți-le în setările sistemului pentru a primi mementouri.",
+  "reminderTitle": "Ce zi a săptămânii?",
+  "reveal": "Dezvăluiți",
+  "practice": "Exersați"
+}

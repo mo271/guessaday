@@ -1,0 +1,102 @@
+{
+  "@@locale": "sv",
+  "appName": "Guessaday",
+  "settings": "Inställningar",
+  "about": "Om appen",
+  "startDate": "Startdatum",
+  "endDate": "Slutdatum",
+  "pickStartDate": "Välj startdatum",
+  "pickEndDate": "Välj slutdatum",
+  "appDescription": "Appen visar ett slumpmässigt datum. Din uppgift är att räkna ut vilken veckodag det är och välja rätt.",
+  "author": "Utvecklare",
+  "howTo": "Om du inte redan vet hur man räknar ut veckodagen kan du lätt lära dig det:",
+  "moreInfo": "Mer information",
+  "ok": "OK",
+  "version": "Version",
+  "timer": "Stoppur",
+  "enabled": "Aktiverat",
+  "disabled": "Inaktiverat",
+  "reappearMsg": "Tryck på det dolda datumet för att visa det igen!",
+  "after": "Efter {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Datumintervall",
+  "firstDayInList": "Första dagen i listan",
+  "localeDefault": "Automatiskt",
+  "shortDateDisplay": "Visa datumet kort",
+  "hideTheDate": "Dölj datumet",
+  "rangeCustom": "Eget intervall",
+  "rangeThisMonth": "Den här månaden",
+  "rangeThisYear": "I år",
+  "rangeNextYear": "Nästa år",
+  "rangeLast100Years": "De senaste 100 åren",
+  "rangeCentury20": "1900-talet",
+  "rangeCentury21": "2000-talet",
+  "rangeGregorianToToday": "1582-10-15 – i dag",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Statistik",
+  "rounds": "Omgångar",
+  "accuracy": "Träffsäkerhet",
+  "averageTime": "Genomsnittstid",
+  "bestTime": "Bästa tid",
+  "currentStreak": "Nuvarande svit",
+  "bestStreak": "Längsta svit",
+  "allTime": "Totalt",
+  "lastNRounds": "Senaste {n} omgångarna",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} omgångar",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Alla datumintervall",
+  "noRoundsYet": "Inga omgångar spelade ännu. Statistiken visas här efter ditt första svar.",
+  "recentWindow": "Omgångar i senaste statistiken",
+  "resetStatistics": "Återställ statistik",
+  "resetStatisticsConfirm": "Vill du radera alla sparade omgångar? Det går inte att ångra.",
+  "delete": "Radera",
+  "cancel": "Avbryt",
+  "withAverage": "{count} · snitt {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Övningspåminnelser",
+  "practiceRemindersHint": "Slumpmässiga datum som aviseringar under dagen",
+  "remindersPerDay": "Påminnelser per dag",
+  "nPerDay": "{n, plural, one{En gång om dagen} =2{Två gånger om dagen} other{{n} gånger om dagen}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Tidigaste påminnelse",
+  "latestReminder": "Senaste påminnelse",
+  "notificationsBlocked": "Aviseringar är avstängda för Guessaday. Tillåt dem i systeminställningarna för att få påminnelser.",
+  "reminderTitle": "Vilken veckodag?",
+  "reveal": "Visa svar",
+  "practice": "Öva"
+}

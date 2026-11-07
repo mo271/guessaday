@@ -1,0 +1,102 @@
+{
+  "@@locale": "uk",
+  "appName": "Guessaday",
+  "settings": "Налаштування",
+  "about": "Про додаток",
+  "startDate": "Початкова дата",
+  "endDate": "Кінцева дата",
+  "pickStartDate": "Вибрати початкову дату",
+  "pickEndDate": "Вибрати кінцеву дату",
+  "appDescription": "Додаток показує випадкову дату. Вам потрібно обчислити, на який день тижня вона припадає, і вибрати правильний.",
+  "author": "Автор",
+  "howTo": "Якщо ви ще не вмієте обчислювати день тижня, цього цілком можна навчитися:",
+  "moreInfo": "Докладніше",
+  "ok": "ОК",
+  "version": "Версія",
+  "timer": "Секундомір",
+  "enabled": "Увімкнено",
+  "disabled": "Вимкнено",
+  "reappearMsg": "Торкніться прихованої дати, щоб показати її знову!",
+  "after": "Через {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Діапазон дат",
+  "firstDayInList": "Перший день у списку",
+  "localeDefault": "Автоматично",
+  "shortDateDisplay": "Показувати дату ненадовго",
+  "hideTheDate": "Приховувати дату",
+  "rangeCustom": "Власний діапазон",
+  "rangeThisMonth": "Цей місяць",
+  "rangeThisYear": "Цей рік",
+  "rangeNextYear": "Наступний рік",
+  "rangeLast100Years": "Останні 100 років",
+  "rangeCentury20": "XX століття",
+  "rangeCentury21": "XXI століття",
+  "rangeGregorianToToday": "1582-10-15 – сьогодні",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Статистика",
+  "rounds": "Раунди",
+  "accuracy": "Точність",
+  "averageTime": "Середній час",
+  "bestTime": "Найкращий час",
+  "currentStreak": "Поточна серія",
+  "bestStreak": "Найкраща серія",
+  "allTime": "За весь час",
+  "lastNRounds": "{n, plural, one{Останній {n} раунд} few{Останні {n} раунди} many{Останні {n} раундів} other{Останні {n} раунду}}",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n, plural, one{{n} раунд} few{{n} раунди} many{{n} раундів} other{{n} раунду}}",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Усі діапазони дат",
+  "noRoundsYet": "Раундів поки немає. Статистика з’явиться тут після першої відповіді.",
+  "recentWindow": "Раундів у недавній статистиці",
+  "resetStatistics": "Скинути статистику",
+  "resetStatisticsConfirm": "Видалити всі записані раунди? Цю дію не можна скасувати.",
+  "delete": "Видалити",
+  "cancel": "Скасувати",
+  "withAverage": "{count} · сер. {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Нагадування про тренування",
+  "practiceRemindersHint": "Випадкові дати у сповіщеннях протягом дня",
+  "remindersPerDay": "Нагадувань на день",
+  "nPerDay": "{n, plural, =2{Двічі на день} one{{n} раз на день} few{{n} рази на день} many{{n} разів на день} other{{n} разу на день}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Найраніше нагадування",
+  "latestReminder": "Найпізніше нагадування",
+  "notificationsBlocked": "Сповіщення для Guessaday вимкнено. Дозвольте їх у налаштуваннях системи, щоб отримувати нагадування.",
+  "reminderTitle": "Який день тижня?",
+  "reveal": "Показати",
+  "practice": "Тренування"
+}

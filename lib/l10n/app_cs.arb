@@ -1,0 +1,102 @@
+{
+  "@@locale": "cs",
+  "appName": "Guessaday",
+  "settings": "Nastavení",
+  "about": "O aplikaci",
+  "startDate": "Počáteční datum",
+  "endDate": "Koncové datum",
+  "pickStartDate": "Vybrat počáteční datum",
+  "pickEndDate": "Vybrat koncové datum",
+  "appDescription": "Tato aplikace zobrazí náhodné datum. Vaším úkolem je spočítat, na který den v týdnu připadá, a vybrat ten správný.",
+  "author": "Autor",
+  "howTo": "Pokud ještě nevíte, jak den v týdnu spočítat, určitě se to můžete naučit:",
+  "moreInfo": "Další informace",
+  "ok": "OK",
+  "version": "Verze",
+  "timer": "Stopky",
+  "enabled": "Zapnuto",
+  "disabled": "Vypnuto",
+  "reappearMsg": "Klepnutím na skryté datum ho znovu zobrazíte!",
+  "after": "Po {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Rozsah dat",
+  "firstDayInList": "První den v seznamu",
+  "localeDefault": "Automaticky",
+  "shortDateDisplay": "Krátké zobrazení data",
+  "hideTheDate": "Skrývat datum",
+  "rangeCustom": "Vlastní rozsah",
+  "rangeThisMonth": "Tento měsíc",
+  "rangeThisYear": "Tento rok",
+  "rangeNextYear": "Příští rok",
+  "rangeLast100Years": "Posledních 100 let",
+  "rangeCentury20": "20. století",
+  "rangeCentury21": "21. století",
+  "rangeGregorianToToday": "1582-10-15 – dnes",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Statistiky",
+  "rounds": "Kola",
+  "accuracy": "Úspěšnost",
+  "averageTime": "Průměrný čas",
+  "bestTime": "Nejlepší čas",
+  "currentStreak": "Aktuální série",
+  "bestStreak": "Nejdelší série",
+  "allTime": "Celkem",
+  "lastNRounds": "{n, plural, one{Poslední kolo} few{Poslední {n} kola} many{Posledních {n} kol} other{Posledních {n} kol}}",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n, plural, one{{n} kolo} few{{n} kola} many{{n} kola} other{{n} kol}}",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Všechny rozsahy dat",
+  "noRoundsYet": "Zatím nebylo odehráno žádné kolo. Statistiky se zde zobrazí po první odpovědi.",
+  "recentWindow": "Kola v nedávných statistikách",
+  "resetStatistics": "Vynulovat statistiky",
+  "resetStatisticsConfirm": "Smazat všechna zaznamenaná kola? Tuto akci nelze vrátit zpět.",
+  "delete": "Smazat",
+  "cancel": "Zrušit",
+  "withAverage": "{count} · prům. {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Připomenutí procvičování",
+  "practiceRemindersHint": "Náhodná data jako oznámení během dne",
+  "remindersPerDay": "Připomenutí za den",
+  "nPerDay": "{n, plural, one{Jednou denně} =2{Dvakrát denně} few{{n}krát denně} many{{n}krát denně} other{{n}krát denně}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Nejdřívější připomenutí",
+  "latestReminder": "Nejpozdější připomenutí",
+  "notificationsBlocked": "Oznámení pro Guessaday jsou vypnutá. Povolte je v nastavení systému, abyste dostávali připomenutí.",
+  "reminderTitle": "Který den v týdnu?",
+  "reveal": "Odhalit",
+  "practice": "Procvičit"
+}

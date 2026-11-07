@@ -1,0 +1,15 @@
+Trenažér pro výpočet dne v týdnu pro libovolné datum.
+
+Guessaday zobrazí náhodné datum a zeptá se, na který den v týdnu připadá. Klepněte na svou odpověď a aplikace vám řekne, zda byla správná, a volitelně i jak dlouho vám to trvalo.
+
+Funkce:
+• Volba rozsahu dat: tento měsíc, tento rok, posledních 100 let, 20. nebo 21. století, celé období gregoriánského kalendáře nebo vlastní počáteční a koncové datum.
+• Stopky pro každý tip.
+• „Krátké zobrazení data“: datum po nastavené době zmizí, takže si ho musíte nejprve zapamatovat.
+• Statistiky pro každý rozsah dat: úspěšnost, časy a série.
+• Volitelná připomenutí procvičování: několik náhodných dat denně jako oznámení s tlačítky „Odhalit“ a „Procvičit“. Ve výchozím nastavení vypnuto.
+• Data a názvy dnů v týdnu se řídí jazykem vašeho zařízení.
+
+Pokud se chcete naučit počítat den v týdnu z hlavy, navštivte web vývojáře: https://firsching.ch/guessaday
+
+Guessaday je svobodný software (GPL-3.0) a neobsahuje žádné reklamy ani sledování.

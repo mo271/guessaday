@@ -1,0 +1,102 @@
+{
+  "@@locale": "nl",
+  "appName": "Guessaday",
+  "settings": "Instellingen",
+  "about": "Over",
+  "startDate": "Begindatum",
+  "endDate": "Einddatum",
+  "pickStartDate": "Begindatum kiezen",
+  "pickEndDate": "Einddatum kiezen",
+  "appDescription": "Deze app toont een willekeurige datum. Je moet dan berekenen op welke dag van de week die valt en de juiste dag kiezen.",
+  "author": "Auteur",
+  "howTo": "Als je nog niet weet hoe je de dag van de week berekent, kun je dat zeker leren:",
+  "moreInfo": "Meer informatie",
+  "ok": "OK",
+  "version": "Versie",
+  "timer": "Stopwatch",
+  "enabled": "Ingeschakeld",
+  "disabled": "Uitgeschakeld",
+  "reappearMsg": "Tik op de verborgen datum om die weer te tonen!",
+  "after": "Na {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Periode",
+  "firstDayInList": "Eerste dag in de lijst",
+  "localeDefault": "Automatisch",
+  "shortDateDisplay": "Datum kort weergeven",
+  "hideTheDate": "Datum verbergen",
+  "rangeCustom": "Eigen periode",
+  "rangeThisMonth": "Deze maand",
+  "rangeThisYear": "Dit jaar",
+  "rangeNextYear": "Volgend jaar",
+  "rangeLast100Years": "De afgelopen 100 jaar",
+  "rangeCentury20": "De 20e eeuw",
+  "rangeCentury21": "De 21e eeuw",
+  "rangeGregorianToToday": "1582-10-15 – vandaag",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Statistieken",
+  "rounds": "Rondes",
+  "accuracy": "Nauwkeurigheid",
+  "averageTime": "Gemiddelde tijd",
+  "bestTime": "Beste tijd",
+  "currentStreak": "Huidige reeks",
+  "bestStreak": "Beste reeks",
+  "allTime": "Totaal",
+  "lastNRounds": "Laatste {n} rondes",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} rondes",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Alle periodes",
+  "noRoundsYet": "Nog geen rondes gespeeld. Na je eerste antwoord verschijnen hier de statistieken.",
+  "recentWindow": "Rondes in recente statistieken",
+  "resetStatistics": "Statistieken resetten",
+  "resetStatisticsConfirm": "Alle opgeslagen rondes verwijderen? Dit kan niet ongedaan worden gemaakt.",
+  "delete": "Verwijderen",
+  "cancel": "Annuleren",
+  "withAverage": "{count} · gem. {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Oefenherinneringen",
+  "practiceRemindersHint": "Willekeurige datums als meldingen gedurende de dag",
+  "remindersPerDay": "Herinneringen per dag",
+  "nPerDay": "{n, plural, =1{Eén keer per dag} =2{Twee keer per dag} other{{n} keer per dag}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Vroegste herinnering",
+  "latestReminder": "Laatste herinnering",
+  "notificationsBlocked": "Meldingen zijn uitgeschakeld voor Guessaday. Sta ze toe in de systeeminstellingen om herinneringen te ontvangen.",
+  "reminderTitle": "Welke dag van de week?",
+  "reveal": "Onthullen",
+  "practice": "Oefenen"
+}

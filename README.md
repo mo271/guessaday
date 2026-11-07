@@ -24,8 +24,8 @@ Android, iOS, Linux desktop and the web from one Dart codebase.
 - Optional practice reminders: a few random dates a day arrive as
   notifications, with "Reveal" and "Practice" buttons. Off by default; the
   notification permission is only requested when you turn them on.
-- Dates and weekday names follow the device language. The settings strings
-  are translated into English and German.
+- Dates and weekday names follow the device language. The interface is
+  translated into more than twenty languages.
 
 ## Development
 
@@ -100,8 +100,13 @@ Feel free to improve this app! You can open an issue or make a pull request.
 
 ## Translating
 
-Add an `app_<lang>.arb` file next to `lib/l10n/app_en.arb`, translate the
-values, and run `flutter gen-l10n`. Pull requests are welcome.
+The English and German strings are written by the author. The other
+languages were machine-translated and checked only superficially, so
+corrections from native speakers are very welcome: edit the matching
+`lib/l10n/app_<lang>.arb` (and `fastlane/metadata/android/<locale>/` for
+the store listing) and open a pull request. For a new language, add an
+`app_<lang>.arb` file next to `lib/l10n/app_en.arb`, translate the values,
+and run `flutter gen-l10n`; `flutter test` checks that no string is missing.
 
 ## Calendar note
 

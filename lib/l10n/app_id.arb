@@ -1,0 +1,102 @@
+{
+  "@@locale": "id",
+  "appName": "Guessaday",
+  "settings": "Setelan",
+  "about": "Tentang",
+  "startDate": "Tanggal mulai",
+  "endDate": "Tanggal akhir",
+  "pickStartDate": "Pilih tanggal mulai",
+  "pickEndDate": "Pilih tanggal akhir",
+  "appDescription": "Aplikasi ini menampilkan tanggal acak. Anda kemudian diminta menghitung tanggal tersebut jatuh pada hari apa dan memilih hari yang benar.",
+  "author": "Pembuat",
+  "howTo": "Jika Anda belum tahu cara menghitung hari dalam seminggu, Anda pasti bisa mempelajarinya:",
+  "moreInfo": "Informasi selengkapnya",
+  "ok": "Oke",
+  "version": "Versi",
+  "timer": "Stopwatch",
+  "enabled": "Aktif",
+  "disabled": "Nonaktif",
+  "reappearMsg": "Ketuk tanggal yang tersembunyi untuk menampilkannya lagi!",
+  "after": "Setelah {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Rentang tanggal",
+  "firstDayInList": "Hari pertama dalam daftar",
+  "localeDefault": "Otomatis",
+  "shortDateDisplay": "Tampilkan tanggal sebentar saja",
+  "hideTheDate": "Sembunyikan tanggal",
+  "rangeCustom": "Pilih sendiri",
+  "rangeThisMonth": "Bulan ini",
+  "rangeThisYear": "Tahun ini",
+  "rangeNextYear": "Tahun depan",
+  "rangeLast100Years": "100 tahun terakhir",
+  "rangeCentury20": "Abad ke-20",
+  "rangeCentury21": "Abad ke-21",
+  "rangeGregorianToToday": "1582-10-15 – hari ini",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Statistik",
+  "rounds": "Ronde",
+  "accuracy": "Akurasi",
+  "averageTime": "Waktu rata-rata",
+  "bestTime": "Waktu terbaik",
+  "currentStreak": "Rentetan saat ini",
+  "bestStreak": "Rentetan terbaik",
+  "allTime": "Sepanjang waktu",
+  "lastNRounds": "{n} ronde terakhir",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} ronde",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Semua rentang tanggal",
+  "noRoundsYet": "Belum ada ronde yang dimainkan. Statistik akan muncul di sini setelah jawaban pertama Anda.",
+  "recentWindow": "Jumlah ronde dalam statistik terbaru",
+  "resetStatistics": "Reset statistik",
+  "resetStatisticsConfirm": "Hapus semua ronde yang tercatat? Tindakan ini tidak dapat diurungkan.",
+  "delete": "Hapus",
+  "cancel": "Batal",
+  "withAverage": "{count} · rata-rata {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Pengingat latihan",
+  "practiceRemindersHint": "Tanggal acak sebagai notifikasi sepanjang hari",
+  "remindersPerDay": "Pengingat per hari",
+  "nPerDay": "{n, plural, =1{Sekali sehari} =2{Dua kali sehari} other{{n} kali sehari}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Pengingat paling awal",
+  "latestReminder": "Pengingat paling akhir",
+  "notificationsBlocked": "Notifikasi untuk Guessaday dinonaktifkan. Izinkan notifikasi di setelan sistem untuk menerima pengingat.",
+  "reminderTitle": "Hari apa?",
+  "reveal": "Tampilkan",
+  "practice": "Latihan"
+}

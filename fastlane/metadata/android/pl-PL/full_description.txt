@@ -1,0 +1,15 @@
+Trener obliczania dnia tygodnia dla dowolnej daty.
+
+Guessaday pokazuje losową datę i pyta, jaki to dzień tygodnia. Dotknij swojej odpowiedzi, a aplikacja powie Ci, czy była poprawna, i opcjonalnie, ile czasu Ci to zajęło.
+
+Funkcje:
+• Wybór zakresu dat: ten miesiąc, ten rok, ostatnie 100 lat, XX lub XXI wiek, cały okres kalendarza gregoriańskiego albo własna data początkowa i końcowa.
+• Stoper dla każdej odpowiedzi.
+• „Krótkie wyświetlanie daty”: data znika po ustawionym czasie, więc trzeba ją najpierw zapamiętać.
+• Statystyki dla każdego zakresu dat: skuteczność, czasy i serie.
+• Opcjonalne przypomnienia o ćwiczeniach: kilka losowych dat dziennie jako powiadomienia z przyciskami „Pokaż” i „Ćwicz”. Domyślnie wyłączone.
+• Daty i nazwy dni tygodnia są zgodne z językiem urządzenia.
+
+Jeśli chcesz nauczyć się obliczać dzień tygodnia w pamięci, odwiedź stronę autora: https://firsching.ch/guessaday
+
+Guessaday jest wolnym oprogramowaniem (GPL-3.0) i nie zawiera reklam ani śledzenia.

@@ -1,0 +1,15 @@
+Un entrenador para calcular el día de la semana de cualquier fecha.
+
+Guessaday muestra una fecha aleatoria y te pregunta en qué día de la semana cae. Toca tu respuesta y la aplicación te dirá si has acertado y, si quieres, cuánto tiempo has necesitado.
+
+Funciones:
+• Elige el intervalo de fechas: este mes, este año, los últimos 100 años, el siglo XX o XXI, toda la era gregoriana o tus propias fechas de inicio y de fin.
+• Cronómetro para cada respuesta.
+• «Mostrar la fecha brevemente»: la fecha desaparece tras un tiempo configurable, así que primero tienes que memorizarla.
+• Estadísticas por intervalo de fechas: aciertos, tiempos y rachas.
+• Recordatorios de práctica opcionales: unas cuantas fechas aleatorias al día como notificaciones, con los botones «Revelar» y «Practicar». Desactivados de forma predeterminada.
+• Las fechas y los nombres de los días siguen el idioma de tu dispositivo.
+
+Si quieres aprender a calcular el día de la semana mentalmente, visita el sitio web del desarrollador: https://firsching.ch/guessaday
+
+Guessaday es software libre (GPL-3.0) y no contiene anuncios ni rastreo.

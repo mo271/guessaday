@@ -1,0 +1,102 @@
+{
+  "@@locale": "hi",
+  "appName": "Guessaday",
+  "settings": "सेटिंग",
+  "about": "ऐप के बारे में",
+  "startDate": "शुरुआती तारीख",
+  "endDate": "आखिरी तारीख",
+  "pickStartDate": "शुरुआती तारीख चुनें",
+  "pickEndDate": "आखिरी तारीख चुनें",
+  "appDescription": "यह ऐप एक रैंडम तारीख दिखाता है। आपको हिसाब लगाना है कि उस दिन हफ़्ते का कौन-सा दिन (वार) है और सही दिन चुनना है।",
+  "author": "डेवलपर",
+  "howTo": "अगर आपको अभी तक हफ़्ते का दिन निकालना नहीं आता, तो आप इसे ज़रूर सीख सकते हैं:",
+  "moreInfo": "ज़्यादा जानकारी",
+  "ok": "ठीक है",
+  "version": "वर्शन",
+  "timer": "स्टॉपवॉच",
+  "enabled": "चालू",
+  "disabled": "बंद",
+  "reappearMsg": "छिपी हुई तारीख को फिर से देखने के लिए उस पर टैप करें!",
+  "after": "{duration} के बाद",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "तारीख की सीमा",
+  "firstDayInList": "सूची का पहला दिन",
+  "localeDefault": "अपने-आप",
+  "shortDateDisplay": "तारीख थोड़ी देर के लिए दिखाएं",
+  "hideTheDate": "तारीख छिपाएं",
+  "rangeCustom": "खुद चुनें",
+  "rangeThisMonth": "यह महीना",
+  "rangeThisYear": "यह साल",
+  "rangeNextYear": "अगला साल",
+  "rangeLast100Years": "पिछले 100 साल",
+  "rangeCentury20": "20वीं सदी",
+  "rangeCentury21": "21वीं सदी",
+  "rangeGregorianToToday": "1582-10-15 – आज",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "आंकड़े",
+  "rounds": "राउंड",
+  "accuracy": "सटीकता",
+  "averageTime": "औसत समय",
+  "bestTime": "सबसे अच्छा समय",
+  "currentStreak": "मौजूदा स्ट्रीक",
+  "bestStreak": "सबसे लंबी स्ट्रीक",
+  "allTime": "अब तक",
+  "lastNRounds": "पिछले {n} राउंड",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} राउंड",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "तारीख की सभी सीमाएं",
+  "noRoundsYet": "अभी तक कोई राउंड नहीं खेला गया। आपके पहले जवाब के बाद यहां आंकड़े दिखेंगे।",
+  "recentWindow": "हाल के आंकड़ों में राउंड",
+  "resetStatistics": "आंकड़े रीसेट करें",
+  "resetStatisticsConfirm": "रिकॉर्ड किए गए सभी राउंड मिटाएं? इसे पहले जैसा नहीं किया जा सकता।",
+  "delete": "मिटाएं",
+  "cancel": "रद्द करें",
+  "withAverage": "{count} · औसत {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "अभ्यास के रिमाइंडर",
+  "practiceRemindersHint": "दिन के दौरान सूचनाओं के रूप में रैंडम तारीखें",
+  "remindersPerDay": "हर दिन रिमाइंडर",
+  "nPerDay": "{n, plural, =1{दिन में एक बार} =2{दिन में दो बार} other{दिन में {n} बार}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "सबसे पहला रिमाइंडर",
+  "latestReminder": "सबसे आखिरी रिमाइंडर",
+  "notificationsBlocked": "Guessaday के लिए सूचनाएं बंद हैं। रिमाइंडर पाने के लिए सिस्टम सेटिंग में उन्हें चालू करें।",
+  "reminderTitle": "हफ़्ते का कौन-सा दिन?",
+  "reveal": "जवाब देखें",
+  "practice": "अभ्यास करें"
+}

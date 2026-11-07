@@ -1,0 +1,102 @@
+{
+  "@@locale": "zh",
+  "appName": "Guessaday",
+  "settings": "设置",
+  "about": "关于",
+  "startDate": "开始日期",
+  "endDate": "结束日期",
+  "pickStartDate": "选择开始日期",
+  "pickEndDate": "选择结束日期",
+  "appDescription": "本应用会显示一个随机日期。请计算这一天是星期几，然后选出正确的答案。",
+  "author": "作者",
+  "howTo": "如果你还不会计算星期几，完全可以学会：",
+  "moreInfo": "更多信息",
+  "ok": "确定",
+  "version": "版本",
+  "timer": "秒表",
+  "enabled": "已启用",
+  "disabled": "已停用",
+  "reappearMsg": "点按隐藏的日期即可重新显示",
+  "after": "{duration}后",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "日期范围",
+  "firstDayInList": "列表中的第一天",
+  "localeDefault": "自动",
+  "shortDateDisplay": "短暂显示日期",
+  "hideTheDate": "隐藏日期",
+  "rangeCustom": "自定义",
+  "rangeThisMonth": "本月",
+  "rangeThisYear": "今年",
+  "rangeNextYear": "明年",
+  "rangeLast100Years": "最近 100 年",
+  "rangeCentury20": "20 世纪",
+  "rangeCentury21": "21 世纪",
+  "rangeGregorianToToday": "1582-10-15 – 今天",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "统计",
+  "rounds": "轮数",
+  "accuracy": "正确率",
+  "averageTime": "平均用时",
+  "bestTime": "最佳用时",
+  "currentStreak": "当前连续答对",
+  "bestStreak": "最长连续答对",
+  "allTime": "全部时间",
+  "lastNRounds": "最近 {n} 轮",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} 轮",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "所有日期范围",
+  "noRoundsYet": "尚未进行任何练习。首次作答后，统计数据会显示在这里。",
+  "recentWindow": "近期统计包含的轮数",
+  "resetStatistics": "重置统计",
+  "resetStatisticsConfirm": "要删除所有已记录的轮次吗？此操作无法撤消。",
+  "delete": "删除",
+  "cancel": "取消",
+  "withAverage": "{count} · 平均 {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "练习提醒",
+  "practiceRemindersHint": "白天以通知形式推送随机日期",
+  "remindersPerDay": "每天提醒次数",
+  "nPerDay": "{n, plural, other{每天 {n} 次}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "最早提醒时间",
+  "latestReminder": "最晚提醒时间",
+  "notificationsBlocked": "Guessaday 的通知已关闭。请在系统设置中允许通知，以接收提醒。",
+  "reminderTitle": "星期几？",
+  "reveal": "查看答案",
+  "practice": "练习"
+}

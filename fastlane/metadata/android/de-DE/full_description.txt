@@ -6,6 +6,8 @@ Funktionen:
 • Zeitraum wählen: aktueller Monat, dieses Jahr, die letzten 100 Jahre, das 20. oder 21. Jahrhundert, die gesamte gregorianische Zeitrechnung oder ein eigener Zeitraum.
 • Stoppuhr für jede Antwort.
 • „Datum nur kurz anzeigen“: Das Datum verschwindet nach einer einstellbaren Zeit, du musst es dir also zuerst merken.
+• Statistik pro Zeitraum: Trefferquote, Zeiten und Serien.
+• Optionale Übungserinnerungen: ein paar zufällige Daten pro Tag als Benachrichtigung, mit „Auflösen“ und „Üben“. Standardmäßig aus.
 • Datum und Wochentage folgen der Sprache deines Geräts.
 
 Wie man den Wochentag im Kopf berechnet, erfährst du auf der Website des Entwicklers: https://firsching.ch/guessaday

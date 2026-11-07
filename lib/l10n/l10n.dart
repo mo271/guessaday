@@ -3,14 +3,16 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'app_localizations.dart';
 
-/// Every language the Material and Cupertino widgets can be localised to.
-/// The app's own strings fall back to English where no translation exists,
-/// while dates and weekday names follow the device language, exactly as the
-/// original app did.
+/// The app's own languages first, so that a script variant such as
+/// Traditional Chinese wins over the plain language code, then every other
+/// language the Material and Cupertino widgets can be localised to. Strings
+/// without a translation fall back to English, while dates and weekday names
+/// follow the device language in any case.
 final List<Locale> supportedLocales = [
-  const Locale('en'),
+  ...AppLocalizations.supportedLocales,
   for (final code in kMaterialSupportedLanguages)
-    if (code != 'en' && kCupertinoSupportedLanguages.contains(code))
+    if (kCupertinoSupportedLanguages.contains(code) &&
+        !AppLocalizations.supportedLocales.any((l) => l.languageCode == code))
       Locale(code),
 ];
 

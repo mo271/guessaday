@@ -1,0 +1,102 @@
+{
+  "@@locale": "ja",
+  "appName": "Guessaday",
+  "settings": "設定",
+  "about": "このアプリについて",
+  "startDate": "開始日",
+  "endDate": "終了日",
+  "pickStartDate": "開始日を選択",
+  "pickEndDate": "終了日を選択",
+  "appDescription": "このアプリはランダムな日付を表示します。その日付が何曜日かを計算して、正しい曜日を選んでください。",
+  "author": "作者",
+  "howTo": "曜日の計算方法をまだ知らなくても、きっと身につけられます：",
+  "moreInfo": "詳細情報",
+  "ok": "OK",
+  "version": "バージョン",
+  "timer": "ストップウォッチ",
+  "enabled": "有効",
+  "disabled": "無効",
+  "reappearMsg": "隠れた日付をタップすると再表示されます",
+  "after": "{duration}後",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "日付の範囲",
+  "firstDayInList": "リストの最初の曜日",
+  "localeDefault": "自動",
+  "shortDateDisplay": "日付を短時間だけ表示",
+  "hideTheDate": "日付を隠す",
+  "rangeCustom": "自分で選択",
+  "rangeThisMonth": "今月",
+  "rangeThisYear": "今年",
+  "rangeNextYear": "来年",
+  "rangeLast100Years": "過去100年間",
+  "rangeCentury20": "20世紀",
+  "rangeCentury21": "21世紀",
+  "rangeGregorianToToday": "1582-10-15 – 今日",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "統計",
+  "rounds": "回数",
+  "accuracy": "正答率",
+  "averageTime": "平均時間",
+  "bestTime": "ベストタイム",
+  "currentStreak": "現在の連続正解",
+  "bestStreak": "最長連続正解",
+  "allTime": "全期間",
+  "lastNRounds": "直近{n}回",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n}回",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "すべての日付範囲",
+  "noRoundsYet": "まだ回答がありません。最初に回答すると、ここに統計が表示されます。",
+  "recentWindow": "直近の統計に含める回数",
+  "resetStatistics": "統計をリセット",
+  "resetStatisticsConfirm": "記録されたすべての回答を削除しますか？この操作は元に戻せません。",
+  "delete": "削除",
+  "cancel": "キャンセル",
+  "withAverage": "{count} · 平均 {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "練習リマインダー",
+  "practiceRemindersHint": "日中にランダムな日付を通知で出題します",
+  "remindersPerDay": "1日のリマインダー数",
+  "nPerDay": "{n, plural, other{1日{n}回}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "リマインダーの開始時刻",
+  "latestReminder": "リマインダーの終了時刻",
+  "notificationsBlocked": "Guessaday の通知がオフになっています。リマインダーを受け取るには、システム設定で通知を許可してください。",
+  "reminderTitle": "何曜日？",
+  "reveal": "答えを見る",
+  "practice": "練習する"
+}

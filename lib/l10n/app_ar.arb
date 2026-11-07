@@ -1,0 +1,102 @@
+{
+  "@@locale": "ar",
+  "appName": "Guessaday",
+  "settings": "الإعدادات",
+  "about": "حول التطبيق",
+  "startDate": "تاريخ البداية",
+  "endDate": "تاريخ النهاية",
+  "pickStartDate": "اختيار تاريخ البداية",
+  "pickEndDate": "اختيار تاريخ النهاية",
+  "appDescription": "يعرض هذا التطبيق تاريخًا عشوائيًا. عليك بعد ذلك حساب يوم الأسبوع الذي يوافقه هذا التاريخ واختيار اليوم الصحيح.",
+  "author": "المطوّر",
+  "howTo": "إذا كنت لا تعرف بعد كيفية حساب يوم الأسبوع، فيمكنك تعلّم ذلك بسهولة:",
+  "moreInfo": "مزيد من المعلومات",
+  "ok": "حسنًا",
+  "version": "الإصدار",
+  "timer": "ساعة الإيقاف",
+  "enabled": "مفعّل",
+  "disabled": "معطّل",
+  "reappearMsg": "انقر على التاريخ المخفي لإظهاره مجددًا!",
+  "after": "بعد {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "نطاق التواريخ",
+  "firstDayInList": "اليوم الأول في القائمة",
+  "localeDefault": "تلقائي",
+  "shortDateDisplay": "عرض التاريخ لفترة قصيرة",
+  "hideTheDate": "إخفاء التاريخ",
+  "rangeCustom": "نطاق مخصّص",
+  "rangeThisMonth": "هذا الشهر",
+  "rangeThisYear": "هذه السنة",
+  "rangeNextYear": "السنة القادمة",
+  "rangeLast100Years": "آخر 100 سنة",
+  "rangeCentury20": "القرن العشرون",
+  "rangeCentury21": "القرن الحادي والعشرون",
+  "rangeGregorianToToday": "1582-10-15 – اليوم",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "الإحصاءات",
+  "rounds": "الجولات",
+  "accuracy": "الدقة",
+  "averageTime": "متوسط الوقت",
+  "bestTime": "أفضل وقت",
+  "currentStreak": "السلسلة الحالية",
+  "bestStreak": "أفضل سلسلة",
+  "allTime": "كل الأوقات",
+  "lastNRounds": "{n, plural, zero{آخر {n} جولة} one{آخر جولة} two{آخر جولتين} few{آخر {n} جولات} many{آخر {n} جولة} other{آخر {n} جولة}}",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n, plural, zero{{n} جولة} one{جولة واحدة} two{جولتان} few{{n} جولات} many{{n} جولة} other{{n} جولة}}",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "كل نطاقات التواريخ",
+  "noRoundsYet": "لم تُلعب أي جولة بعد. ستظهر الإحصاءات هنا بعد إجابتك الأولى.",
+  "recentWindow": "عدد الجولات في الإحصاءات الأخيرة",
+  "resetStatistics": "إعادة تعيين الإحصاءات",
+  "resetStatisticsConfirm": "هل تريد حذف كل الجولات المسجّلة؟ لا يمكن التراجع عن هذا الإجراء.",
+  "delete": "حذف",
+  "cancel": "إلغاء",
+  "withAverage": "{count} · متوسط {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "تذكيرات التمرين",
+  "practiceRemindersHint": "تواريخ عشوائية على شكل إشعارات خلال اليوم",
+  "remindersPerDay": "عدد التذكيرات في اليوم",
+  "nPerDay": "{n, plural, zero{{n} مرات في اليوم} one{مرة واحدة في اليوم} two{مرتان في اليوم} few{{n} مرات في اليوم} many{{n} مرة في اليوم} other{{n} مرة في اليوم}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "أبكر تذكير",
+  "latestReminder": "آخر تذكير",
+  "notificationsBlocked": "الإشعارات متوقفة لتطبيق Guessaday. اسمح بها في إعدادات النظام لتلقّي التذكيرات.",
+  "reminderTitle": "أي يوم من الأسبوع؟",
+  "reveal": "إظهار",
+  "practice": "تمرين"
+}

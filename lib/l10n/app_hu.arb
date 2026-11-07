@@ -1,0 +1,102 @@
+{
+  "@@locale": "hu",
+  "appName": "Guessaday",
+  "settings": "Beállítások",
+  "about": "Névjegy",
+  "startDate": "Kezdő dátum",
+  "endDate": "Záró dátum",
+  "pickStartDate": "Kezdő dátum kiválasztása",
+  "pickEndDate": "Záró dátum kiválasztása",
+  "appDescription": "Az alkalmazás egy véletlenszerű dátumot jelenít meg. A feladat kiszámolni, hogy ez a nap a hét melyik napjára esik, és kiválasztani a helyeset.",
+  "author": "Szerző",
+  "howTo": "Ha még nem tudja, hogyan kell kiszámolni a hét napját, könnyen megtanulhatja:",
+  "moreInfo": "További információ",
+  "ok": "OK",
+  "version": "Verzió",
+  "timer": "Stopper",
+  "enabled": "Bekapcsolva",
+  "disabled": "Kikapcsolva",
+  "reappearMsg": "Koppintson az elrejtett dátumra, hogy újra megjelenjen!",
+  "after": "{duration} után",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Dátumtartomány",
+  "firstDayInList": "Első nap a listában",
+  "localeDefault": "Automatikus",
+  "shortDateDisplay": "Dátum rövid megjelenítése",
+  "hideTheDate": "Dátum elrejtése",
+  "rangeCustom": "Egyéni tartomány",
+  "rangeThisMonth": "Ez a hónap",
+  "rangeThisYear": "Ez az év",
+  "rangeNextYear": "Jövő év",
+  "rangeLast100Years": "Az elmúlt 100 év",
+  "rangeCentury20": "A 20. század",
+  "rangeCentury21": "A 21. század",
+  "rangeGregorianToToday": "1582-10-15 – ma",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Statisztika",
+  "rounds": "Körök",
+  "accuracy": "Pontosság",
+  "averageTime": "Átlagos idő",
+  "bestTime": "Legjobb idő",
+  "currentStreak": "Jelenlegi sorozat",
+  "bestStreak": "Leghosszabb sorozat",
+  "allTime": "Összesen",
+  "lastNRounds": "Az utolsó {n} kör",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} kör",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Minden dátumtartomány",
+  "noRoundsYet": "Még nincs lejátszott kör. A statisztika az első válasz után jelenik meg itt.",
+  "recentWindow": "Körök a legutóbbi statisztikában",
+  "resetStatistics": "Statisztika visszaállítása",
+  "resetStatisticsConfirm": "Törli az összes rögzített kört? Ez nem vonható vissza.",
+  "delete": "Törlés",
+  "cancel": "Mégse",
+  "withAverage": "{count} · átl. {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Gyakorlási emlékeztetők",
+  "practiceRemindersHint": "Véletlenszerű dátumok értesítésként a nap folyamán",
+  "remindersPerDay": "Emlékeztetők naponta",
+  "nPerDay": "{n, plural, one{Naponta egyszer} =2{Naponta kétszer} other{Naponta {n} alkalommal}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Legkorábbi emlékeztető",
+  "latestReminder": "Legkésőbbi emlékeztető",
+  "notificationsBlocked": "A Guessaday értesítései ki vannak kapcsolva. Az emlékeztetők fogadásához engedélyezze őket a rendszerbeállításokban.",
+  "reminderTitle": "A hét melyik napja?",
+  "reveal": "Megoldás",
+  "practice": "Gyakorlás"
+}

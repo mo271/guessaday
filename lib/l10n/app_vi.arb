@@ -1,0 +1,102 @@
+{
+  "@@locale": "vi",
+  "appName": "Guessaday",
+  "settings": "Cài đặt",
+  "about": "Giới thiệu",
+  "startDate": "Ngày bắt đầu",
+  "endDate": "Ngày kết thúc",
+  "pickStartDate": "Chọn ngày bắt đầu",
+  "pickEndDate": "Chọn ngày kết thúc",
+  "appDescription": "Ứng dụng này hiển thị một ngày ngẫu nhiên. Bạn cần tính xem ngày đó là thứ mấy trong tuần rồi chọn đáp án đúng.",
+  "author": "Tác giả",
+  "howTo": "Nếu bạn chưa biết cách tính thứ trong tuần, bạn hoàn toàn có thể học được:",
+  "moreInfo": "Thông tin thêm",
+  "ok": "OK",
+  "version": "Phiên bản",
+  "timer": "Bấm giờ",
+  "enabled": "Đã bật",
+  "disabled": "Đã tắt",
+  "reappearMsg": "Nhấn vào ngày đã ẩn để hiện lại!",
+  "after": "Sau {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Khoảng ngày",
+  "firstDayInList": "Ngày đầu tiên trong danh sách",
+  "localeDefault": "Tự động",
+  "shortDateDisplay": "Chỉ hiển thị ngày trong chốc lát",
+  "hideTheDate": "Ẩn ngày",
+  "rangeCustom": "Tự chọn",
+  "rangeThisMonth": "Tháng này",
+  "rangeThisYear": "Năm nay",
+  "rangeNextYear": "Năm sau",
+  "rangeLast100Years": "100 năm gần đây",
+  "rangeCentury20": "Thế kỷ 20",
+  "rangeCentury21": "Thế kỷ 21",
+  "rangeGregorianToToday": "1582-10-15 – hôm nay",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Thống kê",
+  "rounds": "Số lượt",
+  "accuracy": "Độ chính xác",
+  "averageTime": "Thời gian trung bình",
+  "bestTime": "Thời gian tốt nhất",
+  "currentStreak": "Chuỗi hiện tại",
+  "bestStreak": "Chuỗi dài nhất",
+  "allTime": "Từ trước đến nay",
+  "lastNRounds": "{n} lượt gần nhất",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} lượt",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Tất cả khoảng ngày",
+  "noRoundsYet": "Bạn chưa chơi lượt nào. Thống kê sẽ hiển thị ở đây sau câu trả lời đầu tiên của bạn.",
+  "recentWindow": "Số lượt trong thống kê gần đây",
+  "resetStatistics": "Đặt lại thống kê",
+  "resetStatisticsConfirm": "Xóa tất cả lượt đã ghi lại? Bạn không thể hoàn tác thao tác này.",
+  "delete": "Xóa",
+  "cancel": "Hủy",
+  "withAverage": "{count} · TB {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Nhắc luyện tập",
+  "practiceRemindersHint": "Nhận ngày ngẫu nhiên dưới dạng thông báo trong ngày",
+  "remindersPerDay": "Số lần nhắc mỗi ngày",
+  "nPerDay": "{n, plural, =1{Mỗi ngày một lần} =2{Mỗi ngày hai lần} other{Mỗi ngày {n} lần}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Nhắc sớm nhất",
+  "latestReminder": "Nhắc muộn nhất",
+  "notificationsBlocked": "Thông báo của Guessaday đang bị tắt. Hãy cho phép thông báo trong cài đặt hệ thống để nhận lời nhắc.",
+  "reminderTitle": "Thứ mấy?",
+  "reveal": "Xem đáp án",
+  "practice": "Luyện tập"
+}

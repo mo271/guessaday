@@ -1,0 +1,102 @@
+{
+  "@@locale": "it",
+  "appName": "Guessaday",
+  "settings": "Impostazioni",
+  "about": "Informazioni",
+  "startDate": "Data di inizio",
+  "endDate": "Data di fine",
+  "pickStartDate": "Scegli la data di inizio",
+  "pickEndDate": "Scegli la data di fine",
+  "appDescription": "Questa app mostra una data casuale. Devi calcolare che giorno della settimana è e selezionare quello giusto.",
+  "author": "Autore",
+  "howTo": "Se non sai ancora calcolare il giorno della settimana, puoi senz'altro impararlo:",
+  "moreInfo": "Maggiori informazioni",
+  "ok": "OK",
+  "version": "Versione",
+  "timer": "Cronometro",
+  "enabled": "Attivato",
+  "disabled": "Disattivato",
+  "reappearMsg": "Tocca la data nascosta per farla riapparire!",
+  "after": "Dopo {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Intervallo di date",
+  "firstDayInList": "Primo giorno dell'elenco",
+  "localeDefault": "Automatico",
+  "shortDateDisplay": "Mostra la data brevemente",
+  "hideTheDate": "Nascondi la data",
+  "rangeCustom": "Intervallo personalizzato",
+  "rangeThisMonth": "Questo mese",
+  "rangeThisYear": "Quest'anno",
+  "rangeNextYear": "L'anno prossimo",
+  "rangeLast100Years": "Gli ultimi 100 anni",
+  "rangeCentury20": "Il XX secolo",
+  "rangeCentury21": "Il XXI secolo",
+  "rangeGregorianToToday": "1582-10-15 – oggi",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Statistiche",
+  "rounds": "Turni",
+  "accuracy": "Precisione",
+  "averageTime": "Tempo medio",
+  "bestTime": "Miglior tempo",
+  "currentStreak": "Serie attuale",
+  "bestStreak": "Serie migliore",
+  "allTime": "Dall'inizio",
+  "lastNRounds": "Ultimi {n} turni",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} turni",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Tutti gli intervalli di date",
+  "noRoundsYet": "Nessun turno giocato finora. Le statistiche appariranno qui dopo la tua prima risposta.",
+  "recentWindow": "Turni nelle statistiche recenti",
+  "resetStatistics": "Azzera statistiche",
+  "resetStatisticsConfirm": "Eliminare tutti i turni registrati? L'operazione non può essere annullata.",
+  "delete": "Elimina",
+  "cancel": "Annulla",
+  "withAverage": "{count} · media {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Promemoria di allenamento",
+  "practiceRemindersHint": "Date casuali come notifiche durante la giornata",
+  "remindersPerDay": "Promemoria al giorno",
+  "nPerDay": "{n, plural, =1{Una volta al giorno} =2{Due volte al giorno} other{{n} volte al giorno}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Primo promemoria",
+  "latestReminder": "Ultimo promemoria",
+  "notificationsBlocked": "Le notifiche di Guessaday sono disattivate. Consentile nelle impostazioni di sistema per ricevere i promemoria.",
+  "reminderTitle": "Che giorno della settimana?",
+  "reveal": "Rivela",
+  "practice": "Esercitati"
+}

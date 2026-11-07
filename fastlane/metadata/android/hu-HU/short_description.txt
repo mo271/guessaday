@@ -1,0 +1,1 @@
+Gyakorolja a hét napjának kiszámítását tetszőleges dátumra

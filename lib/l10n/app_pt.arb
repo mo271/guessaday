@@ -1,0 +1,102 @@
+{
+  "@@locale": "pt",
+  "appName": "Guessaday",
+  "settings": "Configurações",
+  "about": "Sobre",
+  "startDate": "Data inicial",
+  "endDate": "Data final",
+  "pickStartDate": "Escolher data inicial",
+  "pickEndDate": "Escolher data final",
+  "appDescription": "Este app mostra uma data aleatória. Você deve calcular em que dia da semana ela cai e selecionar o dia correto.",
+  "author": "Autor",
+  "howTo": "Se você ainda não sabe calcular o dia da semana, com certeza pode aprender:",
+  "moreInfo": "Mais informações",
+  "ok": "OK",
+  "version": "Versão",
+  "timer": "Cronômetro",
+  "enabled": "Ativado",
+  "disabled": "Desativado",
+  "reappearMsg": "Toque na data oculta para que ela reapareça!",
+  "after": "Após {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Período",
+  "firstDayInList": "Primeiro dia da lista",
+  "localeDefault": "Automático",
+  "shortDateDisplay": "Mostrar a data brevemente",
+  "hideTheDate": "Ocultar a data",
+  "rangeCustom": "Período personalizado",
+  "rangeThisMonth": "Este mês",
+  "rangeThisYear": "Este ano",
+  "rangeNextYear": "Próximo ano",
+  "rangeLast100Years": "Os últimos 100 anos",
+  "rangeCentury20": "O século XX",
+  "rangeCentury21": "O século XXI",
+  "rangeGregorianToToday": "1582-10-15 – hoje",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Estatísticas",
+  "rounds": "Rodadas",
+  "accuracy": "Acertos",
+  "averageTime": "Tempo médio",
+  "bestTime": "Melhor tempo",
+  "currentStreak": "Sequência atual",
+  "bestStreak": "Melhor sequência",
+  "allTime": "Desde o início",
+  "lastNRounds": "Últimas {n} rodadas",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n} rodadas",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Todos os períodos",
+  "noRoundsYet": "Nenhuma rodada jogada ainda. As estatísticas aparecem aqui depois da sua primeira resposta.",
+  "recentWindow": "Rodadas nas estatísticas recentes",
+  "resetStatistics": "Redefinir estatísticas",
+  "resetStatisticsConfirm": "Excluir todas as rodadas registradas? Isso não pode ser desfeito.",
+  "delete": "Excluir",
+  "cancel": "Cancelar",
+  "withAverage": "{count} · méd. {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Lembretes de prática",
+  "practiceRemindersHint": "Datas aleatórias como notificações ao longo do dia",
+  "remindersPerDay": "Lembretes por dia",
+  "nPerDay": "{n, plural, =1{Uma vez por dia} =2{Duas vezes por dia} other{{n} vezes por dia}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Primeiro lembrete",
+  "latestReminder": "Último lembrete",
+  "notificationsBlocked": "As notificações do Guessaday estão desativadas. Permita-as nas configurações do sistema para receber lembretes.",
+  "reminderTitle": "Que dia da semana?",
+  "reveal": "Revelar",
+  "practice": "Praticar"
+}

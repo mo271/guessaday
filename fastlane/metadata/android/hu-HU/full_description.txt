@@ -1,0 +1,15 @@
+Gyakorlóalkalmazás a hét napjának kiszámításához tetszőleges dátumra.
+
+A Guessaday egy véletlenszerű dátumot mutat, és megkérdezi, a hét melyik napjára esik. Koppintson a válaszra, és az alkalmazás megmondja, helyes volt-e, és kérésre azt is, mennyi időre volt szüksége.
+
+Funkciók:
+• Választható dátumtartomány: ez a hónap, ez az év, az elmúlt 100 év, a 20. vagy a 21. század, a teljes Gergely-naptári időszak vagy saját kezdő és záró dátum.
+• Stopper minden tipphez.
+• „Dátum rövid megjelenítése”: a dátum beállítható idő után eltűnik, így először meg kell jegyeznie.
+• Statisztika dátumtartományonként: pontosság, idők és sorozatok.
+• Választható gyakorlási emlékeztetők: naponta néhány véletlenszerű dátum értesítésként, „Megoldás” és „Gyakorlás” gombbal. Alapértelmezés szerint kikapcsolva.
+• A dátumok és a napok nevei az eszköz nyelvét követik.
+
+Ha szeretné megtanulni fejben kiszámolni a hét napját, látogasson el a fejlesztő weboldalára: https://firsching.ch/guessaday
+
+A Guessaday szabad szoftver (GPL-3.0), nem tartalmaz hirdetéseket és nem követi a felhasználót.

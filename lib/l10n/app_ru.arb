@@ -1,0 +1,102 @@
+{
+  "@@locale": "ru",
+  "appName": "Guessaday",
+  "settings": "Настройки",
+  "about": "О приложении",
+  "startDate": "Начальная дата",
+  "endDate": "Конечная дата",
+  "pickStartDate": "Выбрать начальную дату",
+  "pickEndDate": "Выбрать конечную дату",
+  "appDescription": "Приложение показывает случайную дату. Вам нужно вычислить, на какой день недели она приходится, и выбрать правильный.",
+  "author": "Автор",
+  "howTo": "Если вы ещё не умеете вычислять день недели, этому вполне можно научиться:",
+  "moreInfo": "Подробнее",
+  "ok": "ОК",
+  "version": "Версия",
+  "timer": "Секундомер",
+  "enabled": "Включено",
+  "disabled": "Выключено",
+  "reappearMsg": "Нажмите на скрытую дату, чтобы показать её снова!",
+  "after": "Через {duration}",
+  "@after": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "dateRange": "Диапазон дат",
+  "firstDayInList": "Первый день в списке",
+  "localeDefault": "Автоматически",
+  "shortDateDisplay": "Показывать дату ненадолго",
+  "hideTheDate": "Скрывать дату",
+  "rangeCustom": "Свой диапазон",
+  "rangeThisMonth": "Этот месяц",
+  "rangeThisYear": "Этот год",
+  "rangeNextYear": "Следующий год",
+  "rangeLast100Years": "Последние 100 лет",
+  "rangeCentury20": "XX век",
+  "rangeCentury21": "XXI век",
+  "rangeGregorianToToday": "1582-10-15 – сегодня",
+  "range1600To2099": "1600-01-01 – 2099-12-31",
+  "range1To9999": "0001-01-01 – 9999-12-31",
+  "statistics": "Статистика",
+  "rounds": "Раунды",
+  "accuracy": "Точность",
+  "averageTime": "Среднее время",
+  "bestTime": "Лучшее время",
+  "currentStreak": "Текущая серия",
+  "bestStreak": "Лучшая серия",
+  "allTime": "За всё время",
+  "lastNRounds": "{n, plural, one{Последний {n} раунд} few{Последние {n} раунда} many{Последние {n} раундов} other{Последние {n} раунда}}",
+  "@lastNRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "nRounds": "{n, plural, one{{n} раунд} few{{n} раунда} many{{n} раундов} other{{n} раунда}}",
+  "@nRounds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allRanges": "Все диапазоны дат",
+  "noRoundsYet": "Раундов пока нет. Статистика появится здесь после первого ответа.",
+  "recentWindow": "Раундов в недавней статистике",
+  "resetStatistics": "Сбросить статистику",
+  "resetStatisticsConfirm": "Удалить все записанные раунды? Это действие нельзя отменить.",
+  "delete": "Удалить",
+  "cancel": "Отмена",
+  "withAverage": "{count} · ср. {time}",
+  "@withAverage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "practiceReminders": "Напоминания о тренировках",
+  "practiceRemindersHint": "Случайные даты в уведомлениях в течение дня",
+  "remindersPerDay": "Напоминаний в день",
+  "nPerDay": "{n, plural, =2{Дважды в день} one{{n} раз в день} few{{n} раза в день} many{{n} раз в день} other{{n} раза в день}}",
+  "@nPerDay": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "earliestReminder": "Самое раннее напоминание",
+  "latestReminder": "Самое позднее напоминание",
+  "notificationsBlocked": "Уведомления для Guessaday отключены. Разрешите их в настройках системы, чтобы получать напоминания.",
+  "reminderTitle": "Какой день недели?",
+  "reveal": "Показать",
+  "practice": "Тренировка"
+}
