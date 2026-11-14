@@ -1,0 +1,1 @@
+doomsday,calendar,weekday,day of week,mental math,date,trainer,brain,memory,algorithm,conway,quiz
