@@ -1,1 +1,4 @@
 • Mais dez idiomas: bengali, tailandês, persa, tâmil, filipino, grego, hebraico, dinamarquês, norueguês e finlandês. Correções são bem-vindas no GitHub.
+• Paisagem: a data e os dias da semana agora ficam lado a lado.
+• O tempo fora do app não conta mais para o tempo de resposta.
+• Os lembretes por dia podem ser definidos como “Nunca”. Com muitos lembretes por dia, eles não param mais depois de um tempo.

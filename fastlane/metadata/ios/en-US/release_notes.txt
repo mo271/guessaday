@@ -1,1 +1,4 @@
 • Ten more languages: Bengali, Thai, Persian, Tamil, Filipino, Greek, Hebrew, Danish, Norwegian and Finnish. Corrections are welcome on GitHub.
+• Landscape: the date and the weekdays now sit side by side.
+• Time spent outside the app no longer counts towards the answer time.
+• Reminders per day can be set to "Never". With many reminders a day they no longer stop after a while.

@@ -1,1 +1,4 @@
 • Zece limbi în plus: bengaleză, thailandeză, persană, tamilă, filipineză, greacă, ebraică, daneză, norvegiană și finlandeză. Corecturile sunt binevenite pe GitHub.
+• Orientare peisaj: data și zilele săptămânii sunt acum una lângă alta.
+• Timpul petrecut în afara aplicației nu mai contează la timpul de răspuns.
+• Mementourile pe zi pot fi setate la „Niciodată”. Cu multe mementouri pe zi, ele nu se mai opresc după o vreme.

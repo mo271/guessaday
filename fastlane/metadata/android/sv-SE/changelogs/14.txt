@@ -1,1 +1,4 @@
 • Tio språk till: bengali, thai, persiska, tamil, filipino, grekiska, hebreiska, danska, norska och finska. Rättelser välkomnas på GitHub.
+• Liggande läge: datumet och veckodagarna visas nu sida vid sida.
+• Tid utanför appen räknas inte längre in i svarstiden.
+• Påminnelser per dag kan ställas in på ”Aldrig”. Med många påminnelser om dagen slutar de inte längre efter ett tag.

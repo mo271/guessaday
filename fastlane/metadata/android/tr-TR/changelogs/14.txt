@@ -1,1 +1,4 @@
 • On yeni dil daha: Bengalce, Tayca, Farsça, Tamilce, Filipince, Yunanca, İbranice, Danca, Norveççe ve Fince. Düzeltmeler GitHub üzerinden memnuniyetle karşılanır.
+• Yatay görünüm: tarih ve haftanın günleri artık yan yana duruyor.
+• Uygulama dışında geçirilen süre artık yanıt süresine sayılmıyor.
+• Günlük hatırlatıcı sayısı “Hiçbir zaman” olarak ayarlanabilir. Günde çok sayıda hatırlatıcı olduğunda artık bir süre sonra durmuyorlar.

@@ -1,1 +1,4 @@
 • Ti sprog mere: bengali, thai, persisk, tamil, filippinsk, græsk, hebraisk, dansk, norsk og finsk. Rettelser er velkomne på GitHub.
+• Liggende format: datoen og ugedagene står nu side om side.
+• Tid brugt uden for appen tæller ikke længere med i svartiden.
+• Påmindelser pr. dag kan sættes til »Aldrig«. Med mange påmindelser om dagen stopper de ikke længere efter et stykke tid.

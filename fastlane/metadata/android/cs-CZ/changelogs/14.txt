@@ -1,1 +1,4 @@
 • Deset dalších jazyků: bengálština, thajština, perština, tamilština, filipínština, řečtina, hebrejština, dánština, norština a finština. Opravy jsou vítány na GitHubu.
+• Na šířku: datum a dny v týdnu jsou teď vedle sebe.
+• Čas strávený mimo aplikaci se už nepočítá do času odpovědi.
+• Připomenutí za den lze nastavit na „Nikdy“. Při mnoha připomenutích denně už po chvíli nepřestávají.

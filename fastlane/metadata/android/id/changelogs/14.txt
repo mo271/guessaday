@@ -1,1 +1,4 @@
 • Sepuluh bahasa tambahan: Bengali, Thai, Persia, Tamil, Filipino, Yunani, Ibrani, Denmark, Norwegia, dan Finlandia. Koreksi dipersilakan di GitHub.
+• Lanskap: tanggal dan hari-hari dalam seminggu kini berdampingan.
+• Waktu di luar aplikasi tidak lagi dihitung sebagai waktu menjawab.
+• Pengingat per hari dapat diatur ke “Tidak pernah”. Dengan banyak pengingat sehari, pengingat tidak lagi berhenti setelah beberapa waktu.

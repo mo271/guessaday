@@ -1,1 +1,4 @@
 • Tíz további nyelv: bengáli, thai, perzsa, tamil, filippínó, görög, héber, dán, norvég és finn. A javításokat szívesen fogadjuk a GitHubon.
+• Fekvő nézet: a dátum és a hét napjai most egymás mellett állnak.
+• Az alkalmazáson kívül töltött idő már nem számít bele a válaszidőbe.
+• A napi emlékeztetők száma „Soha” értékre is állítható. Sok napi emlékeztető esetén már nem maradnak abba egy idő után.

@@ -1,1 +1,4 @@
 • Sampu pang wika: Bengali, Thai, Persian, Tamil, Filipino, Griyego, Hebreo, Danish, Norwegian at Finnish. Malugod na tinatanggap ang mga pagwawasto sa GitHub.
+• Landscape: magkatabi na ngayon ang petsa at ang mga araw ng linggo.
+• Hindi na binibilang sa oras ng sagot ang oras na ginugol sa labas ng app.
+• Maaari nang itakda sa “Hindi kailanman” ang mga paalala bawat araw. Kapag maraming paalala sa isang araw, hindi na ito humihinto pagkalipas ng ilang sandali.

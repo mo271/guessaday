@@ -1,1 +1,4 @@
 • Dieci lingue in più: bengalese, thailandese, persiano, tamil, filippino, greco, ebraico, danese, norvegese e finlandese. Le correzioni sono benvenute su GitHub.
+• Orizzontale: la data e i giorni della settimana ora sono affiancati.
+• Il tempo trascorso fuori dall'app non conta più nel tempo di risposta.
+• I promemoria al giorno si possono impostare su “Mai”. Con molti promemoria al giorno non si interrompono più dopo un po'.

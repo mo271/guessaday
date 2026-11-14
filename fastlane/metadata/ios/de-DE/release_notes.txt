@@ -1,1 +1,4 @@
 • Zehn weitere Sprachen: Bengalisch, Thai, Persisch, Tamil, Filipino, Griechisch, Hebräisch, Dänisch, Norwegisch und Finnisch. Korrekturen sind auf GitHub willkommen.
+• Querformat: Datum und Wochentage stehen jetzt nebeneinander.
+• Zeit außerhalb der App zählt nicht mehr zur Antwortzeit.
+• Erinnerungen pro Tag lassen sich auf „Nie“ stellen. Bei vielen Erinnerungen am Tag hören sie nicht mehr nach einer Weile auf.

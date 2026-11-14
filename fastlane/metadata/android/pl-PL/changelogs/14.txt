@@ -1,1 +1,4 @@
 • Dziesięć kolejnych języków: bengalski, tajski, perski, tamilski, filipiński, grecki, hebrajski, duński, norweski i fiński. Poprawki mile widziane na GitHubie.
+• Układ poziomy: data i dni tygodnia są teraz obok siebie.
+• Czas spędzony poza aplikacją nie liczy się już do czasu odpowiedzi.
+• Przypomnienia dziennie można ustawić na „Nigdy”. Przy wielu przypomnieniach dziennie nie przestają już po pewnym czasie.

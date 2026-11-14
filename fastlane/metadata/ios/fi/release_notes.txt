@@ -1,1 +1,4 @@
 • Kymmenen kieltä lisää: bengali, thai, persia, tamili, filipino, kreikka, heprea, tanska, norja ja suomi. Korjaukset ovat tervetulleita GitHubissa.
+• Vaakasuunta: päivämäärä ja viikonpäivät ovat nyt vierekkäin.
+• Sovelluksen ulkopuolella vietettyä aikaa ei enää lasketa vastausaikaan.
+• Muistutuksia päivässä voi asettaa arvoon ”Ei koskaan”. Kun muistutuksia on päivässä monta, ne eivät enää lopu hetken päästä.

@@ -1,1 +1,4 @@
 • Diez idiomas más: bengalí, tailandés, persa, tamil, filipino, griego, hebreo, danés, noruego y finés. Las correcciones son bienvenidas en GitHub.
+• Horizontal: la fecha y los días de la semana aparecen ahora uno al lado del otro.
+• El tiempo fuera de la app ya no cuenta para el tiempo de respuesta.
+• Los recordatorios al día se pueden poner en «Nunca». Con muchos recordatorios al día ya no se detienen al cabo de un rato.

@@ -1,1 +1,4 @@
 • Tien extra talen: Bengaals, Thai, Perzisch, Tamil, Filipijns, Grieks, Hebreeuws, Deens, Noors en Fins. Verbeteringen zijn welkom op GitHub.
+• Liggend: de datum en de weekdagen staan nu naast elkaar.
+• Tijd buiten de app telt niet meer mee voor de antwoordtijd.
+• Herinneringen per dag kunnen op “Nooit” worden gezet. Bij veel herinneringen per dag stoppen ze niet meer na een tijdje.
