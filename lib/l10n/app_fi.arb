@@ -54,7 +54,7 @@
   "practiceReminders": "Harjoitusmuistutukset",
   "practiceRemindersHint": "Satunnaisia päivämääriä ilmoituksina päivän aikana",
   "remindersPerDay": "Muistutuksia päivässä",
-  "nPerDay": "{n, plural, one{Kerran päivässä} =2{Kahdesti päivässä} other{{n} kertaa päivässä}}",
+  "nPerDay": "{n, plural, =0{Ei koskaan} one{Kerran päivässä} =2{Kahdesti päivässä} other{{n} kertaa päivässä}}",
   "earliestReminder": "Aikaisin muistutus",
   "latestReminder": "Myöhäisin muistutus",
   "notificationsBlocked": "Ilmoitukset on poistettu käytöstä Guessaday-sovellukselta. Salli ne järjestelmän asetuksissa saadaksesi muistutuksia.",

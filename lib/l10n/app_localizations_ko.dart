@@ -186,6 +186,7 @@ class AppLocalizationsKo extends AppLocalizations {
       n,
       locale: localeName,
       other: '하루 $n회',
+      zero: '안 함',
     );
     return '$_temp0';
   }

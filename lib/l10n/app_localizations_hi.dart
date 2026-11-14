@@ -193,6 +193,7 @@ class AppLocalizationsHi extends AppLocalizations {
       other: 'दिन में $n बार',
       two: 'दिन में दो बार',
       one: 'दिन में एक बार',
+      zero: 'कभी नहीं',
     );
     return '$_temp0';
   }

@@ -192,6 +192,7 @@ class AppLocalizationsFil extends AppLocalizations {
       other: '$n beses bawat araw',
       one: 'Isang beses bawat araw',
       two: 'Dalawang beses bawat araw',
+      zero: 'Hindi kailanman',
     );
     return '$_temp0';
   }

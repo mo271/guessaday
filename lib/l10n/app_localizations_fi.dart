@@ -193,6 +193,7 @@ class AppLocalizationsFi extends AppLocalizations {
       other: '$n kertaa päivässä',
       two: 'Kahdesti päivässä',
       one: 'Kerran päivässä',
+      zero: 'Ei koskaan',
     );
     return '$_temp0';
   }

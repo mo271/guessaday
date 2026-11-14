@@ -174,16 +174,21 @@ class SettingsScreen extends StatelessWidget {
               title: Text(l10n.remindersPerDay),
               subtitle: Text(l10n.nPerDay(settings.remindersPerDay)),
               onTap: () async {
+                // The dialog picks a position in the list rather than a
+                // count, since "once a day" is listed twice and a radio
+                // group may have only one selected radio.
+                const options = Settings.remindersPerDayOptions;
                 final picked = await pickOption<int>(
                   context,
                   title: l10n.remindersPerDay,
-                  current: settings.remindersPerDay,
+                  current: options.indexOf(settings.remindersPerDay),
                   options: [
-                    for (final n in Settings.remindersPerDayOptions)
-                      (n, l10n.nPerDay(n)),
+                    for (final (i, n) in options.indexed) (i, l10n.nPerDay(n)),
                   ],
                 );
-                if (picked != null) settings.setRemindersPerDay(picked);
+                if (picked != null) {
+                  settings.setRemindersPerDay(options[picked]);
+                }
               },
             ),
             ListTile(

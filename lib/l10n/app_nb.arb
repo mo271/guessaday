@@ -54,7 +54,7 @@
   "practiceReminders": "Øvingspåminnelser",
   "practiceRemindersHint": "Tilfeldige datoer som varsler i løpet av dagen",
   "remindersPerDay": "Påminnelser per dag",
-  "nPerDay": "{n, plural, one{Én gang om dagen} =2{To ganger om dagen} other{{n} ganger om dagen}}",
+  "nPerDay": "{n, plural, =0{Aldri} one{Én gang om dagen} =2{To ganger om dagen} other{{n} ganger om dagen}}",
   "earliestReminder": "Tidligste påminnelse",
   "latestReminder": "Seneste påminnelse",
   "notificationsBlocked": "Varsler er slått av for Guessaday. Tillat dem i systeminnstillingene for å få påminnelser.",

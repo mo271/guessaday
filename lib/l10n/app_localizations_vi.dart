@@ -192,6 +192,7 @@ class AppLocalizationsVi extends AppLocalizations {
       other: 'Mỗi ngày $n lần',
       two: 'Mỗi ngày hai lần',
       one: 'Mỗi ngày một lần',
+      zero: 'Không bao giờ',
     );
     return '$_temp0';
   }

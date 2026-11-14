@@ -85,7 +85,7 @@
   "practiceReminders": "Lembretes de prática",
   "practiceRemindersHint": "Datas aleatórias como notificações ao longo do dia",
   "remindersPerDay": "Lembretes por dia",
-  "nPerDay": "{n, plural, =1{Uma vez por dia} =2{Duas vezes por dia} other{{n} vezes por dia}}",
+  "nPerDay": "{n, plural, =0{Nunca} =1{Uma vez por dia} =2{Duas vezes por dia} other{{n} vezes por dia}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

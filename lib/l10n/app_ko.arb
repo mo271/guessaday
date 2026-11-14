@@ -85,7 +85,7 @@
   "practiceReminders": "연습 알림",
   "practiceRemindersHint": "하루 동안 무작위 날짜를 알림으로 받기",
   "remindersPerDay": "하루 알림 횟수",
-  "nPerDay": "{n, plural, other{하루 {n}회}}",
+  "nPerDay": "{n, plural, =0{안 함} other{하루 {n}회}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

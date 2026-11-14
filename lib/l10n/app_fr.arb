@@ -85,7 +85,7 @@
   "practiceReminders": "Rappels d'entraînement",
   "practiceRemindersHint": "Des dates aléatoires en notification au cours de la journée",
   "remindersPerDay": "Rappels par jour",
-  "nPerDay": "{n, plural, =1{Une fois par jour} =2{Deux fois par jour} other{{n} fois par jour}}",
+  "nPerDay": "{n, plural, =0{Jamais} =1{Une fois par jour} =2{Deux fois par jour} other{{n} fois par jour}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

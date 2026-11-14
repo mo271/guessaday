@@ -85,7 +85,7 @@
   "practiceReminders": "Nhắc luyện tập",
   "practiceRemindersHint": "Nhận ngày ngẫu nhiên dưới dạng thông báo trong ngày",
   "remindersPerDay": "Số lần nhắc mỗi ngày",
-  "nPerDay": "{n, plural, =1{Mỗi ngày một lần} =2{Mỗi ngày hai lần} other{Mỗi ngày {n} lần}}",
+  "nPerDay": "{n, plural, =0{Không bao giờ} =1{Mỗi ngày một lần} =2{Mỗi ngày hai lần} other{Mỗi ngày {n} lần}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

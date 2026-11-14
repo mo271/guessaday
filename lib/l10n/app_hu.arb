@@ -85,7 +85,7 @@
   "practiceReminders": "Gyakorlási emlékeztetők",
   "practiceRemindersHint": "Véletlenszerű dátumok értesítésként a nap folyamán",
   "remindersPerDay": "Emlékeztetők naponta",
-  "nPerDay": "{n, plural, one{Naponta egyszer} =2{Naponta kétszer} other{Naponta {n} alkalommal}}",
+  "nPerDay": "{n, plural, =0{Soha} one{Naponta egyszer} =2{Naponta kétszer} other{Naponta {n} alkalommal}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

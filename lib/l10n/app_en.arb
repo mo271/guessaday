@@ -85,7 +85,7 @@
   "practiceReminders": "Practice reminders",
   "practiceRemindersHint": "Random dates as notifications during the day",
   "remindersPerDay": "Reminders per day",
-  "nPerDay": "{n, plural, =1{Once a day} =2{Twice a day} other{{n} times a day}}",
+  "nPerDay": "{n, plural, =0{Never} =1{Once a day} =2{Twice a day} other{{n} times a day}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

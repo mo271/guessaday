@@ -211,6 +211,7 @@ class AppLocalizationsUk extends AppLocalizations {
       few: '$n рази на день',
       one: '$n раз на день',
       two: 'Двічі на день',
+      zero: 'Ніколи',
     );
     return '$_temp0';
   }

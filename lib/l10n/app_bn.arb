@@ -54,7 +54,7 @@
   "practiceReminders": "অনুশীলনের রিমাইন্ডার",
   "practiceRemindersHint": "দিনের বেলায় নোটিফিকেশন হিসেবে এলোমেলো তারিখ",
   "remindersPerDay": "প্রতিদিন রিমাইন্ডার",
-  "nPerDay": "{n, plural, =2{দিনে দুবার} one{দিনে একবার} other{দিনে {n} বার}}",
+  "nPerDay": "{n, plural, =0{কখনও না} =2{দিনে দুবার} one{দিনে একবার} other{দিনে {n} বার}}",
   "earliestReminder": "প্রথম রিমাইন্ডার",
   "latestReminder": "শেষ রিমাইন্ডার",
   "notificationsBlocked": "Guessaday-এর জন্য নোটিফিকেশন বন্ধ আছে। রিমাইন্ডার পেতে সিস্টেম সেটিংসে তা চালু করুন।",

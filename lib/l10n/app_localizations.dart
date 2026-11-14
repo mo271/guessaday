@@ -486,7 +486,7 @@ abstract class AppLocalizations {
   /// No description provided for @nPerDay.
   ///
   /// In en, this message translates to:
-  /// **'{n, plural, =1{Once a day} =2{Twice a day} other{{n} times a day}}'**
+  /// **'{n, plural, =0{Never} =1{Once a day} =2{Twice a day} other{{n} times a day}}'**
   String nPerDay(int n);
 
   /// No description provided for @earliestReminder.

@@ -210,6 +210,7 @@ class AppLocalizationsRu extends AppLocalizations {
       few: '$n раза в день',
       one: '$n раз в день',
       two: 'Дважды в день',
+      zero: 'Никогда',
     );
     return '$_temp0';
   }

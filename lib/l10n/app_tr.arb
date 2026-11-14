@@ -85,7 +85,7 @@
   "practiceReminders": "Alıştırma hatırlatıcıları",
   "practiceRemindersHint": "Gün içinde bildirim olarak rastgele tarihler",
   "remindersPerDay": "Günlük hatırlatıcı sayısı",
-  "nPerDay": "{n, plural, =1{Günde bir kez} =2{Günde iki kez} other{Günde {n} kez}}",
+  "nPerDay": "{n, plural, =0{Hiçbir zaman} =1{Günde bir kez} =2{Günde iki kez} other{Günde {n} kez}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

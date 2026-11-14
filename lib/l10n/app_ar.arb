@@ -85,7 +85,7 @@
   "practiceReminders": "تذكيرات التمرين",
   "practiceRemindersHint": "تواريخ عشوائية على شكل إشعارات خلال اليوم",
   "remindersPerDay": "عدد التذكيرات في اليوم",
-  "nPerDay": "{n, plural, zero{{n} مرات في اليوم} one{مرة واحدة في اليوم} two{مرتان في اليوم} few{{n} مرات في اليوم} many{{n} مرة في اليوم} other{{n} مرة في اليوم}}",
+  "nPerDay": "{n, plural, zero{أبدًا} one{مرة واحدة في اليوم} two{مرتان في اليوم} few{{n} مرات في اليوم} many{{n} مرة في اليوم} other{{n} مرة في اليوم}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

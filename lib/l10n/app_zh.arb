@@ -85,7 +85,7 @@
   "practiceReminders": "练习提醒",
   "practiceRemindersHint": "白天以通知形式推送随机日期",
   "remindersPerDay": "每天提醒次数",
-  "nPerDay": "{n, plural, other{每天 {n} 次}}",
+  "nPerDay": "{n, plural, =0{从不} other{每天 {n} 次}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

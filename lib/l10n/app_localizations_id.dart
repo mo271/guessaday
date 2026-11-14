@@ -193,6 +193,7 @@ class AppLocalizationsId extends AppLocalizations {
       other: '$n kali sehari',
       two: 'Dua kali sehari',
       one: 'Sekali sehari',
+      zero: 'Tidak pernah',
     );
     return '$_temp0';
   }

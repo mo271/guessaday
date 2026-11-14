@@ -54,7 +54,7 @@
   "practiceReminders": "Mga paalala sa pagsasanay",
   "practiceRemindersHint": "Mga random na petsa bilang notification sa buong araw",
   "remindersPerDay": "Mga paalala bawat araw",
-  "nPerDay": "{n, plural, =2{Dalawang beses bawat araw} one{Isang beses bawat araw} other{{n} beses bawat araw}}",
+  "nPerDay": "{n, plural, =0{Hindi kailanman} =2{Dalawang beses bawat araw} one{Isang beses bawat araw} other{{n} beses bawat araw}}",
   "earliestReminder": "Pinakamaagang paalala",
   "latestReminder": "Pinakahuling paalala",
   "notificationsBlocked": "Naka-off ang mga notification para sa Guessaday. Payagan ang mga ito sa mga setting ng system para makatanggap ng mga paalala.",

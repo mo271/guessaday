@@ -54,7 +54,7 @@
   "practiceReminders": "Übungserinnerungen",
   "practiceRemindersHint": "Zufällige Daten als Benachrichtigung über den Tag verteilt",
   "remindersPerDay": "Erinnerungen pro Tag",
-  "nPerDay": "{n, plural, =1{Einmal täglich} =2{Zweimal täglich} other{{n}-mal täglich}}",
+  "nPerDay": "{n, plural, =0{Nie} =1{Einmal täglich} =2{Zweimal täglich} other{{n}-mal täglich}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

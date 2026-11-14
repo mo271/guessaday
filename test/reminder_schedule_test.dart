@@ -107,6 +107,14 @@ void main() {
     });
   });
 
+  test('the reminders per day are the Fibonacci numbers from zero', () {
+    final options = Settings.remindersPerDayOptions;
+    expect(options.take(2), [0, 1]);
+    for (var i = 2; i < options.length; i++) {
+      expect(options[i], options[i - 1] + options[i - 2]);
+    }
+  });
+
   group('ReminderSync.daysFor', () {
     test('fills the platform limit even if today is over', () {
       expect(ReminderSync.daysFor(1, 60), 7);
@@ -116,7 +124,8 @@ void main() {
       expect(ReminderSync.daysFor(99, 60), 2);
       expect(ReminderSync.daysFor(99, 300), 5);
       for (final limit in [60, 300]) {
-        for (final n in Settings.remindersPerDayOptions) {
+        // Zero ("never") schedules nothing and never reaches daysFor.
+        for (final n in Settings.remindersPerDayOptions.where((n) => n > 0)) {
           final days = ReminderSync.daysFor(n, limit);
           expect(days, inInclusiveRange(1, 7));
           // The days after today hold a full schedule, or a week is reached.

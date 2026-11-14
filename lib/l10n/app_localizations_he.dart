@@ -208,6 +208,7 @@ class AppLocalizationsHe extends AppLocalizations {
       many: '$n פעמים ביום',
       two: 'פעמיים ביום',
       one: 'פעם ביום',
+      zero: 'אף פעם',
     );
     return '$_temp0';
   }

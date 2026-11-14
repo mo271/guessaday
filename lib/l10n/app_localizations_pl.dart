@@ -210,6 +210,7 @@ class AppLocalizationsPl extends AppLocalizations {
       few: '$n razy dziennie',
       two: 'Dwa razy dziennie',
       one: 'Raz dziennie',
+      zero: 'Nigdy',
     );
     return '$_temp0';
   }

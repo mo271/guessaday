@@ -186,6 +186,7 @@ class AppLocalizationsJa extends AppLocalizations {
       n,
       locale: localeName,
       other: '1日$n回',
+      zero: 'なし',
     );
     return '$_temp0';
   }

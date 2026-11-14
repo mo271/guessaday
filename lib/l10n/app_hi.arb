@@ -85,7 +85,7 @@
   "practiceReminders": "अभ्यास के रिमाइंडर",
   "practiceRemindersHint": "दिन के दौरान सूचनाओं के रूप में रैंडम तारीखें",
   "remindersPerDay": "हर दिन रिमाइंडर",
-  "nPerDay": "{n, plural, =1{दिन में एक बार} =2{दिन में दो बार} other{दिन में {n} बार}}",
+  "nPerDay": "{n, plural, =0{कभी नहीं} =1{दिन में एक बार} =2{दिन में दो बार} other{दिन में {n} बार}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

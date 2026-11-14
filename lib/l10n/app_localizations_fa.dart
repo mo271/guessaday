@@ -193,6 +193,7 @@ class AppLocalizationsFa extends AppLocalizations {
       other: '$n بار در روز',
       one: 'یک بار در روز',
       two: 'دو بار در روز',
+      zero: 'هرگز',
     );
     return '$_temp0';
   }
