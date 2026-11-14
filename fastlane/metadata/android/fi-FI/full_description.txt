@@ -1,0 +1,15 @@
+Harjoitussovellus minkä tahansa päivämäärän viikonpäivän laskemiseen.
+
+Guessaday näyttää satunnaisen päivämäärän ja kysyy, mikä viikonpäivä se on. Napauta vastaustasi, niin sovellus kertoo, olitko oikeassa, ja halutessasi myös, kuinka kauan sinulla kesti.
+
+Ominaisuudet:
+• Valitse päivämääräväli: tämä kuukausi, tämä vuosi, viimeiset 100 vuotta, 1900- tai 2000-luku, koko gregoriaaninen aikakausi tai oma alku- ja loppupäivä.
+• Sekuntikello jokaiselle arvaukselle.
+• ”Näytä päivämäärä lyhyesti”: päivämäärä katoaa säädettävän viiveen jälkeen, joten se on ensin painettava mieleen.
+• Tilastot päivämääräväleittäin: osumatarkkuus, ajat ja putket.
+• Valinnaiset harjoitusmuistutukset: muutama satunnainen päivämäärä päivässä ilmoituksina, joissa on painikkeet ”Näytä vastaus” ja ”Harjoittele”. Oletuksena pois käytöstä.
+• Päivämäärät ja viikonpäivien nimet noudattavat laitteen kieltä.
+
+Jos haluat oppia laskemaan viikonpäivän päässä, käy kehittäjän verkkosivustolla: https://firsching.ch/guessaday
+
+Guessaday on vapaa ohjelmisto (GPL-3.0), eikä se sisällä mainoksia tai seurantaa.

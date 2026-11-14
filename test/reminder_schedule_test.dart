@@ -108,20 +108,34 @@ void main() {
   });
 
   group('ReminderSync.daysFor', () {
-    test('keeps the pending count within the platform limit', () {
+    test('fills the platform limit even if today is over', () {
       expect(ReminderSync.daysFor(1, 60), 7);
-      expect(ReminderSync.daysFor(8, 60), 7);
-      expect(ReminderSync.daysFor(9, 60), 6);
-      expect(ReminderSync.daysFor(99, 60), 1);
-      expect(ReminderSync.daysFor(99, 300), 3);
+      expect(ReminderSync.daysFor(9, 60), 7);
+      expect(ReminderSync.daysFor(21, 60), 4);
+      expect(ReminderSync.daysFor(34, 60), 3);
+      expect(ReminderSync.daysFor(99, 60), 2);
+      expect(ReminderSync.daysFor(99, 300), 5);
       for (final limit in [60, 300]) {
         for (final n in Settings.remindersPerDayOptions) {
           final days = ReminderSync.daysFor(n, limit);
           expect(days, inInclusiveRange(1, 7));
-          // One day may exceed the limit; the caller truncates the list.
-          if (days > 1) expect(n * days, lessThanOrEqualTo(limit));
+          // The days after today hold a full schedule, or a week is reached.
+          if (days < 7) expect(n * (days - 1), greaterThanOrEqualTo(limit));
         }
       }
+    });
+
+    test('34 a day opened after the window still schedules the limit', () {
+      final times = reminderTimes(
+        now: DateTime(2026, 11, 14, 23, 30),
+        perDay: 34,
+        startMinute: 7 * 60,
+        endMinute: 22 * 60,
+        days: ReminderSync.daysFor(34, 60),
+        random: Random(1),
+      ).take(60).toList();
+      expect(times, hasLength(60));
+      expect(times.first.day, 15);
     });
   });
 }

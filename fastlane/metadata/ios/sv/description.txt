@@ -1,0 +1,15 @@
+En tränare för att räkna ut veckodagen för vilket datum som helst.
+
+Guessaday visar ett slumpmässigt datum och frågar vilken veckodag det infaller på. Tryck på ditt svar så berättar appen om du hade rätt, och om du vill även hur lång tid du behövde.
+
+Funktioner:
+• Välj datumintervall: den här månaden, i år, de senaste 100 åren, 1900- eller 2000-talet, hela den gregorianska eran eller ett eget start- och slutdatum.
+• Stoppur för varje gissning.
+• ”Visa datumet kort”: datumet försvinner efter en inställbar tid, så du måste memorera det först.
+• Statistik per datumintervall: träffsäkerhet, tider och sviter.
+• Valfria övningspåminnelser: några slumpmässiga datum om dagen som aviseringar, med knapparna ”Visa svar” och ”Öva”. Av som standard.
+• Datum och veckodagsnamn följer enhetens språk.
+
+Vill du lära dig att räkna ut veckodagen i huvudet? Besök utvecklarens webbplats: https://firsching.ch/guessaday
+
+Guessaday är fri programvara (GPL-3.0) och innehåller varken annonser eller spårning.

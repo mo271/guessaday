@@ -1,0 +1,1 @@
+Ćwicz obliczanie dnia tygodnia dla dowolnej daty

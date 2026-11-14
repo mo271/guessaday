@@ -23,6 +23,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// is the only way to see the iOS build without a Mac.
 void main() {
   final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+  // flutter drive builds in debug mode; keep the DEBUG banner out of the
+  // pictures so they can be used as store screenshots.
+  WidgetsApp.debugAllowBannerOverride = false;
 
   testWidgets('screens render', (tester) async {
     final prefs = await SharedPreferences.getInstance();

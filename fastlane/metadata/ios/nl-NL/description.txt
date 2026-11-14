@@ -1,0 +1,15 @@
+Een trainer voor het berekenen van de dag van de week van een willekeurige datum.
+
+Guessaday toont een willekeurige datum en vraagt je op welke dag van de week die valt. Tik op je antwoord en de app vertelt je of je het goed had en, als je wilt, hoelang je erover deed.
+
+Functies:
+• Kies de periode: deze maand, dit jaar, de afgelopen 100 jaar, de 20e of 21e eeuw, het hele gregoriaanse tijdperk of je eigen begin- en einddatum.
+• Stopwatch voor elk antwoord.
+• „Datum kort weergeven”: de datum verdwijnt na een instelbare tijd, dus je moet hem eerst onthouden.
+• Statistieken per periode: nauwkeurigheid, tijden en reeksen.
+• Optionele oefenherinneringen: een paar willekeurige datums per dag als meldingen, met de knoppen „Onthullen” en „Oefenen”. Standaard uit.
+• Datums en namen van de dagen volgen de taal van je apparaat.
+
+Wil je leren hoe je de dag van de week uit je hoofd berekent? Bezoek dan de website van de ontwikkelaar: https://firsching.ch/guessaday
+
+Guessaday is vrije software (GPL-3.0) en bevat geen advertenties of tracking.

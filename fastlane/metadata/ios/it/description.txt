@@ -1,0 +1,15 @@
+Un allenatore per calcolare il giorno della settimana di qualsiasi data.
+
+Guessaday mostra una data casuale e ti chiede in che giorno della settimana cade. Tocca la tua risposta e l'app ti dice se era giusta e, se vuoi, quanto tempo ti è servito.
+
+Funzioni:
+• Scegli l'intervallo di date: questo mese, quest'anno, gli ultimi 100 anni, il XX o il XXI secolo, l'intera era gregoriana oppure una data di inizio e di fine a tua scelta.
+• Cronometro per ogni risposta.
+• «Mostra la data brevemente»: la data scompare dopo un intervallo configurabile, quindi devi prima memorizzarla.
+• Statistiche per intervallo di date: precisione, tempi e serie.
+• Promemoria di allenamento opzionali: alcune date casuali al giorno come notifiche, con i pulsanti «Rivela» ed «Esercitati». Disattivati per impostazione predefinita.
+• Le date e i nomi dei giorni seguono la lingua del tuo dispositivo.
+
+Se vuoi imparare a calcolare il giorno della settimana a mente, visita il sito web dello sviluppatore: https://firsching.ch/guessaday
+
+Guessaday è software libero (GPL-3.0) e non contiene pubblicità né tracciamento.

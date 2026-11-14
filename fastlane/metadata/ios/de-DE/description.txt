@@ -14,3 +14,4 @@ Funktionen:
 Wie man den Wochentag im Kopf berechnet, erfährst du auf der Website des Entwicklers: https://firsching.ch/guessaday/de/
 
 Guessaday wird von Moritz Firsching entwickelt und ist freie Software (GPL-3.0).
+

@@ -45,8 +45,18 @@ jobs:
   ios-simulator:
     # Runs the app on the iOS Simulator and uploads a screenshot of every
     # screen (integration_test/screenshots_test.dart). Without a Mac this is
-    # the only way to see the iOS build.
+    # the only way to see the iOS build, and the pictures double as App Store
+    # screenshots (a 6.9" iPhone and a 13" iPad are what App Store Connect
+    # asks for).
     runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - device: iPhone 17 Pro Max
+            kind: iphone
+          - device: iPad Pro 13-inch
+            kind: ipad
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -57,14 +67,21 @@ jobs:
       - run: flutter gen-l10n
       - name: Boot a simulator
         id: sim
+        env:
+          WANTED: ${{ matrix.device }}
+          KIND: ${{ matrix.kind }}
         run: |
           UDID=$(xcrun simctl list devices available -j | python3 -c "
-          import json, sys
+          import json, os, sys
           devices = json.load(sys.stdin)['devices']
-          phones = [d for runtime, ds in devices.items() if 'iOS' in runtime
-                    for d in ds if d['name'].startswith('iPhone')]
-          phones.sort(key=lambda d: d['name'])
-          print(phones[-1]['udid'])")
+          prefix = 'iPad' if os.environ['KIND'] == 'ipad' else 'iPhone'
+          found = [d for runtime, ds in devices.items() if 'iOS' in runtime
+                   for d in ds if d['name'].startswith(prefix)]
+          found.sort(key=lambda d: d['name'])
+          wanted = [d for d in found if d['name'].startswith(os.environ['WANTED'])]
+          chosen = (wanted or found)[-1]
+          print(chosen['name'], file=sys.stderr)
+          print(chosen['udid'])")
           xcrun simctl boot "$UDID"
           xcrun simctl bootstatus "$UDID" -b
           echo "udid=$UDID" >> "$GITHUB_OUTPUT"
@@ -76,5 +93,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: ios-screenshots
+          name: ios-screenshots-${{ matrix.kind }}
           path: screenshots/

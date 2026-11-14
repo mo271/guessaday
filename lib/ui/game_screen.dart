@@ -35,8 +35,34 @@ class _GameScreenState extends State<GameScreen> {
   Timer? _hideTimer;
   (RangePreset, DateTime, DateTime)? _rangeKey;
   Reminders? _reminders;
+  late final AppLifecycleListener _lifecycle;
+
+  /// When the app went to the background during an open round.
+  DateTime? _hiddenAt;
 
   bool get _answered => _guess != null;
+
+  @override
+  void initState() {
+    super.initState();
+    _lifecycle = AppLifecycleListener(onHide: _onHide, onShow: _onShow);
+  }
+
+  void _onHide() {
+    if (!_answered) _hiddenAt = DateTime.now();
+  }
+
+  /// Time away from the app does not count towards the answer time.
+  void _onShow() {
+    final hiddenAt = _hiddenAt;
+    final round = _round;
+    _hiddenAt = null;
+    if (hiddenAt == null || round == null || _answered) return;
+    _round = Round(
+      date: round.date,
+      startedAt: round.startedAt.add(DateTime.now().difference(hiddenAt)),
+    );
+  }
 
   @override
   void didChangeDependencies() {
@@ -62,6 +88,7 @@ class _GameScreenState extends State<GameScreen> {
   @override
   void dispose() {
     _hideTimer?.cancel();
+    _lifecycle.dispose();
     _reminders?.practice.removeListener(_onPracticeRequest);
     super.dispose();
   }
@@ -90,6 +117,9 @@ class _GameScreenState extends State<GameScreen> {
     );
     _guess = null;
     _elapsed = null;
+    // A round started while in the background (from a reminder) is timed
+    // from when the app is shown.
+    if (_hiddenAt != null) _hiddenAt = DateTime.now();
     _scheduleHide(settings);
   }
 
@@ -189,10 +219,18 @@ class _GameScreenState extends State<GameScreen> {
         child: SafeArea(
           child: LayoutBuilder(
             builder: (context, constraints) {
-              // The seven weekday rows take three quarters of the height; the
-              // date and the timer share the rest. The row font is as large
-              // as the longest weekday name allows.
-              final rowHeight = constraints.maxHeight * 0.75 / 7;
+              // Portrait: the seven weekday rows take three quarters of the
+              // height; the date and the timer share the rest. Landscape:
+              // date and timer on the left, the rows over the full height on
+              // the right. The row font is as large as the longest weekday
+              // name allows.
+              final landscape = constraints.maxWidth > constraints.maxHeight;
+              final rowHeight = landscape
+                  ? constraints.maxHeight / 7
+                  : constraints.maxHeight * 0.75 / 7;
+              final rowWidth = landscape
+                  ? constraints.maxWidth / 2
+                  : constraints.maxWidth;
               final names = [
                 for (final weekday in weekdayOrder(first))
                   weekdayName(locale, weekday),
@@ -200,50 +238,71 @@ class _GameScreenState extends State<GameScreen> {
               final rowFontSize = fitFontSize(
                 texts: names,
                 style: textTheme.titleLarge!,
-                maxWidth: constraints.maxWidth,
+                maxWidth: rowWidth,
                 rowHeight: rowHeight,
               );
+              final date = Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: AnimatedOpacity(
+                    opacity: _dateVisible ? 1 : 0,
+                    duration: Duration(
+                      milliseconds: (fadeSeconds * 1000).round(),
+                    ),
+                    // Shrinks instead of overflowing, e.g. with a large
+                    // system text size or a long month name.
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        DateFormat.yMMMMd(locale).format(round.date),
+                        textAlign: TextAlign.center,
+                        style: textTheme.displaySmall?.copyWith(fontSize: 44),
+                      ),
+                    ),
+                  ),
+                ),
+              );
+              final timer = Center(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    showTimer ? formatElapsed(_elapsed!) : '',
+                    style: textTheme.headlineMedium?.copyWith(
+                      fontFeatures: const [FontFeature.tabularFigures()],
+                    ),
+                  ),
+                ),
+              );
+              final rows = [
+                for (final weekday in weekdayOrder(first))
+                  _WeekdayRow(
+                    name: weekdayName(locale, weekday),
+                    state: _rowState(weekday, round),
+                    height: rowHeight,
+                    fontSize: rowFontSize,
+                    onTap: _answered ? null : () => _onGuess(weekday),
+                  ),
+              ];
+              if (landscape) {
+                return Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Expanded(flex: 2, child: date),
+                          Expanded(child: timer),
+                        ],
+                      ),
+                    ),
+                    Expanded(child: Column(children: rows)),
+                  ],
+                );
+              }
               return Column(
                 children: [
-                  Expanded(
-                    flex: 2,
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: AnimatedOpacity(
-                          opacity: _dateVisible ? 1 : 0,
-                          duration: Duration(
-                            milliseconds: (fadeSeconds * 1000).round(),
-                          ),
-                          child: Text(
-                            DateFormat.yMMMMd(locale).format(round.date),
-                            textAlign: TextAlign.center,
-                            style: textTheme.displaySmall?.copyWith(
-                              fontSize: 44,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  for (final weekday in weekdayOrder(first))
-                    _WeekdayRow(
-                      name: weekdayName(locale, weekday),
-                      state: _rowState(weekday, round),
-                      height: rowHeight,
-                      fontSize: rowFontSize,
-                      onTap: _answered ? null : () => _onGuess(weekday),
-                    ),
-                  Expanded(
-                    child: Center(
-                      child: Text(
-                        showTimer ? formatElapsed(_elapsed!) : '',
-                        style: textTheme.headlineMedium?.copyWith(
-                          fontFeatures: const [FontFeature.tabularFigures()],
-                        ),
-                      ),
-                    ),
-                  ),
+                  Expanded(flex: 2, child: date),
+                  ...rows,
+                  Expanded(child: timer),
                 ],
               );
             },

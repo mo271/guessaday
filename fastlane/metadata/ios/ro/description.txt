@@ -1,0 +1,15 @@
+Un antrenor pentru calcularea zilei săptămânii pentru orice dată.
+
+Guessaday afișează o dată aleatorie și vă întreabă în ce zi a săptămânii cade. Atingeți răspunsul, iar aplicația vă spune dacă ați avut dreptate și, opțional, cât timp v-a luat.
+
+Funcții:
+• Alegeți intervalul de date: luna aceasta, anul acesta, ultimii 100 de ani, secolul al XX-lea sau al XXI-lea, întreaga eră gregoriană sau propriile date de început și de sfârșit.
+• Cronometru pentru fiecare răspuns.
+• „Afișare scurtă a datei”: data dispare după un interval configurabil, așa că trebuie să o memorați mai întâi.
+• Statistici pentru fiecare interval de date: precizie, timpi și serii.
+• Mementouri opționale de exersare: câteva date aleatorii pe zi ca notificări, cu butoanele „Dezvăluiți” și „Exersați”. Dezactivate implicit.
+• Datele și numele zilelor săptămânii urmează limba dispozitivului.
+
+Dacă doriți să învățați cum să calculați ziua săptămânii în minte, vizitați site-ul dezvoltatorului: https://firsching.ch/guessaday
+
+Guessaday este software liber (GPL-3.0) și nu conține reclame sau urmărire.

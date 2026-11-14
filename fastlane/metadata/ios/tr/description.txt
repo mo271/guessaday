@@ -1,0 +1,15 @@
+Herhangi bir tarihin haftanın hangi gününe denk geldiğini hesaplamak için bir alıştırma uygulaması.
+
+Guessaday rastgele bir tarih gösterir ve bu tarihin haftanın hangi gününe denk geldiğini sorar. Yanıtınıza dokunun; uygulama doğru bilip bilmediğinizi ve isterseniz ne kadar süre harcadığınızı söyler.
+
+Özellikler:
+• Tarih aralığını seçin: bu ay, bu yıl, son 100 yıl, 20. veya 21. yüzyıl, tüm Gregoryen dönemi ya da kendi başlangıç ve bitiş tarihiniz.
+• Her tahmin için kronometre.
+• “Tarihi kısa süre göster”: Tarih, ayarlanabilir bir süre sonra kaybolur; yani önce aklınızda tutmanız gerekir.
+• Tarih aralığına göre istatistikler: doğruluk, süreler ve seriler.
+• İsteğe bağlı alıştırma hatırlatıcıları: günde birkaç rastgele tarih, “Göster” ve “Alıştırma” düğmeleriyle bildirim olarak gelir. Varsayılan olarak kapalıdır.
+• Tarihler ve gün adları cihazınızın diline uyar.
+
+Haftanın gününü zihinden nasıl hesaplayacağınızı öğrenmek isterseniz geliştiricinin web sitesini ziyaret edin: https://firsching.ch/guessaday
+
+Guessaday özgür yazılımdır (GPL-3.0); reklam veya izleme içermez.

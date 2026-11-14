@@ -1,0 +1,15 @@
+En træner til at regne ugedagen ud for en hvilken som helst dato.
+
+Guessaday viser en tilfældig dato og spørger, hvilken ugedag den falder på. Tryk på dit svar, så fortæller appen dig, om du havde ret, og hvis du vil, også hvor lang tid du brugte.
+
+Funktioner:
+• Vælg datointerval: denne måned, i år, de seneste 100 år, 1900- eller 2000-tallet, hele den gregorianske æra eller din egen start- og slutdato.
+• Stopur for hvert gæt.
+• "Vis datoen kortvarigt": datoen forsvinder efter en indstillelig tid, så du først skal huske den.
+• Statistik pr. datointerval: træfsikkerhed, tider og stimer.
+• Valgfrie øvelsespåmindelser: et par tilfældige datoer om dagen som notifikationer, med knapperne "Vis svar" og "Øv". Slået fra som standard.
+• Datoer og ugedagsnavne følger enhedens sprog.
+
+Vil du lære at regne ugedagen ud i hovedet? Besøg udviklerens websted: https://firsching.ch/guessaday
+
+Guessaday er fri software (GPL-3.0) og indeholder hverken reklamer eller sporing.
