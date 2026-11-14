@@ -43,6 +43,23 @@ void main() {
     expect(find.textContaining(RegExp(r'^\d\d:\d\d\.\d\d$')), findsOneWidget);
   });
 
+  testWidgets('landscape puts the weekdays beside the date', (tester) async {
+    tester.view.physicalSize = const Size(932, 430);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(await freshApp());
+    await tester.pumpAndSettle();
+
+    final date = tester.getCenter(find.byType(AnimatedOpacity));
+    final monday = tester.getRect(find.text('Monday'));
+    expect(monday.left, greaterThan(date.dx));
+    // Rows big enough to tap: the seven share the full height.
+    final row = tester.getSize(
+      find.ancestor(of: find.text('Monday'), matching: find.byType(InkWell)),
+    );
+    expect(row.height, greaterThanOrEqualTo(44));
+  });
+
   testWidgets('settings screen opens and shows the date range', (tester) async {
     await tester.pumpWidget(await freshApp());
     await tester.pumpAndSettle();
