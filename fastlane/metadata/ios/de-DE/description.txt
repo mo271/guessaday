@@ -8,7 +8,7 @@ Funktionen:
 • „Datum nur kurz anzeigen“: Das Datum verschwindet nach einer einstellbaren Zeit, du musst es dir also zuerst merken.
 • Statistik pro Zeitraum: Trefferquote, Zeiten und Serien.
 • Optionale Übungserinnerungen: ein paar zufällige Daten pro Tag als Benachrichtigung, mit „Auflösen“ und „Üben“. Standardmäßig aus.
-• Datum und Wochentage folgen der Sprache deines Geräts; die App gibt es in 23 Sprachen.
+• Datum und Wochentage folgen der Sprache deines Geräts; die App gibt es in 33 Sprachen.
 • Funktioniert komplett offline. Keine Werbung, kein Tracking, kein Konto.
 
 Wie man den Wochentag im Kopf berechnet, erfährst du auf der Website des Entwicklers: https://firsching.ch/guessaday/de/
