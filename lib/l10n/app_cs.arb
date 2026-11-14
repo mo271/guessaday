@@ -85,7 +85,7 @@
   "practiceReminders": "Připomenutí procvičování",
   "practiceRemindersHint": "Náhodná data jako oznámení během dne",
   "remindersPerDay": "Připomenutí za den",
-  "nPerDay": "{n, plural, one{Jednou denně} =2{Dvakrát denně} few{{n}krát denně} many{{n}krát denně} other{{n}krát denně}}",
+  "nPerDay": "{n, plural, =0{Nikdy} one{Jednou denně} =2{Dvakrát denně} few{{n}krát denně} many{{n}krát denně} other{{n}krát denně}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

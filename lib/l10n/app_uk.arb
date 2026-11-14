@@ -85,7 +85,7 @@
   "practiceReminders": "Нагадування про тренування",
   "practiceRemindersHint": "Випадкові дати у сповіщеннях протягом дня",
   "remindersPerDay": "Нагадувань на день",
-  "nPerDay": "{n, plural, =2{Двічі на день} one{{n} раз на день} few{{n} рази на день} many{{n} разів на день} other{{n} разу на день}}",
+  "nPerDay": "{n, plural, =0{Ніколи} =2{Двічі на день} one{{n} раз на день} few{{n} рази на день} many{{n} разів на день} other{{n} разу на день}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

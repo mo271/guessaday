@@ -192,6 +192,7 @@ class AppLocalizationsNl extends AppLocalizations {
       other: '$n keer per dag',
       two: 'Twee keer per dag',
       one: 'Eén keer per dag',
+      zero: 'Nooit',
     );
     return '$_temp0';
   }

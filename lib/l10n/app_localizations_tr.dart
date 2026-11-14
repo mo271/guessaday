@@ -193,6 +193,7 @@ class AppLocalizationsTr extends AppLocalizations {
       other: 'Günde $n kez',
       two: 'Günde iki kez',
       one: 'Günde bir kez',
+      zero: 'Hiçbir zaman',
     );
     return '$_temp0';
   }

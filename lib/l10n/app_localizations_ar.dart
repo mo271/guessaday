@@ -214,7 +214,7 @@ class AppLocalizationsAr extends AppLocalizations {
       few: '$n مرات في اليوم',
       two: 'مرتان في اليوم',
       one: 'مرة واحدة في اليوم',
-      zero: '$n مرات في اليوم',
+      zero: 'أبدًا',
     );
     return '$_temp0';
   }

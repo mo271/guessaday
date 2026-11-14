@@ -205,6 +205,7 @@ class AppLocalizationsEl extends AppLocalizations {
       other: '$n φορές την ημέρα',
       one: 'Μία φορά την ημέρα',
       two: 'Δύο φορές την ημέρα',
+      zero: 'Ποτέ',
     );
     return '$_temp0';
   }

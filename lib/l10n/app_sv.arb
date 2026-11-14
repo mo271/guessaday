@@ -85,7 +85,7 @@
   "practiceReminders": "Övningspåminnelser",
   "practiceRemindersHint": "Slumpmässiga datum som aviseringar under dagen",
   "remindersPerDay": "Påminnelser per dag",
-  "nPerDay": "{n, plural, one{En gång om dagen} =2{Två gånger om dagen} other{{n} gånger om dagen}}",
+  "nPerDay": "{n, plural, =0{Aldrig} one{En gång om dagen} =2{Två gånger om dagen} other{{n} gånger om dagen}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

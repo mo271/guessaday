@@ -85,7 +85,7 @@
   "practiceReminders": "Promemoria di allenamento",
   "practiceRemindersHint": "Date casuali come notifiche durante la giornata",
   "remindersPerDay": "Promemoria al giorno",
-  "nPerDay": "{n, plural, =1{Una volta al giorno} =2{Due volte al giorno} other{{n} volte al giorno}}",
+  "nPerDay": "{n, plural, =0{Mai} =1{Una volta al giorno} =2{Due volte al giorno} other{{n} volte al giorno}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

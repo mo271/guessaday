@@ -192,6 +192,7 @@ class AppLocalizationsSv extends AppLocalizations {
       other: '$n gånger om dagen',
       two: 'Två gånger om dagen',
       one: 'En gång om dagen',
+      zero: 'Aldrig',
     );
     return '$_temp0';
   }

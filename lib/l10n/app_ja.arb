@@ -85,7 +85,7 @@
   "practiceReminders": "練習リマインダー",
   "practiceRemindersHint": "日中にランダムな日付を通知で出題します",
   "remindersPerDay": "1日のリマインダー数",
-  "nPerDay": "{n, plural, other{1日{n}回}}",
+  "nPerDay": "{n, plural, =0{なし} other{1日{n}回}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

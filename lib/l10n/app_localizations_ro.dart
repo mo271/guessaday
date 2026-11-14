@@ -207,6 +207,7 @@ class AppLocalizationsRo extends AppLocalizations {
       few: 'De $n ori pe zi',
       two: 'De două ori pe zi',
       one: 'O dată pe zi',
+      zero: 'Niciodată',
     );
     return '$_temp0';
   }

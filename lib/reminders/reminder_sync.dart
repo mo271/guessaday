@@ -110,7 +110,7 @@ class _ReminderSyncState extends State<ReminderSync>
   void _sync(Settings settings, {bool cancelIfOff = false}) {
     final reminders = RemindersScope.of(context);
     if (!reminders.supported) return;
-    if (!settings.remindersEnabled) {
+    if (!settings.remindersEnabled || settings.remindersPerDay == 0) {
       if (cancelIfOff) _enqueue(reminders.backend.cancelAll);
       return;
     }

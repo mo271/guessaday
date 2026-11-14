@@ -192,6 +192,7 @@ class AppLocalizationsNb extends AppLocalizations {
       other: '$n ganger om dagen',
       two: 'To ganger om dagen',
       one: 'Én gang om dagen',
+      zero: 'Aldri',
     );
     return '$_temp0';
   }

@@ -54,7 +54,7 @@
   "practiceReminders": "תזכורות תרגול",
   "practiceRemindersHint": "תאריכים אקראיים כהתראות במהלך היום",
   "remindersPerDay": "תזכורות ביום",
-  "nPerDay": "{n, plural, one{פעם ביום} two{פעמיים ביום} many{{n} פעמים ביום} other{{n} פעמים ביום}}",
+  "nPerDay": "{n, plural, =0{אף פעם} one{פעם ביום} two{פעמיים ביום} many{{n} פעמים ביום} other{{n} פעמים ביום}}",
   "earliestReminder": "התזכורת המוקדמת ביותר",
   "latestReminder": "התזכורת המאוחרת ביותר",
   "notificationsBlocked": "ההתראות של Guessaday כבויות. יש לאפשר אותן בהגדרות המערכת כדי לקבל תזכורות.",

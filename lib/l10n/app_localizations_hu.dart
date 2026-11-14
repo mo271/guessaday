@@ -193,6 +193,7 @@ class AppLocalizationsHu extends AppLocalizations {
       other: 'Naponta $n alkalommal',
       two: 'Naponta kétszer',
       one: 'Naponta egyszer',
+      zero: 'Soha',
     );
     return '$_temp0';
   }

@@ -47,10 +47,12 @@ class Settings extends ChangeNotifier {
   /// Choices for how many recent rounds the "recent" statistics cover.
   static const recentWindowOptions = <int>[5, 10, 20, 50, 100];
 
-  /// Choices for practice reminders per day. Only as many upcoming
-  /// reminders as the platform allows are pending at once (see
-  /// ReminderBackend.maxPending); opening the app tops them up.
-  static const remindersPerDayOptions = <int>[1, 2, 3, 5, 8, 13, 21, 34];
+  /// Choices for practice reminders per day: the Fibonacci numbers, which
+  /// properly start at zero, so "never" and "once a day" come first and
+  /// "once a day" then comes again. Only as many upcoming reminders as the
+  /// platform allows are pending at once (see ReminderBackend.maxPending);
+  /// opening the app tops them up.
+  static const remindersPerDayOptions = <int>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
 
   /// The choice closest to [value], for values stored by other versions.
   static int _nearestOption(int value) => remindersPerDayOptions.reduce(

@@ -192,6 +192,7 @@ class AppLocalizationsDa extends AppLocalizations {
       other: '$n gange om dagen',
       two: 'To gange om dagen',
       one: 'En gang om dagen',
+      zero: 'Aldrig',
     );
     return '$_temp0';
   }

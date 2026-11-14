@@ -192,6 +192,7 @@ class AppLocalizationsBn extends AppLocalizations {
       other: 'দিনে $n বার',
       one: 'দিনে একবার',
       two: 'দিনে দুবার',
+      zero: 'কখনও না',
     );
     return '$_temp0';
   }

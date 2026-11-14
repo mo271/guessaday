@@ -85,7 +85,7 @@
   "practiceReminders": "Mementouri de exersare",
   "practiceRemindersHint": "Date aleatorii ca notificări pe parcursul zilei",
   "remindersPerDay": "Mementouri pe zi",
-  "nPerDay": "{n, plural, one{O dată pe zi} =2{De două ori pe zi} few{De {n} ori pe zi} other{De {n} de ori pe zi}}",
+  "nPerDay": "{n, plural, =0{Niciodată} one{O dată pe zi} =2{De două ori pe zi} few{De {n} ori pe zi} other{De {n} de ori pe zi}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

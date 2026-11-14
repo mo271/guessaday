@@ -54,7 +54,7 @@
   "practiceReminders": "การเตือนฝึกฝน",
   "practiceRemindersHint": "สุ่มวันที่ส่งเป็นการแจ้งเตือนระหว่างวัน",
   "remindersPerDay": "จำนวนการเตือนต่อวัน",
-  "nPerDay": "{n, plural, =1{วันละครั้ง} =2{วันละสองครั้ง} other{วันละ {n} ครั้ง}}",
+  "nPerDay": "{n, plural, =0{ไม่เลย} =1{วันละครั้ง} =2{วันละสองครั้ง} other{วันละ {n} ครั้ง}}",
   "earliestReminder": "เวลาเตือนเร็วสุด",
   "latestReminder": "เวลาเตือนช้าสุด",
   "notificationsBlocked": "การแจ้งเตือนของ Guessaday ถูกปิดอยู่ โปรดอนุญาตในการตั้งค่าระบบเพื่อรับการเตือนฝึกฝน",

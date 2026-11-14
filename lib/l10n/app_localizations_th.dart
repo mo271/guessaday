@@ -191,6 +191,7 @@ class AppLocalizationsTh extends AppLocalizations {
       other: 'วันละ $n ครั้ง',
       two: 'วันละสองครั้ง',
       one: 'วันละครั้ง',
+      zero: 'ไม่เลย',
     );
     return '$_temp0';
   }

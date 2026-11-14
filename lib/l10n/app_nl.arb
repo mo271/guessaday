@@ -85,7 +85,7 @@
   "practiceReminders": "Oefenherinneringen",
   "practiceRemindersHint": "Willekeurige datums als meldingen gedurende de dag",
   "remindersPerDay": "Herinneringen per dag",
-  "nPerDay": "{n, plural, =1{Eén keer per dag} =2{Twee keer per dag} other{{n} keer per dag}}",
+  "nPerDay": "{n, plural, =0{Nooit} =1{Eén keer per dag} =2{Twee keer per dag} other{{n} keer per dag}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

@@ -192,6 +192,7 @@ class AppLocalizationsEn extends AppLocalizations {
       other: '$n times a day',
       two: 'Twice a day',
       one: 'Once a day',
+      zero: 'Never',
     );
     return '$_temp0';
   }

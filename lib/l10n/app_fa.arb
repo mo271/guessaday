@@ -54,7 +54,7 @@
   "practiceReminders": "یادآورهای تمرین",
   "practiceRemindersHint": "تاریخ‌های تصادفی به‌صورت اعلان در طول روز",
   "remindersPerDay": "تعداد یادآور در روز",
-  "nPerDay": "{n, plural, =2{دو بار در روز} one{یک بار در روز} other{{n} بار در روز}}",
+  "nPerDay": "{n, plural, =0{هرگز} =2{دو بار در روز} one{یک بار در روز} other{{n} بار در روز}}",
   "earliestReminder": "زودترین یادآور",
   "latestReminder": "دیرترین یادآور",
   "notificationsBlocked": "اعلان‌ها برای Guessaday خاموش هستند. برای دریافت یادآورها، آن‌ها را در تنظیمات سیستم مجاز کنید.",

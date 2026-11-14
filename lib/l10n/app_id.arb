@@ -85,7 +85,7 @@
   "practiceReminders": "Pengingat latihan",
   "practiceRemindersHint": "Tanggal acak sebagai notifikasi sepanjang hari",
   "remindersPerDay": "Pengingat per hari",
-  "nPerDay": "{n, plural, =1{Sekali sehari} =2{Dua kali sehari} other{{n} kali sehari}}",
+  "nPerDay": "{n, plural, =0{Tidak pernah} =1{Sekali sehari} =2{Dua kali sehari} other{{n} kali sehari}}",
   "@nPerDay": {
     "placeholders": {
       "n": {

@@ -185,6 +185,7 @@ class AppLocalizationsZh extends AppLocalizations {
       n,
       locale: localeName,
       other: '每天 $n 次',
+      zero: '从不',
     );
     return '$_temp0';
   }
@@ -388,6 +389,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
       n,
       locale: localeName,
       other: '每天 $n 次',
+      zero: '從不',
     );
     return '$_temp0';
   }

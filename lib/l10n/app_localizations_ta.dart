@@ -191,6 +191,7 @@ class AppLocalizationsTa extends AppLocalizations {
       other: 'நாளுக்கு $n முறை',
       one: 'நாளுக்கு ஒரு முறை',
       two: 'நாளுக்கு இரு முறை',
+      zero: 'ஒருபோதும் இல்லை',
     );
     return '$_temp0';
   }

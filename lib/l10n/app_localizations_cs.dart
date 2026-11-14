@@ -209,6 +209,7 @@ class AppLocalizationsCs extends AppLocalizations {
       few: '${n}krát denně',
       two: 'Dvakrát denně',
       one: 'Jednou denně',
+      zero: 'Nikdy',
     );
     return '$_temp0';
   }
