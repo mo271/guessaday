@@ -28,8 +28,11 @@ class ReminderSync extends StatefulWidget {
   /// pending; every start of the app tops the schedule up again.
   static const maxDays = 7;
 
+  /// Days to draw reminders for: enough that the days after today alone
+  /// fill [maxPending], since today's window may already be over. The
+  /// caller cuts the sorted list at [maxPending].
   static int daysFor(int perDay, int maxPending) =>
-      (maxPending ~/ perDay).clamp(1, maxDays);
+      ((maxPending + perDay - 1) ~/ perDay + 1).clamp(1, maxDays);
 
   @override
   State<ReminderSync> createState() => _ReminderSyncState();
@@ -40,6 +43,19 @@ class _ReminderSyncState extends State<ReminderSync>
   final Random _random = Random();
   bool _initialized = false;
   late (ReminderKey, Locale) _key;
+
+  /// Platform calls run one after another, so that replacing the schedule
+  /// (up to [ReminderBackend.maxPending] calls) and cancelling it cannot
+  /// interleave. A queued update that a newer one supersedes is skipped.
+  Future<void> _queue = Future.value();
+  int _generation = 0;
+
+  void _enqueue(Future<void> Function() update) {
+    final generation = ++_generation;
+    _queue = _queue
+        .then((_) => generation == _generation ? update() : null)
+        .catchError((Object e) => debugPrint('Reminder update failed: $e'));
+  }
 
   @override
   void initState() {
@@ -95,7 +111,7 @@ class _ReminderSyncState extends State<ReminderSync>
     final reminders = RemindersScope.of(context);
     if (!reminders.supported) return;
     if (!settings.remindersEnabled) {
-      if (cancelIfOff) reminders.backend.cancelAll();
+      if (cancelIfOff) _enqueue(reminders.backend.cancelAll);
       return;
     }
     final l10n = AppLocalizations.of(context);
@@ -130,7 +146,7 @@ class _ReminderSyncState extends State<ReminderSync>
           ),
         ),
     ];
-    reminders.backend.replaceSchedule(requests);
+    _enqueue(() => reminders.backend.replaceSchedule(requests));
   }
 
   ReminderPayload _payloadFor(
