@@ -87,4 +87,35 @@ void main() {
     expect(tester.widget<AnimatedOpacity>(opacity).opacity, 0);
     await tester.pumpAndSettle();
   });
+
+  testWidgets('time in the background does not count', (tester) async {
+    await tester.pumpWidget(await freshApp());
+    await tester.pumpAndSettle();
+
+    final binding = tester.binding;
+    for (final state in [
+      AppLifecycleState.inactive,
+      AppLifecycleState.hidden,
+      AppLifecycleState.paused,
+    ]) {
+      binding.handleAppLifecycleStateChanged(state);
+    }
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 1500)),
+    );
+    for (final state in [
+      AppLifecycleState.hidden,
+      AppLifecycleState.inactive,
+      AppLifecycleState.resumed,
+    ]) {
+      binding.handleAppLifecycleStateChanged(state);
+    }
+    await tester.tap(find.text('Wednesday'));
+    await tester.pump();
+
+    final timer = tester.widget<Text>(
+      find.textContaining(RegExp(r'^\d\d:\d\d\.\d\d$')),
+    );
+    expect(timer.data, startsWith('00:00.'));
+  });
 }
