@@ -1,1 +1,1 @@
-Kalender,Wochentag,Doomsday,Kopfrechnen,Gehirntraining,Datum,Trainer,Gedächtnis
+Wochentag,Kalender,Kopfrechnen,Datum,Doomsday,Gedächtnis,Training,Rechnen,Mathe,Quiz,Gehirn,Conway
