@@ -35,8 +35,34 @@ class _GameScreenState extends State<GameScreen> {
   Timer? _hideTimer;
   (RangePreset, DateTime, DateTime)? _rangeKey;
   Reminders? _reminders;
+  late final AppLifecycleListener _lifecycle;
+
+  /// When the app went to the background during an open round.
+  DateTime? _hiddenAt;
 
   bool get _answered => _guess != null;
+
+  @override
+  void initState() {
+    super.initState();
+    _lifecycle = AppLifecycleListener(onHide: _onHide, onShow: _onShow);
+  }
+
+  void _onHide() {
+    if (!_answered) _hiddenAt = DateTime.now();
+  }
+
+  /// Time away from the app does not count towards the answer time.
+  void _onShow() {
+    final hiddenAt = _hiddenAt;
+    final round = _round;
+    _hiddenAt = null;
+    if (hiddenAt == null || round == null || _answered) return;
+    _round = Round(
+      date: round.date,
+      startedAt: round.startedAt.add(DateTime.now().difference(hiddenAt)),
+    );
+  }
 
   @override
   void didChangeDependencies() {
@@ -62,6 +88,7 @@ class _GameScreenState extends State<GameScreen> {
   @override
   void dispose() {
     _hideTimer?.cancel();
+    _lifecycle.dispose();
     _reminders?.practice.removeListener(_onPracticeRequest);
     super.dispose();
   }
@@ -90,6 +117,9 @@ class _GameScreenState extends State<GameScreen> {
     );
     _guess = null;
     _elapsed = null;
+    // A round started while in the background (from a reminder) is timed
+    // from when the app is shown.
+    if (_hiddenAt != null) _hiddenAt = DateTime.now();
     _scheduleHide(settings);
   }
 
